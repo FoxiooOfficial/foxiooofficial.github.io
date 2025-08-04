@@ -1,4 +1,5 @@
-body {
+body
+{
     margin: 0;
     padding: 0;
 
@@ -82,15 +83,23 @@ body {
 
 ._Window_Info {
     position: absolute;
-    top: 10vh;
     left: 50%;
     transform: translateX(-50%);
     
     width: clamp(300px, 60vw, 500px);
 
-    border: 1px solid rgb(255, 0, 255);
+    background:
+        linear-gradient(black, black) padding-box,
+        linear-gradient(90deg, #00ffff, #ff00ff, #ffff00) border-box;
+    border: 1px solid transparent;
+    box-shadow:
+        0 0 0 1px black,
+        0 0 0 2px white,
+        0 0 0 4px black;
 
-    font-family: sans-serif;
+    font-family: "Comic Neue", cursive;
+    font-weight: 300;
+    font-style: normal;
 }
 
 ._Window_Header
@@ -98,27 +107,63 @@ body {
     display: flex;
     align-items: center;
 
-    background-color: yellow;
+    background-color: rgb(255, 255, 255);
     background-image: url("Background/Window_Bar_1.png");
-    background-size: auto 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     image-rendering: pixelated;
 
     border: 1px solid rgb(0, 0, 0);
 
     padding: 4px 8px;
     height: 34px;
+
+    position: relative; /* wymagane dla pseudo-elementu */
+    overflow: hidden;   /* ukryj nadmiar gif-a */
 }
 
 ._Window_Header_Icon
 {
-    margin-right: 8px;
+    margin-right: 4px;
     image-rendering: pixelated;
+
+    background-color: black;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 0 1px black;
 }
 
 ._Window_Header_Text
 {
+    padding: 4px 8px;
     font-size: 20px;
-    color: black;
+    color: rgb(255, 255, 255);
+
+    background-color: black;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 0 1px black;
+}
+
+._Window_Header::after {
+    content: "";
+    position: absolute;
+
+    top: 0; left: 100px;
+    width: 100%; height: 100%;
+    
+    pointer-events: none;
+
+    background: url("Background/Space_5.gif") repeat;
+    background-size: cover;
+
+    image-rendering: pixelated;
+    mix-blend-mode:multiply;
+    
+    mask-image: linear-gradient(to right, transparent 0%, black 60%, black 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 60%, black 100%);
+
+    opacity: 1;
+    z-index: 2;
+    
 }
 
 ._Window_Layout
@@ -127,15 +172,13 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     padding: 16px;
-
-    border: 1px solid rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
 }
 
 ._Window_Text
 {
-    font-size: 32px;
-    color: black;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
 }
 
 ._Window_Image
@@ -168,3 +211,90 @@ body {
         transform: translateY(100px) scale(0);
     }
 }
+
+/* ########################### */
+/* Main */
+/* ########################### */
+
+._Main_Container {
+    margin: 0 auto;
+    padding: 12px 0;
+    max-width: 1080px;
+    width: 90%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+}
+
+._Main_Banner
+{
+    padding-top: 24px;
+    width: 100%;
+    max-width: 1080px;
+    height: auto;
+
+    image-rendering: pixelated;
+    margin-bottom: 24px;
+}
+
+._Main_Content
+{
+    padding: 0px 24px;
+    margin-left: 10px;
+    width: 100%;
+    max-width: 1025px; /* 1080 - 24 * 2 - 4 - 3 */
+
+    background:
+        linear-gradient(black, black) padding-box,
+        linear-gradient(90deg, #00ffff, #ff00ff, #ffff00) border-box;
+    border: 1px solid transparent;
+    box-shadow:
+        0 0 0 1px black,
+        0 0 0 2px white,
+        0 0 0 4px black;
+
+    font-family: "Comic Neue", cursive;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;    color: white;
+    
+}
+
+._Main_Inner_Content {
+    margin-left: 220px;
+}
+
+
+._Main_Panel
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    width: 100%;
+    max-width: 1080px;
+
+    position: relative;
+
+}
+
+/* ########################### */
+/* Side */
+/* ########################### */
+
+._Window_Side {
+    position: absolute;
+    left: min(90px, 20%);
+    width: clamp(200px, 20vw, 300px);
+    z-index: 10;
+    opacity: 0.95;
+}
+
+._Window_Update { top: 280px; }
+._Window_Nav { top: 500px; }
+
