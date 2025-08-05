@@ -100,6 +100,22 @@ body
     font-family: "Comic Neue", cursive;
     font-weight: 300;
     font-style: normal;
+
+    position: relative;
+}
+
+._Window_Info::after {
+    content: "";
+    position: absolute;
+    top: -16px; left: -16px; right: -16px; bottom: -16px;
+    z-index: -1;
+    pointer-events: none;
+
+    border: 16px solid transparent;
+    border-image: url("Background/Shadow_Dither.png") 16 fill repeat;
+
+    image-rendering: pixelated;
+    border-radius: 20px;
 }
 
 ._Window_Header
@@ -118,8 +134,8 @@ body
     padding: 4px 8px;
     height: 34px;
 
-    position: relative; /* wymagane dla pseudo-elementu */
-    overflow: hidden;   /* ukryj nadmiar gif-a */
+    position: relative;
+    overflow: hidden;
 }
 
 ._Window_Header_Icon
@@ -195,12 +211,14 @@ body
 {
     position: fixed;
 
-    width: 3px; height: 3px;
+    width: 9px; height: 9px;
 
     pointer-events: none;
 
     opacity: 1;     z-index: 9999;      image-rendering: pixelated;
     animation: _Stars_Fall 1.5s ease-out forwards;
+
+    mask-image: url("/Media/Icons/Star.png");
 }
 
 @keyframes _Stars_Fall {
@@ -242,12 +260,14 @@ body
 
 ._Main_Content
 {
-    padding: 0px 24px;
-    margin-left: 10px;
+    padding: 0px 0px;
+    margin-left: 24px;
     width: 100%;
     max-width: 1025px; /* 1080 - 24 * 2 - 4 - 3 */
 
     background:
+     linear-gradient(#12101Ccc, #12101Ccc) padding-box,
+        url("/Media/Background/Space_4.gif") padding-box,
         linear-gradient(black, black) padding-box,
         linear-gradient(90deg, #00ffff, #ff00ff, #ffff00) border-box;
     border: 1px solid transparent;
@@ -260,6 +280,8 @@ body
     font-weight: 300;
     font-style: normal;
     font-size: 24px;    color: white;
+
+    image-rendering: pixelated
     
 }
 
@@ -296,5 +318,26 @@ body
 }
 
 ._Window_Update { top: 280px; }
-._Window_Nav { top: 500px; }
+._Window_Nav { top: 580px; }
+
+._Nav_List {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    
+}
+
+._Nav_List li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+._Nav_Icon {
+    width: 36px;
+    padding-right: 8px;
+    vertical-align: middle;
+    image-rendering: pixelated;
+    margin-right: 6px;
+}
 
