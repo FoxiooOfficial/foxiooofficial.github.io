@@ -341,3 +341,8 @@ body
     margin-right: 6px;
 }
 
+@media (max-width: 600px), (pointer: coarse) {
+  body, ._Window_Info, ._Main_Content {
+    font-family: sans-serif !important;
+  }
+}
