@@ -28,6 +28,9 @@ body
     z-index: -99999;    opacity: 0.5;
 
     animation: _Animation_Background_Scroll 240s linear infinite;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 ._Background_Layer_1 {
@@ -75,6 +78,44 @@ body
 @keyframes _Animation_Background_Scroll {
     from { background-position: 0 0; }
     to   { background-position: 384px 384px; }
+}
+
+/* ########################### */
+/* UI Elements */
+/* ########################### */
+
+._UI_Elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Style dla okien */
+._Window_Side {
+    image-rendering: pixelated;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    position: absolute;
+}
+
+._UI_Elements img {
+    position: absolute;
+    image-rendering: pixelated;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
 }
 
 /* ########################### */
@@ -278,18 +319,13 @@ body
     margin-bottom: 24px;
 }
 
-._Main_Content
-{
+._Main_Content {
+    position: relative;
     padding: 0px 0px;
     margin-left: 24px;
     width: 100%;
     max-width: 1025px; /* 1080 - 24 * 2 - 4 - 3 */
 
-    background:
-     linear-gradient(#12101Ccc, #12101Ccc) padding-box,
-        url("/Media/Background/Space_4.gif") padding-box,
-        linear-gradient(black, black) padding-box,
-        linear-gradient(90deg, #00ffff, #ff00ff, #ffff00) border-box;
     border: 1px solid transparent;
     box-shadow:
         0 0 0 1px black,
@@ -299,10 +335,27 @@ body
     font-family: "Comic Neue", cursive, "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 24px;    color: white;
+    font-size: 24px;
+    color: white;
 
-    image-rendering: pixelated
+    image-rendering: pixelated;
+    z-index: 1;
+}
+
+._Main_Content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
     
+    background:
+      linear-gradient(rgba(18, 16, 28, 0.8), rgba(0, 0, 0, 0.8)) padding-box,
+      url("/Media/Background/Space_4.gif") center padding-box,
+      linear-gradient(black, black) padding-box,
+      linear-gradient(90deg, #00ffff, #ff00ff, #ffff00) border-box;
+
+    border: 1px solid transparent;
+    opacity: 0.97;
 }
 
 ._Main_Inner_Content {
@@ -331,14 +384,42 @@ body
 
 ._Window_Side {
     position: absolute;
-    left: min(90px, 20%);
-    width: clamp(200px, 20vw, 300px);
+    left: max(-50px, 0vw);
+    width: clamp(200px, 20vw, 220px);
     z-index: 10;
     opacity: 0.95;
+    animation: circleFloat 45s steps(10) infinite;
+    will-change: transform;
+    image-rendering: pixelated;
 }
 
-._Window_Update { top: 280px; }
-._Window_Nav { top: 580px; }
+@keyframes circleFloat {
+    0%  { transform: translate(0px, 0px); }
+    25% { transform: translate(10px, 10px); }
+    50% { transform: translate(0px, 20px); }
+    75% { transform: translate(-10px, 10px); }
+    100% { transform: translate(0px, 0px); }
+}
+._Window_Side:hover {
+    animation-play-state: paused;
+}
+
+._Window_Update { 
+    
+    top: 280px;
+    animation-delay: -1500s;
+}
+
+._Window_Nav { 
+    top: 580px;
+    animation-delay: -1000s;
+}
+
+._Window_Senko { 
+    top: 420px;
+    left: min(900px, 80vw);
+    animation-delay: -1200s;
+}
 
 ._Nav_List {
     margin: 0;
@@ -352,13 +433,26 @@ body
     align-items: center;
     margin: 0 -16px 2px -16px;
     padding: 4px 16px;
-    width: calc(clamp(200px, 20vw, 300px) - 32px);
+    width: calc(clamp(200px, 20vw, 220px) - 32px);
     transition: all 0.3s ease-in-out;
 }
 
-._Nav_List li:hover {
-    background-color: rgba(128, 0, 255, 0.3);
+._ListYellow {
+    background-color: rgba(255, 255, 0, 0.05); 
 }
+
+._ListPink {
+    background-color: rgb(255, 0, 255, 0.05); 
+}
+
+._ListCyan {
+    background-color: rgb(0, 255, 255, 0.05); 
+}
+
+._Nav_List li:hover {
+     background-color: rgb(255, 255, 255, 0.15);
+}
+
 
 @keyframes _AniRot {
     from {
@@ -382,7 +476,7 @@ body
 
 ._Nav_List li:hover ._Nav_Icon {
     animation-play-state: running;
-    transform: scale(1.1);
+    transform: scale(1.3);
     image-rendering: pixelated;
 }
 

@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'spamtombutton.gif', 'srgb-now.gif', 'steam.gif', 'vocaloid.png',
             'vscbutton.gif', 'xp.gif', 'queen.gif', 'Tails7.png', 'tumblr_0e9e8c986a91ff8c473585a70f0428ff_62f51094_100.webp',
             'frutigeraeroarchive_2.png', 'tumblr_07f320adf87aae019e9f2a604f869467_da6cdc50_100.webp', 'tumblr_32ee9dd279018f9709f003e4551efa04_36081447_100.webp',
-            'tumblr_4874a8b02f5d2d6638c8fb8b68487825_24f65212_100.gif', 'tumblr_b6ece958592a05678b93636e10c3f505_c6a7ea9e_100.gif'
+            'tumblr_4874a8b02f5d2d6638c8fb8b68487825_24f65212_100.gif', 'tumblr_b6ece958592a05678b93636e10c3f505_c6a7ea9e_100.gif',
+            '2ktan.png', 'konata.gif', 'WEBP.gif'
         ];
         
         _ButtonFiles = Fun_Shuffle([..._ButtonFiles]);
