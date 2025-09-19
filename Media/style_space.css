@@ -88,7 +88,10 @@ body
     position: absolute;
     top: 0;
     left: 0;
+
     width: 100%;
+    max-width: 1080px;
+    min-width: 1024px;
     height: 100%;
     pointer-events: none;
     z-index: 1;
@@ -373,6 +376,7 @@ body
 
     width: 100%;
     max-width: 1080px;
+    min-width: 1024px;
 
     position: relative;
 
@@ -417,7 +421,7 @@ body
 
 ._Window_Senko { 
     top: 420px;
-    left: min(900px, 80vw);
+    left: min(900px, 100% - 180px);
     animation-delay: -1200s;
 }
 
