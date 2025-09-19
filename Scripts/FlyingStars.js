@@ -24,13 +24,13 @@
         _Star.style.pointerEvents = 'none';
 
         const _Size = Fun_Lerp(_SizeMin, _SizeMax);
-            _Star.style.width = `${_Size}px`;     _Star.style.height = `${_Size}px`;    _Star.style.zIndex = '9999';
+            _Star.style.width = `${_Size}px`;     _Star.style.height = `${_Size}px`;    _Star.style.zIndex = '-999';
 
         _Star.style.left = `${Fun_Lerp(0, window.innerWidth - _Size)}px`;
         _Star.style.top = `${Fun_Lerp(0, window.innerHeight - _Size)}px`;
 
         _Star.style.opacity = '0';
-        _Star.style.mixBlendMode = 'screen';
+        //_Star.style.mixBlendMode = 'screen';
         _Star.style.imageRendering = 'pixelated';
 
         let _Rot = Fun_Lerp(0, 360);
