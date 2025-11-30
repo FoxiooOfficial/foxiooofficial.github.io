@@ -1,0 +1,53 @@
+<div class="content-header">
+    <h1>Tails7 Mapper Object - Rotation Mode</h1>
+    <div class="date">29 November 2025</div>
+</div>
+
+<div class="main">
+    <div class="article-layout">
+        <div class="article-content">
+            
+            <div class="content-section">
+                <p>Rotation Mode w obiekcie <span class="code-object">Tails7 Mapper Object</span> jako zachowanie jest odpowiadanie za obrót obiektów z grupy <span class="code-object">3D.Objects Group</span>.</p>
+                <p>Tryb ten wykorzystuje dwie zmienne: <span class="code-variable">_RotationBase</span> i <span class="code-variable">_RotationMod</span>.</p>
+                <p><span class="code-variable">_RotationBase</span> jest automatycznie obliczany przez tryb a <span class="code-variable">_RotationMod</span> to wartość która do wyniku końcowego obrotu jest dodawana, przykładowo jak chcesz by do rotation dodać 5 stopni, to do tej zmiennej przypisujesz 5.</p>
+            <div class="content-section">
+                <h2>Różne tryby w Rotation Mode</h2>
+
+                <p>Rotation Mode ma swój jeden tryb który każdy obiekt z grupy <span class="code-object">3D.Objects Group</span> może indywidualnie się zachowywać.&nbsp;
+                    W zmiennej string <span class="code-string">_RotationMode</span> przypisujemy do niej wartość która określa dany tryb.
+                </p>
+                
+                <div class="tags-table-container">
+                    <table class="tags-table">
+                        <thead>
+                            <tr>
+                                <th>Wartość</th>
+                                <th>Opis</th>
+                                <th>Data dodania</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"DEFAULT"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zmienia obrót obiektu zależny od obrotu kamery w osi Y dla obiektów z grupy <span class="code-object">3D.Objects Group</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_18.05.25</span></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+            <div class="warning-box">
+                    <h3>Note</h3>
+                    <p>Ustawienie wartości innej niż z listy spowoduje ignorowanie tego zachowania</p>
+                </div>
+        
+    </div>
+</div>

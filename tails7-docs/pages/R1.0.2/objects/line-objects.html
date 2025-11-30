@@ -1,0 +1,248 @@
+<div class="content-header">
+    <h1>Line Objects</h1>
+    <div class="date">29 November 2025</div>
+</div>
+
+<hr>
+
+<div class="main">
+
+        
+        <div class="content-section">
+            <p>
+                <span class="code-object">Line</span> nazwywamy te obiekty którę mają swój punkt początkowy i końcowy i przez te punkty jest rysowana linia 2D na ekranie.
+                <br><br>
+                Obiekty te głównie używają 2 osobnych <span class="code-variable">Sprite</span> do punktów <strong>A, B</strong>.
+                <br><br>
+                <img src="/tails7-docs/media/objects/line/0.png">
+                <br><br>
+                Każdy punkt ma swoją kolejność, zaczynając od punktu <strong>A</strong>, do punktu <strong>B</strong>.
+                <br><br>
+                Obiekt też ma cztery zachowania, <strong>Set Points and Other Varibles</strong>, <strong>Set Position, Rotation & Scale</strong>, <strong>Set Visibility</strong> i <strong>Set Texture</strong>.
+                Pierwsze zachowanie uzyskuje pozycję punktów A i B jak ich widoczność, drugie zachowanie wykorzystuje wartości uzyskane i ustawia obiekt na ekranie, ustawia jego skale gdzie ma się zaczynać i kończyć i oblicza kąt pod jakim ma być linia rysowania. Trzecie zachowanie ustawia widoczność linii, a czwarte ustawia teksturę linii na 1 <i>(Można to zmodyfikować jeśli chcesz by linia zmieniała teksutrę)</i>. 
+            </p>
+        </div>
+
+            <div class="content-section">
+                <h2>Zmienne w Line Objects</h2>
+
+                <p>Obiekt ten ma kilka zmiennych w sekcji <strong>Alterable Values</strong>
+                </p>
+                
+                <div class="tags-table-container">
+                    <table class="tags-table">
+                        <thead>
+                            <tr>
+                                <th>Zmienna</th>
+                                <th>Domyślna wartość</th>
+                                <th>Opis</th>
+                                <th>Data dodania</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointX_A</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna która przechowuje wartość X punktu A w shaderze polygonu.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointY_A</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna która przechowuje wartość Y punktu A w shaderze polygonu.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointX_B</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna która przechowuje wartość X punktu B w shaderze polygonu.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointY_B</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna która przechowuje wartość Y punktu B w shaderze polygonu.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Thickness</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">2</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna określa grubość linii rysowanej na ekranie.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_TextureSizeX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">1</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Deklaruj tu rozmiar tekstury linii której używasz w osi X.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                                <td>
+                                    <span class="code-variable">_LayerOffset</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Podobnie jak w <span class="code-object">Sprite</span>, przesuwa obiekt w warstwach, dodatnia wartość to obiekt będzie nad innymi obiektami, wartość negatywan to wręcz przeciwnie.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Layer</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna która przechowuje na której warstwie jest obiekt polygonu, domyślnie jest to średnia punktu A i B.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            
+                <p>Obiekt ten ma kilka zmiennych w sekcji <strong>Flags</strong>
+                </p>
+                
+                    <div class="tags-table-container">
+                        <table class="tags-table">
+                            <thead>
+                                <tr>
+                                    <th>Zmienna</th>
+                                    <th>Domyślna wartość</th>
+                                    <th>Opis</th>
+                                    <th>Data dodania</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_Active</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">(Automatically)</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        Zmienna ta określa stan czy polygon jest aktywny, jeśli nie to ustawia prawidłową pozycję na erkanie i skale obiektu po czy zmienia wartość na 1.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_Visibility_A</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">(Automatically)</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        Zmienna ta określa czy punkt A jest widoczny.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_Visibility_B</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">(Automatically)</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        Zmienna ta określa czy punkt B jest widoczny.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_IgnoreShowing</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">0</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        Zmienna ta określa czy polygon ma ignorować ustawienia widoczności punktów A, B, C, D i być nie widocznym zawsze czy kiedy jest potrzeba.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_QualityScale</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">0</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        Zmienna określa czy linia ma być rysowana w wyższej jakości kosztem wydajności, tzn. Ustawiona na 0, jest używane filtrowanie najbliży sąsiad (rozpikselizowany), ustawiona na 1 to używa filtrowania Anti-Aliasing.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+
+</div>

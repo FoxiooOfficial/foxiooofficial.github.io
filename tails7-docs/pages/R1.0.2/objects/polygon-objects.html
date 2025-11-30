@@ -1,0 +1,315 @@
+<div class="content-header">
+    <h1>Polygon Objects</h1>
+    <div class="date">29 November 2025</div>
+</div>
+
+<hr>
+
+<div class="main">
+
+        
+        <div class="content-section">
+            <p>
+                <span class="code-object">Polygony</span> nazywamy te obiekty które używają shadera z rodziny <strong>Quad</strong> albo podobnych które przekrształcamy 4 punkty tak by modyfikowały kształt dający złudzenie 3D.
+                <br><br>
+                Obiekty te głównie używają 4 osobnych <span class="code-variable">Sprite</span> do punktów <strong>A, B, C, D</strong>.
+                <br><br>
+                <img src="/tails7-docs/media/objects/polygon/0.png">
+                <br><br>
+                Każdy punkt ma swoją kolejność, zaczynając od lewego górnego rogu (<strong>A (0; 0)</strong>), następnie prawy górny (<strong>B (1; 0)</strong>), potem prawy dolny (<strong>C (1; 1)</strong>), i na końcu lewy dolny (<strong>D (0; 1)</strong>).
+                <br><br>
+                Polygon też ma dwa zachowania, <strong>Startup</strong> i <strong>Set Points</strong>.
+                Pierwsze zachowanie inicjalizuje polygon i roszerza go by wypełnić ekran, na tym etapie polygon może zostać skalowany co jest poinformowane w notce niżej.
+                Drugie zachowanie <strong>Set Points</strong> ustawia punkty A, B, C, D w odpowiednich miejscach na ekranie i ustala widoczność polygonu.
+            </p>
+        </div>
+
+        <div class="warning-box">
+            <h3>Note</h3>
+            <p>Polygony nie są idealne i mogą znikać gdy jesteśmy zbyt blisko albo pod prostym kątem kamery mogą być artefakty wizualne, jest to winna shaderów który częściowo naprawiłem.
+            </p>
+            <br>
+            <p><b>Polygony nie są domyślnie tworzone gdy API graficzne jest Direct3D8, CPU albo DirectDraw!</b></p>
+            </p>
+        </div>
+
+            <div class="content-section">
+                <h2>Zmienne w Polygon Objects</h2>
+
+                <p>Obiekt ten ma kilka zmiennych w sekcji <strong>Alterable Values</strong>
+                </p>
+                
+                <div class="tags-table-container">
+                    <table class="tags-table">
+                        <thead>
+                            <tr>
+                                <th>Zmienna</th>
+                                <th>Domyślna wartość</th>
+                                <th>Opis</th>
+                                <th>Data dodania</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointX_A</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna która przechowuje wartość X punktu A w shaderze polygonu.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointY_A</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna która przechowuje wartość Y punktu A w shaderze polygonu.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointX_B</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna która przechowuje wartość X punktu B w shaderze polygonu.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointY_B</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna która przechowuje wartość Y punktu B w shaderze polygonu.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointX_C</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna która przechowuje wartość X punktu C w shaderze polygonu.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointY_C</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna która przechowuje wartość Y punktu C w shaderze polygonu.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointX_D</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna która przechowuje wartość X punktu D w shaderze polygonu.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointY_D</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna która przechowuje wartość Y punktu D w shaderze polygonu.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_LayerOffset</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Podobnie jak w <span class="code-object">Sprite</span>, przesuwa obiekt w warstwach, dodatnia wartość to obiekt będzie nad innymi obiektami, wartość negatywan to wręcz przeciwnie.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Layer</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna która przechowuje na której warstwie jest obiekt polygonu, domyślnie jest to średnia punktu A i C.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">FixValue</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">1</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna ta częściowo naprawia błędy wizualne polygonów przy prostych kątach kamery kosztem przesunięciem punktu C.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            
+                <p>Obiekt ten ma kilka zmiennych w sekcji <strong>Flags</strong>
+                </p>
+                
+                    <div class="tags-table-container">
+                        <table class="tags-table">
+                            <thead>
+                                <tr>
+                                    <th>Zmienna</th>
+                                    <th>Domyślna wartość</th>
+                                    <th>Opis</th>
+                                    <th>Data dodania</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_Active</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">(Automatically)</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        Zmienna ta określa stan czy polygon jest aktywny, jeśli nie to ustawia prawidłową pozycję na erkanie i skale obiektu po czy zmienia wartość na 1.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_Visibility_A</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">(Automatically)</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        Zmienna ta określa czy punkt A jest widoczny.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_Visibility_B</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">(Automatically)</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        Zmienna ta określa czy punkt B jest widoczny.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_Visibility_C</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">(Automatically)</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        Zmienna ta określa czy punkt C jest widoczny.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_Visibility_D</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">(Automatically)</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        Zmienna ta określa czy punkt D jest widoczny.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_IgnoreShowing</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">0</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        Zmienna ta określa czy polygon ma ignorować ustawienia widoczności punktów A, B, C, D i być nie widocznym zawsze czy kiedy jest potrzeba.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+
+</div>

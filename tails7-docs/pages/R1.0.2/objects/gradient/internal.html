@@ -1,0 +1,78 @@
+<div class="content-header">
+    <h1>Tails7 Background Gradient - Internal</h1>
+    <div class="date">29 November 2025</div>
+</div>
+
+<div class="main">
+    <div class="article-layout">
+        <div class="article-content">
+            
+            <div class="content-section">
+                <p>Obiekt <span class="code-object">Tails7 Internal Background Gradient</span> tworzy gradient od linii horyzontu skierowany w <strong>dół</strong> oraz zmieniając teksturę na taki który ma gradient,
+                    ustawianiu obiektu w konkretnej pozycji by była zawsze na horyzoncie oraz ma ustawiony odpowiedną rotację by się zgadzała z rotacją kamery w osi Y <i>(oraz do rotacji jest dodawane 180°).</i></p>
+                
+                <p><strong>Dodatkowo również do skali obiektu jest brana pod uwaga pozycja Z kamery.</strong></p>
+
+                <p>Jego pozycja w warstwach jest równa <span class="code-variable">_TargetZLayer( "Tails7 Info Object" )</span>, co oznacza że będzie targetować na taką samą warstwę co obiektu <span class="code-object">Tails7 Render Ground</span> jednak zawszę będzie się wyświetlać nad nim.</p>
+
+                <p>Wszystkie operacje te są w zachowaniu <strong>Mapping</strong> tego obiektu.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Zimenne w tym obiekcie</h2>
+
+                <p>Obiekt ten ma dwie zmienne w sekcji <strong>Alterable Variables</strong></p>
+                
+                <table class="tags-table">
+                    <thead>
+                        <tr>
+                            <th>Zmienna</th>
+                            <th>Domyślna wartość</th>
+                            <th>Opis</th>
+                            <th>Data dodania</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="code-variable">_Size</span>
+                                <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
+                            </td>
+                            <td>
+                                <span class="code-variable">0.5</span>
+                                <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
+                            </td>
+                            <td>
+                                Zmienna ta określa wysokość gradientu w osi Y.
+                            </td>
+                            <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="code-variable">_Calc</span>
+                                <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
+                            </td>
+                            <td>
+                                <span class="code-variable">(Automatically)</span>
+                                <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
+                            </td>
+                            <td>
+                                Zmienna ta jest używana do tymczasowych obliczeń dla zachowania <strong>Mapping</strong> by prawidłowo umieścić obiekt na danej pozycji.
+                            </td>
+                            <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="warning-box">
+                <h3>Note</h3>
+                <p>Obiekt ten miał kilka poprawek na przestrzeni wersji:<br>
+                    Od wersji <b>R1.0.2_18.05.25</b> przepisano obiekt na nowo by współgrał z rotacją kamery w osi Y.<br>
+                    Od wersji <b>R1.0.2_29.11.25</b> dodano zależność od zmiennych <b>_RotYPointX</b> i <b>_RotYPointY</b> obiektu <b>Tails7 Info Object</b>.<br>
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</div>

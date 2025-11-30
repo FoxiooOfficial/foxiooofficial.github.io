@@ -13,10 +13,7 @@ function Fun_WindowFloat() {
         
         const _Off = Math.round(200 + Math.random() * 1000);
         window.style.animationDelay = `-${_Off}s`;
-        
-        window.style.transform = 'translate3d(0, 0, 0)';
     });
 }
 
-// Uruchom inicjalizację po załadowaniu strony
 document.addEventListener('DOMContentLoaded', Fun_WindowFloat);
