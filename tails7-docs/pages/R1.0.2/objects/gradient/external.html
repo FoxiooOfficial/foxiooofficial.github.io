@@ -8,26 +8,25 @@
         <div class="article-content">
             
             <div class="content-section">
-                <p>Obiekt <span class="code-object">Tails7 External Background Gradient</span> tworzy gradient od linii horyzontu skierowany w <strong>górę</strong> oraz zmieniając teksturę na taki który ma gradient
-                    , ustawianiu obiektu w konkretnej pozycji by była zawsze na horyzoncie oraz ma ustawiony odpowiedną rotację by się zgadzała z rotacją kamery w osi Y.</p>
+                <p>The <span class="code-object">Tails7 External Background Gradient</span> object creates a gradient extending <strong>upwards</strong> from the horizon line. It changes the texture to one containing a gradient, positions the object so it remains constantly on the horizon, and adjusts its rotation to match the camera's Y-axis rotation.</p>
                 
-                <p>Jego pozycja w warstwach jest równa <span class="code-variable">_TargetZLayer( "Tails7 Info Object" ) - 1</span>, co oznacza że będzie targetować o jedną warstwę mniej od obiektu <span class="code-object">Tails7 Render Ground</span>.</p>
+                <p>Its layer position is equal to <span class="code-variable">_TargetZLayer( "Tails7 Info Object" ) - 1</span>, meaning it will target a layer one lower than the <span class="code-object">Tails7 Render Ground</span> object.</p>
 
-                <p>Wszystkie operacje te są w zachowaniu <strong>Mapping</strong> tego obiektu.</p>
+                <p>All these operations are handled within the **Mapping** behavior of this object.</p>
             </div>
 
             <div class="content-section">
-                <h2>Zimenne w tym obiekcie</h2>
+                <h2>Variables in this object</h2>
 
-                <p>Obiekt ten ma dwie zmienne w sekcji <strong>Alterable Variables</strong></p>
+                <p>This object has two variables in the <strong>Alterable Variables</strong> section</p>
                 
                 <table class="tags-table">
                     <thead>
                         <tr>
-                            <th>Zmienna</th>
-                            <th>Domyślna wartość</th>
-                            <th>Opis</th>
-                            <th>Data dodania</th>
+                            <th>Variable</th>
+                            <th>Default Value</th>
+                            <th>Description</th>
+                            <th>Date Added</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -41,7 +40,7 @@
                                 <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
                             </td>
                             <td>
-                                Zmienna ta określa wysokość gradientu w osi Y.
+                                This variable determines the height of the gradient on the Y-axis.
                             </td>
                             <td><span class="code-version">R1.0.1_10.05.25</span></td>
                         </tr>
@@ -55,7 +54,7 @@
                                 <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
                             </td>
                             <td>
-                                Zmienna ta jest używana do tymczasowych obliczeń dla zachowania <strong>Mapping</strong> by prawidłowo umieścić obiekt na danej pozycji.
+                                This variable is used for temporary calculations for the <strong>Mapping</strong> behavior to correctly position the object.
                             </td>
                             <td><span class="code-version">R1.0.1_10.05.25</span></td>
                         </tr>
@@ -65,12 +64,13 @@
 
             <div class="warning-box">
                 <h3>Note</h3>
-                <p>Obiekt ten miał kilka poprawek na przestrzeni wersji:<br>
-                    Od wersji <b>R1.0.2_18.05.25</b> przepisano obiekt na nowo by współgrał z rotacją kamery w osi Y.<br>
-                    Od wersji <b>R1.0.2_29.11.25</b> dodano zależność od zmiennych <b>_RotYPointX</b> i <b>_RotYPointY</b> obiektu <b>Tails7 Info Object</b>.<br>
+                <p>This object has had several revisions across versions:<br>
+                    As of version <b>R1.0.2_18.05.25</b>, the object was rewritten to align with the camera's Y-axis rotation.<br>
+                    As of version <b>R1.0.2_29.11.25</b>, a dependency on the variables <b>_RotYPointX</b> and <b>_RotYPointY</b> of the <b>Tails7 Info Object</b> was added.<br>
                 </p>
             </div>
             
         </div>
     </div>
 </div>
+```
