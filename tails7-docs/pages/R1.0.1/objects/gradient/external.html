@@ -1,5 +1,5 @@
 <div class="content-header">
-    <h1>Tails7 Background Gradient - Internal</h1>
+    <h1>Tails7 Background Gradient - External</h1>
     <div class="date">29 November 2025</div>
 </div>
 
@@ -8,11 +8,9 @@
         <div class="article-content">
             
             <div class="content-section">
-                <p>The <span class="code-object">Tails7 Internal Background Gradient</span> object creates a gradient extending <strong>downwards</strong> from the horizon line. It changes the texture to one containing a gradient, positions the object so it remains constantly on the horizon, and adjusts its rotation to match the camera's Y-axis rotation <i>(and 180° is added to the rotation).</i></p>
+                <p>The <span class="code-object">Tails7 External Background Gradient</span> object creates a gradient extending <strong>upwards</strong> from the horizon line. It changes the texture to one containing a gradient, positions the object so it remains constantly on the horizon, and adjusts its rotation to match the camera's Y-axis rotation.</p>
                 
-                <p><strong>Additionally, the camera's Z position is also taken into account for the object's scale.</strong></p>
-
-                <p>Its layer position is equal to <span class="code-variable">_TargetZLayer( "Tails7 Info Object" )</span>, meaning it will target the same layer as the <span class="code-object">Tails7 Render Ground</span> object, but it will always be displayed above it.</p>
+                <p>Its layer position is equal to <span class="code-variable">_TargetZLayer( "Tails7 Info Object" ) - 1</span>, meaning it will target a layer one lower than the <span class="code-object">Tails7 Render Ground</span> object.</p>
 
                 <p>All these operations are handled within the **Mapping** behavior of this object.</p>
             </div>
@@ -38,7 +36,7 @@
                                 <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
                             </td>
                             <td>
-                                <span class="code-variable">0.5</span>
+                                <span class="code-variable">2.0</span>
                                 <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
                             </td>
                             <td>
@@ -63,15 +61,8 @@
                     </tbody>
                 </table>
             </div>
-
-            <div class="warning-box">
-                <h3>Note</h3>
-                <p>This object has had several revisions across versions:<br>
-                    As of version <b>R1.0.2_18.05.25</b>, the object was rewritten to align with the camera's Y-axis rotation.<br>
-                    As of version <b>R1.0.2_29.11.25</b>, a dependency on the variables <b>_RotYPointX</b> and <b>_RotYPointY</b> of the <b>Tails7 Info Object</b> was added.<br>
-                </p>
-            </div>
             
         </div>
     </div>
 </div>
+```

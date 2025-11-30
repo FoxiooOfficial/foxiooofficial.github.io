@@ -12,7 +12,7 @@
                 
                 <p>Initially, in this behavior, the closest <span class="code-object">Tails 7 Render Ground</span> relative to the <span class="code-object">Tails7 Center Point</span> is always selected. This is intended to identify the main object that will be used for calculations. In this event, we set the most important variables on the <span class="code-object">Tails7 Cache</span> object that will be used for Mapping Mode calculations.</p>
 
-                <p>Next, this behavior obtains the <span class="code-variable">_DistanceX</span> and <span class="code-variable">_DistanceY</span> variables of objects from the <span class="code-object">3D.Objects Group</span>, which were calculated by <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/distance-mode.html">Distance Mode</a>, and converts them to the final variables (<span class="code-variable">_FinalX</span> and <span class="code-variable">_FinalY</span>) for a position modified by perspective, similar to a shader.</p>
+                <p>Next, this behavior obtains the <span class="code-variable">_DistanceX</span> and <span class="code-variable">_DistanceY</span> variables of objects from the <span class="code-object">3D.Objects Group</span>, which were calculated by <a class="button" href="/tails7-docs/pages/R1.0.1/objects/mapper-object/distance-mode.html">Distance Mode</a>, and converts them to the final variables (<span class="code-variable">_FinalX</span> and <span class="code-variable">_FinalY</span>) for a position modified by perspective, similar to a shader.</p>
 
             <div class="content-section">
                 <h2>Different modes in Mapping Mode</h2>
@@ -46,30 +46,6 @@
                                 </td>
                                 <td>An additional mode that works similarly to <span class="code-string">"R1.0.1"</span> but does not use the Z position for camera calculation, ideal for background objects such as clouds, stars, sun, mountains, and similar elements. <b>This version does not use all camera rotations!</b></td>
                                 <td><span class="code-version">R1.0.1_10.05.25</span></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="code-string">"R1.0.2"</span>
-                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
-                                </td>
-                                <td>Currently the main mode that converts the initial position to fit the perspective in the shader.<br><br>
-                                    <strong>
-                                    This is a fix for the <span class="code-string">"R1.0.1"</span> mode that takes into account the camera rotation on every axis.
-                                    </strong>
-                                </td>
-                                <td><span class="code-version">R1.0.2_18.05.25</span></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="code-string">"R1.0.2_SKY"</span>
-                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
-                                </td>
-                                <td>An additional mode that works similarly to <span class="code-string">"R1.0.2"</span> but does not use the Z position for camera calculation, ideal for background objects such as clouds, stars, sun, mountains, and similar elements.<br><br>
-                                    <strong>
-                                    This is a fix for the <span class="code-string">"R1.0.1_SKY"</span> mode that takes into account the camera rotation on every axis.
-                                    </strong>
-                                </td>
-                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
                             </tr>
                         </tbody>
                     </table>

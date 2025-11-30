@@ -11,14 +11,6 @@
                 <p>Visible Mode in the <span class="code-object">Tails7 Mapper Object</span> is a behavior responsible for determining when an object from the <span class="code-object">3D.Objects Group</span> should be visible and when it shouldn't. Specifically, it sets the <span class="code-flag">_Visible</span> flag and, depending on the mode, can actually hide/show the object.</p>
             </div>
 
-                <div class="warning-box">
-                    <h3>Note</h3>
-                    <p>As of version <strong>R1.0.2_29.11.25</strong>, many modes have changed their names:</p>
-                    <p>From <strong>"DEFAULTEX"</strong> to <strong>"DEFAULT_EX"</strong>,</p>
-                    <p>From <strong>"CLOSEFADE"</strong> to <strong>"CLOSE_FADE"</strong>,</p>
-                    <p>From <strong>"CLOSEFADEEX"</strong> to <strong>"CLOSE_FADE_EX"</strong>,</p>
-                </div>
-
             <div class="content-section">
                 <h2>Different modes in Visible Mode</h2>
 
@@ -51,7 +43,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <span class="code-string">"DEFAULT_EX"</span>
+                                    <span class="code-string">"DEFAULTX"</span>
                                     <button class="copy-button" onclick="copyCode(this)">Copy</button>
                                 </td>
                                 <td>
@@ -62,7 +54,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <span class="code-string">"CLOSE_FADE"</span>
+                                    <span class="code-string">"CLOSEFADE"</span>
                                     <button class="copy-button" onclick="copyCode(this)">Copy</button>
                                 </td>
                                 <td>
@@ -74,35 +66,13 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <span class="code-string">"CLOSE_FADE_EX"</span>
+                                    <span class="code-string">"CLOSEFADEX"</span>
                                     <button class="copy-button" onclick="copyCode(this)">Copy</button>
                                 </td>
                                 <td>
                                     A mode similar to <span class="code-string">"DEFAULT"</span>, but this one is intended for **polygon points**, and the object's visibility range is <span class="code-variable">180° (<=90° / 270°>=)</span>.
                                 </td>
                                 <td><span class="code-version">R1.0.1_10.05.25</span></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="code-string">"CLOSE_LINE"</span>
-                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
-                                </td>
-                                <td>
-                                    A mode similar to <span class="code-string">"DEFAULT"</span>, but this one is intended for **line points**, and the object's visibility range is <span class="code-variable">160° (<=80° / 280°>=)</span>.
-                                    <br>
-                                    <strong>(Also automatically sets the object's visibility)</strong>
-                                </td>
-                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="code-string">"CLOSE_LINE_EX"</span>
-                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
-                                </td>
-                                <td>
-                                    A mode similar to <span class="code-string">"DEFAULT"</span>, but this one is intended for **line points**, and the object's visibility range is <span class="code-variable">160° (<=80° / 280°>=)</span>.
-                                </td>
-                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
                             </tr>
 
                         </tbody>
