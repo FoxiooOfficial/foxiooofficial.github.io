@@ -1,0 +1,556 @@
+<div class="content-header">
+    <h1>Tails7 Info Object</h1>
+    <div class="date">29 November 2025</div>
+</div>
+
+<hr>
+
+<div class="main">
+
+        
+        <div class="content-section">
+            <p>
+                <span class="code-object">Tails7 Info Object</span> jest to obiekt który przechowuje podstawowe informację w zmiennych, głównie dla <span class="code-object">Tails7 Ground Render</span>.
+                <br><br>
+                Obiekt jest również wykorzystywany w zachowaniach w obiekcie <span class="code-object">Tails7 Mapper Object</span>.
+            </p>
+        </div>
+
+            <div class="content-section">
+                <h2>Zmienne w Tails7 Info Object</h2>
+
+                <p>Obiekt ten ma tylko jedną zmienną w sekcji <strong>Alterable Values</strong>
+                </p>
+                
+                <div class="tags-table-container">
+                    <table class="tags-table">
+                        <thead>
+                            <tr>
+                                <th>Zmienna</th>
+                                <th>Domyślna wartość</th>
+                                <th>Opis</th>
+                                <th>Data dodania</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_WorldSize</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">1</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna ta określa poziom zagęszczenia świata, domyślnie jest ustawiona na 1, jeśli przykładowo ustawimy na 2 to dystans poruszania się, jak i obiektów będzie 2 razy mniejsza.<br>
+                                    <i>(Nie zalecam zmieniać tej zmiennej)</i>
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_TargetZLayer</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">2</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna ta określa na której warstwie ma zostać stworzony obiekt <span class="code-object">Tails7 Render Ground</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PosX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna zwraca informację o pozycji X obiektu <span class="code-object">Tails7 Camera Object</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PosY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna zwraca informację o pozycji Y obiektu <span class="code-object">Tails7 Camera Object</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PosZ</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">1.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna zawiera informację o pozycji Z oraz może jednocześnie ustawiać tą pozycję Z kamery.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna zawiera informację o rotacji w osi X oraz może jednocześnie ustawiać tą rotację X kamery.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna zawiera informację o rotacji w osi Y oraz może jednocześnie ustawiać tą rotację Y kamery.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotZ</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna zawiera informację o rotacji w osi Z oraz może jednocześnie ustawiać tą rotację Z kamery.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Distortion</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">1.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna zawiera informację o stopniu distortion oraz może jednocześnie ustawiać ten distortion kamery.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotXPointX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna zawiera informację o przesunięciu punktu rotacji X w osi X oraz może jednocześnie ustawiać tą wartość.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotXPointY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna zawiera informację o przesunięciu punktu rotacji X w osi Y oraz może jednocześnie ustawiać tą wartość.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotYPointX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna zawiera informację o przesunięciu punktu rotacji Y w osi X oraz może jednocześnie ustawiać tą wartość.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotYPointY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna zawiera informację o przesunięciu punktu rotacji Y w osi Y oraz może jednocześnie ustawiać tą wartość.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Scale</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">1.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna zawiera informację o skali tekstury ground w obu osiach oraz może jednocześnie ustawiać tą wartość.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_ScaleX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">1.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna zawiera informację o skali tekstury ground w osi X oraz może jednocześnie ustawiać tą wartość.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_ScaleY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">1.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna zawiera informację o skali tekstury ground w osi Y oraz może jednocześnie ustawiać tą wartość.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PosOffsetX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna zawiera informację o przesunięciu tekstury w osi X (podawana w wartościach texCoordowych czyli od 0 do 1) oraz może jednocześnie ustawiać tą wartość.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PosOffsetY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna zawiera informację o przesunięciu tekstury w osi Y (podawana w wartościach texCoordowych czyli od 0 do 1) oraz może jednocześnie ustawiać tą wartość.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_TextureID</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">1</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna zawiera informację jaki frame tekstury ground ma być użyty podczas tworzenia obiektu <span class="code-object">Tails7 Ground Render</span> oraz może jednocześnie ustawiać tą wartość.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_TextureSizeX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">2048</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna zawiera informację o skali tekstury ground w osi X, podobnie jak <span class="code-variable">_ScaleX</span> jednak tu używa się jednostki pikseli oraz może jednocześnie ustawiać tą wartość.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_TextureSizeY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">2048</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna zawiera informację o skali tekstury ground w osi Y, podobnie jak <span class="code-variable">_ScaleY</span> jednak tu używa się jednostki pikseli oraz może jednocześnie ustawiać tą wartość.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_ResolutionX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">1280</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmmienna ta określa jaki targetową rozdzielczość w osi X planujesz, ma to znaczenie dla obliczeń które używają chociażby <strong>factoru</strong>.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_ResolutionY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">720</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmmienna ta określa jaki targetową rozdzielczość w osi Y planujesz, ma to znaczenie dla obliczeń które używają chociażby <strong>factoru</strong>.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RenderMinimumSize</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna ta zaiwera informacje o najmniejszej wartości z pośród <span class="code-variable">_ResolutionX</span> i <span class="code-variable">_ResolutionY</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RenderMiddleSizeX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna ta zwraca <span class="code-variable">Frame Width / 2.0</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RenderMiddleSizeY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna ta zwraca <span class="code-variable">Frame Height / 2.0</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_ScaleFactorX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna ta zwraca <span class="code-variable">Frame Width / ( _ResolutionX( "Tails7 Info Object" ) + 0.0 )</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_ScaleFactorY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna ta zwraca <span class="code-variable">Frame Height / ( _ResolutionY( "Tails7 Info Object" ) + 0.0 )</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_WidthRatio</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna ta zwraca <span class="code-variable">Frame Width / 320.0</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_AspectCorrection</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna ta zwraca <span class="code-variable">1.25 - ( _WidthRatio( "Tails7 Info Object" ) - 1.0 ) * 0.3</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+                <p>Obiekt ten ma tylko jedną zmienną w sekcji <strong>Alterable Strings</strong>
+                </p>
+                
+                <div class="tags-table-container">
+                    <table class="tags-table">
+                        <thead>
+                            <tr>
+                                <th>Zmienna</th>
+                                <th>Domyślna wartość</th>
+                                <th>Opis</th>
+                                <th>Data dodania</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-string">_Version</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-string">R1.0.2_29.11.25</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna ta informuje jaką aktualnie wersję Tails7 używasz.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-string">_API</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-string">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna informuje jakiego akutalnie API graficznego używa gra jeśli działa projekt na systemie <strong>Windows</strong>. Tekst może zawierać: 
+                                    <span class="code-string">Direct3D8</span>, <span class="code-string">Direct3D9</span>, <span class="code-string">DirectD3D11</span>, <span class="code-string">DirectDraw</span> lub <span class="code-string">CPU</span>
+
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Obiekt ten ma tylko jedną zmienną w sekcji <strong>Flags</strong>
+                </p>
+                
+                <div class="tags-table-container">
+                    <table class="tags-table">
+                        <thead>
+                            <tr>
+                                <th>Zmienna</th>
+                                <th>Domyślna wartość</th>
+                                <th>Opis</th>
+                                <th>Data dodania</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-bool">_Update</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-bool">0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna ta aktywuje tworzenie obietków <span class="code-object">Tails7 Ground Render</span> od nowa. Przydatne jest gdy chcesz zmienić teksutrę obiektu ziemi jeśli tekstura ma inną rozdzielczość.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-bool">_IsUpdating</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-bool">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zmienna tymczasowa która informuje o statusie tworzenia obiektów <span class="code-object">Tails7 Ground Render</span> gdy flaga <span class="code-bool">_Update</span> jest aktywowana.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+</div>

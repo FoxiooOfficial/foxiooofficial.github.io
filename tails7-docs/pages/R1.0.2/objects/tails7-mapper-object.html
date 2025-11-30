@@ -1,0 +1,28 @@
+<div class="content-header">
+    <h1>Tails7 Mapper Object</h1>
+    <div class="date">29 November 2025</div>
+</div>
+<div class="main">
+    <div class="article-layout">
+
+         <div class="content-section">
+            <p><span class="code-object">Tails7 Mapper Object</span> jest odpowiedzialny za takie operacje jak: ustawianie pozycji, skalowanie, obracanie, warstwowanie dla <strong>WSZYSTKICH</strong> obiektów <span class="code-object">3D.Objects Group</span> gdy są aktywne.</p>
+            <p>Dzieje się tak gdyż obiekt ten ma w sobie kilka zachowań które zachowują pewną ciągłość.</p>
+                <img id="svg-icon" src="/tails7-docs/media/objects/mapper/chain.png" alt="Schemat łańcucha zachowań">
+            <p>Nazywamy to <strong>"Behavior chain mapping for 3D objects.Objects Group executable by Tails7 Mapper Object"</strong> <i>(Bardzo długa nazwa, wiem)</i>, albo poprostu <strong>"łańcuchem"</strong>.</p>
+            <br>
+        <h2>Kolejność łańcucha</h2>
+            <p>Sekwencja łańcucha i kolejność następujących zachowań:</p>
+            <ol style="padding-left: 30px">
+                <li><a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/distance-mode.html">Distance Mode</a> - Ustawia dystans targetowej pozycji <span class="code-object">3D.Object Group</span> a punktem odniesienia <i>(Głównie kamerą)</i>.</li>
+                <li><a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-mode.html">Mapping Mode</a> - Stosowane są kalkulacje odwrotności shadera by przekształcić daną pozycję przez perspektywę by była adekwatna z shaderem.</li>
+                <li><a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-screen-mode.html">Mapping Screen Mode</a> - Wyświetla wynik <strong>Mapping Mode</strong> jednak może też te wyniki zmodyfikować zależnie od trybu.</li>
+                <li><a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/scale-mode.html">Scale Mode</a> - Skaluje obiekt by dopasować go do kalkulacji z <strong>Mapping Mode</strong>.</li>
+                <li><a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/layer-mode.html">Layer Mode</a> - Warstwuje każdy obiekt indywidualnie tak by zdecydować który ma być na wieszchu a który podspodem.</li>
+                <li><a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/visible-mode.html">Visible Mode</a> - Określa kiedy obiekt ma być widoczny a kiedy nie.</li>
+                <li><a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/rotation-mode.html">Rotation Mode</a> - Obraca każdy obiekt.</li>
+            </ol>
+
+         </div>
+    </div>
+</div>

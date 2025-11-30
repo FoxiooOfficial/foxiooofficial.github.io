@@ -1,0 +1,446 @@
+<div class="content-header">
+    <h1>Tails7 Cache Object</h1>
+    <div class="date">29 November 2025</div>
+</div>
+
+<hr>
+
+<div class="main">
+
+        
+        <div class="content-section">
+            <p>
+                <span class="code-object">Tails7 Cache Object</span> pełni role jako kontener z gotowymi wynikami do obliczeń zachowania <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-mode.html">Mapping Mode</a>
+                obiektu <span class="code-object">Tails7 Mapper Object</span>.
+                <br><br>
+                Są one automatyczne obliczane przez wybranie najbliżeszego obiektu <span class="code-object">Tails7 Render Ground</span> wględem <span class="code-object">Tails7 Center Pointer</span>.
+            </p>
+        </div>
+
+        <div class="warning-box">
+            <h3>Note</h3>
+            <p>Od wersji <strong>R1.0.2_29.11.25</strong> obiekt ten został dodany, mogą występować problemy z kompatyblinością z starszymi wydaniami Tails7.</p>
+            </p>
+        </div>
+
+            <div class="content-section">
+                <h2>Zmienne w Tails7 Cache Object</h2>
+
+                <p>Obiekt ten ma kilka zmiennych w sekcji <strong>Alterable Values</strong>
+                </p>
+                
+                <div class="tags-table-container">
+                    <table class="tags-table">
+                        <thead>
+                            <tr>
+                                <th>Zmienna</th>
+                                <th>Domyślna wartość</th>
+                                <th>Opis</th>
+                                <th>Data dodania</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PosX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zwraca akutalną pozycję w osi X w shaderze nałożonym na <span class="code-object">Tails7 Render Ground</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PosY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                 Zwraca akutalną pozycję w osi Y w shaderze nałożonym na <span class="code-object">Tails7 Render Ground</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PosZ</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zwraca akutalną pozycję w osi Z w shaderze nałożonym na <span class="code-object">Tails7 Render Ground</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotZ</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zwraca akutalną rotacje w osi Z w shaderze nałożonym na <span class="code-object">Tails7 Render Ground</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_XScale</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zwraca skalę obiektu <span class="code-object">Tails7 Render Ground</span> w osi X.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_YScale</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zwraca skalę obiektu <span class="code-object">Tails7 Render Ground</span> w osi Y.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Distortion</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zwraca akutalną wartość _Distortion w shaderze nałożonym na <span class="code-object">Tails7 Render Ground</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_YTop</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zwraca akutalną pozycję granicy górnej (Top) obiektu <span class="code-object">Tails7 Render Ground</span> w osi Y.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_YBottom</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zwraca akutalną pozycję granicy dolnej (Bottom) obiektu <span class="code-object">Tails7 Render Ground</span> w osi Y.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_SinRotX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zwraca zmodyfikowaną wartość obrotu w osi X w shaderze nałożonym na <span class="code-object">Tails7 Render Ground</span>, czyli zwraca 
+                                <span class="code-variable">sin(_RotX( "Tails7 Cache" ) - 90.0)</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_CosRotX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zwraca zmodyfikowaną wartość obrotu w osi X w shaderze nałożonym na <span class="code-object">Tails7 Render Ground</span>, czyli zwraca 
+                                <span class="code-variable">cos(_RotX( "Tails7 Cache" ) - 90.0)</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_SinRotY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zwraca zmodyfikowaną wartość obrotu w osi Y w shaderze nałożonym na <span class="code-object">Tails7 Render Ground</span>, czyli zwraca 
+                                <span class="code-variable">sin(_RotY( "Tails7 Cache" ))</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_SinRotY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zwraca zmodyfikowaną wartość obrotu w osi Y w shaderze nałożonym na <span class="code-object">Tails7 Render Ground</span>, czyli zwraca 
+                                <span class="code-variable">cos(_RotY( "Tails7 Cache" ))</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_GroundX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zwraca akutalną pozycję obiektu <span class="code-object">Tails7 Render Ground</span> w osi X.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_GroundY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zwraca akutalną pozycję obiektu <span class="code-object">Tails7 Render Ground</span> w osi Y.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zwraca akutalną pozycję obiektu <span class="code-object">Tails7 Center Pointer</span> w osi X.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Zwraca akutalną pozycję obiektu <span class="code-object">Tails7 Center Pointer</span> w osi Y.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Precompute1</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zwraca skalę obiektu w osi X <span class="code-object">Tails7 Render Ground</span> dzielone przez pozycję Z, czyli dokładnie 
+                                <span class="code-variable">_XScale / _PosZ</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Precompute2</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zwraca skalę obiektu w osi Y <span class="code-object">Tails7 Render Ground</span> dzielone przez pozycję Z, czyli dokładnie 
+                                <span class="code-variable">_YScale / _PosZ</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Precompute3</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zwraca <span class="code-variable">1.0 / ( _YBottom( "Tails7 Cache" ) - _YTop( "Tails7 Cache" ) )</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Precompute4</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                  Zwraca <span class="code-variable">_Distortion( "Tails7 Cache" ) * 2.0 * _Precompute3( "Tails7 Cache" )</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Precompute5</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zwraca <span class="code-variable">_Precompute4( "Tails7 Cache" ) * _YScaleOver( "Tails7 Cache" )</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Precompute6</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zwraca <span class="code-variable">_Precompute4( "Tails7 Cache" ) * _XScaleOver( "Tails7 Cache" )</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Precompute7</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zwraca <span class="code-variable">1.0 / _PosZ( "Tails7 Cache" ) * 0.5</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_XScaleOver</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                               Zwraca <span class="code-variable">1.0 / _XScale( "Tails7 Cache" )</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_YScaleOver</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zwraca <span class="code-variable">1.0 / _YScale( "Tails7 Cache" )</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PiOver180</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Posiada wartość równej <span class="code-variable">π / 180</span>, czyli <span class="code-variable">0.0174533</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_TwoPi</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Posiada wartość równej <span class="code-variable">2π</span>, czyli <span class="code-variable">6.283185307179586</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+</div>

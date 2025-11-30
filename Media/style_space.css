@@ -25,12 +25,12 @@ body
     background-attachment: fixed;
     background-size: 50vw;
 
-    z-index: -99999;    opacity: 0.5;
+    z-index: -99999;    opacity: 0.95;
 
     animation: _Animation_Background_Scroll 240s linear infinite;
     will-change: transform;
     backface-visibility: hidden;
-    transform: translateZ(0);
+
 }
 
 ._Background_Layer_1 {
@@ -43,7 +43,7 @@ body
     background-attachment: fixed;
     background-size: 60vw;
 
-    opacity: 0.5;   z-index: -99998;    mix-blend-mode: screen;
+    opacity: 0.5;   z-index: -99998;    /*mix-blend-mode: screen;*/
 
     animation: _Animation_Background_Scroll 120s linear infinite;
 }
@@ -58,7 +58,7 @@ body
     background-attachment: fixed;
     background-size: 75vw;
 
-    opacity: 0.25;  z-index: -99997;    mix-blend-mode: screen;
+    opacity: 0.25;  z-index: -99997;    /*mix-blend-mode: screen;*/
     animation: _Animation_Background_Scroll 360s linear infinite;
 }
 
@@ -72,7 +72,7 @@ body
     background-attachment: fixed;
     background-size: 20vw;
 
-    opacity: 0.25;  z-index: -99996;    mix-blend-mode: screen;
+    opacity: 0.25;  z-index: -99996;    /*mix-blend-mode: screen;*/
 }
 
 @keyframes _Animation_Background_Scroll {
@@ -148,21 +148,6 @@ body
     position: relative;
 }
 
-@keyframes borderWave {
-    0% {
-        filter: hue-rotate(55deg);
-        transform: perspective(500px) rotateX(0deg) rotateY(0deg);
-    }
-    50% {
-        filter: hue-rotate(169deg);
-        transform: perspective(500px) rotateX(2deg) rotateY(-2deg);
-    }
-    100% {
-        filter: hue-rotate(306deg);
-        transform: perspective(500px) rotateX(0deg) rotateY(2deg);
-    }
-}
-
 ._Window_Info::after {
     content: "";
     position: absolute;
@@ -177,6 +162,7 @@ body
     border-radius: 20px;
 
     mix-blend-mode:color-dodge;
+
     
     animation: borderWave 100s ease-in-out infinite;
     transform-origin: center center;
@@ -423,6 +409,14 @@ body
     top: 420px;
     left: min(900px, 100% - 180px);
     animation-delay: -1200s;
+}
+
+._Window_Project { 
+    top: 150px;
+    left: 50%;
+    width: 550px;
+    animation-delay: 0;
+    animation: stop;
 }
 
 ._Nav_List {

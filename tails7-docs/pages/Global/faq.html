@@ -1,0 +1,22 @@
+<div class="content-header">
+    <h1>Tutorials</h1>
+    <div class="date">30 November 2025</div>
+    <br>
+</div>
+
+<div class="main">
+        
+        <div class="content-section">
+            <h2>Q: Dlaczego na poligonach rysowanych przez silnik Tails7 występują artefakty graficzne (np. zniekształcenia krawędzi) i jak można je wyeliminować?</h2>
+            <p>A: Problem ten jest spowodowany że których z punktów gdy jest zbyt blisko kamery i pod kąkretnym kątem, jego faktyczna pozycja jest bardzo duża i rościąga polygon tak bardzo że pojawiają się artefakty. Rozwiązaniem tymczasowym może być zastosowanie "1/2", "1/3" czyli na jeden polygon, użyć faktycznie dwa lub 3 tworząc jedną ścianę, jednak może to zwiększyć ilość obiektów. Próbuje naprawić polygony i możliwe że jednych z przyszłych aktulizacji będzie to naprawione.</p>
+            <h2>Q: Czy różnice w API graficznym (np. Direct3D9 vs Direct3D11)?</h2>
+            <p>A: Są różnice, dla D3D11 jest lepsza optymalizacja, D3D9 jedynie jest użyteczny w tym przypadku gdy D3D11 nie jest obsługiwany przez sprzęt.</p>
+            <h2>Q: W jaki sposób można rozszerzyć Tails7 o własne tryby mapowania i skalowania oraz jakie są wymagania dotyczące ich implementacji?</h2>
+            <p>Wszelkie mapowania są w obiekcjie Tails7 Mapper Object, a dokładnie w zachowaniach. Jeśli chcesz dodać nowy tryb skalowania, skopiuj domyślny i wklej go by był w tym samym Sub-Eventcie. Ważne by wydarzenie nie zawierało tę samą nazwę co pozostałe tryby w tym wydarzeniu.</p>
+            <h2>Q: Czy możliwa jest modyfikacja lub rozszerzenie kodu źródłowego silnika Tails7 (np. edycja shaderów lub dodawanie funkcji)</h2>
+            <p>A: Tails7 jest na licencji MIT, to znaczy że możesz go udostępniać/modyfikować jak chcesz jednak musisz podać autorów i osoby które są w podziękowaniach.</p>
+            <h2>Q: Jak długo silnik będzie miał wsparcie techniczne?</h2>
+            <p>A: Silnik ten będzie wspierany tak długo jak będę pracował nad moją grą i innymi projektami.</p>
+        </div>
+
+</div>

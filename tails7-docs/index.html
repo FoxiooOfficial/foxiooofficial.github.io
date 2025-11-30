@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tails7</title>
+    <link rel="icon" href="media/Icon16.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="https://foxiooofficial.github.io/"><img src="media/Foxioo_Space.png" alt="Foxioo" style="image-rendering: pixelated;"></a>
+            <img src="media/Logo.png" alt="Tails7 Logo">
+        </div>
+        <div class="header-controls">
+            <div class="version-selector">
+                <label for="version">Version:</label>
+                <select id="version">
+                    <option value="B0.1" disabled>0.1 (Beta)</option>
+                    <option value="B0.11" disabled>0.11 (Beta)</option>                 
+                    <option value="R1.0.1">R1.0.1</option>
+                    <option value="R1.0.2" selected>R1.0.2</option>
+                </select>
+            </div>
+            
+            <div class="theme-switcher">
+                <button id="theme-toggle" title="Change theme">
+                    <img id="theme-icon" src="media/icons/brightness_7_48dp_E3E3E3_FILL0_wght200_GRAD200_opsz48.svg" alt="Theme icon">
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <aside id="navigation">
+        
+    </aside>
+    
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    
+    <main id="content">
+
+    </main>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

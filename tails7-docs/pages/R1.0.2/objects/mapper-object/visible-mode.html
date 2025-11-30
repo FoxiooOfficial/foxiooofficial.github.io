@@ -1,0 +1,119 @@
+<div class="content-header">
+    <h1>Tails7 Mapper Object - Visible Mode</h1>
+    <div class="date">29 November 2025</div>
+</div>
+
+<div class="main">
+    <div class="article-layout">
+        <div class="article-content">
+            
+            <div class="content-section">
+                <p>Visible Mode w obiekcie <span class="code-object">Tails7 Mapper Object</span> jako zachowanie jest odpowiadanie za to kiedy obiekt z grupy <span class="code-object">3D.Objects Group</span> ma być widoczny a kiedy nie, a dokładniej ustawia flagę <span class="code-flag">_Visible</span> i zależnie od trybu może faktycznie ukrywać/pokazywać obiekt.</p>
+            </div>
+
+                <div class="warning-box">
+                    <h3>Note</h3>
+                    <p>Od wersji <strong>R1.0.2_29.11.25</strong> wiele trybów zmieniło nazwę:</p>
+                    <p>Z <strong>"DEFAULTEX"</strong> na <strong>"DEFAULT_EX"</strong>,</p>
+                    <p>Z <strong>"CLOSEFADE"</strong> na <strong>"CLOSE_FADE"</strong>,</p>
+                    <p>Z <strong>"CLOSEFADEEX"</strong> na <strong>"CLOSE_FADE_EX"</strong>,</p>
+                </div>
+
+            <div class="content-section">
+                <h2>Różne tryby w Visible Mode</h2>
+
+                <p>Visible Mode ma 6 różnych trybów które każdy obiekt z grupy <span class="code-object">3D.Objects Group</span> może indywidualnie się zachowywać.&nbsp;
+                    W zmiennej string <span class="code-string">_RotationMode</span> przypisujemy do niej wartość która określa dany tryb.
+                </p>
+                
+                <div class="tags-table-container">
+                    <table class="tags-table">
+                        <thead>
+                            <tr>
+                                <th>Wartość</th>
+                                <th>Opis</th>
+                                <th>Data dodania</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"DEFAULT"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Tryb określa kiedy obiekt ma widoczny czy też nie i główne przeznaczony jest dla sprite. Należy pamiętać że bierze pod uwagę kierunek kamery i nie pokazuje obiektów które są za kamerą.
+                                    Przedział widoczności obiektu to <span class="code-variable">200° (<=100° / 260°>=)</span>.
+                                    <br>
+                                    <strong>(Również atomatycznie ustaiwa widoczność obiektu)</strong>
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"DEFAULT_EX"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Tryb określa kiedy obiekt ma widoczny czy też nie i główne przeznaczony jest dla sprite. Należy pamiętać że bierze pod uwagę kierunek kamery i nie pokazuje obiektów które są za kamerą.
+                                    Przedział widoczności obiektu to <span class="code-variable">200° (<=100° / 260°>=)</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"CLOSE_FADE"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Podobny tryb do <span class="code-string">"DEFAULT"</span> jednak ten jest przeznaczony dla punktów polygonów oraz przedział widoczności obiektu to <span class="code-variable">180° (<=90° / 270°>=)</span>.
+                                    <br>
+                                    <strong>(Również atomatycznie ustaiwa widoczność obiektu)</strong>
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"CLOSE_FADE_EX"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Podobny tryb do <span class="code-string">"DEFAULT"</span> jednak ten jest przeznaczony dla punktów polygonów oraz przedział widoczności obiektu to <span class="code-variable">180° (<=90° / 270°>=)</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"CLOSE_LINE"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Podobny tryb do <span class="code-string">"DEFAULT"</span> jednak ten jest przeznaczony dla punktów linii oraz przedział widoczności obiektu to <span class="code-variable">160° (<=80° / 280°>=)</span>.
+                                    <br>
+                                    <strong>(Również atomatycznie ustaiwa widoczność obiektu)</strong>
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"CLOSE_LINE_EX"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Podobny tryb do <span class="code-string">"DEFAULT"</span> jednak ten jest przeznaczony dla punktów linii oraz przedział widoczności obiektu to <span class="code-variable">160° (<=80° / 280°>=)</span>.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+            <div class="warning-box">
+                    <h3>Note</h3>
+                    <p>Ustawienie wartości innej niż z listy spowoduje ignorowanie tego zachowania</p>
+                </div>
+        
+    </div>
+</div>

@@ -1,0 +1,433 @@
+<div class="content-header">
+    <h1>Tails7 Render Ground</h1>
+    <div class="date">29 November 2025</div>
+</div>
+
+<hr>
+
+<div class="main">
+
+        
+        <div class="content-section">
+            <p>
+                <span class="code-object">Tails7 Render Ground</span> jest to obiekt który rysuje perspektwyę dając efekt przestrzeni przez nałożony shader.
+                Mapowanie obiektów są bazowane na obliczeniach z shadera, tak by dopasować symulowanie trójwymiaru przez prawidłowo ustawienie obiektów na ekranie.
+                <br><br>
+                Obiekt ten jest tworzony przez zachowanie na początku w <strong>Startup Set Render</strong> przez obiekt <span class="code-object">Tails7 Info Object</span>.
+                <img src="/tails7-docs/media/objects/render/0.png">
+                <br>
+                Sprawdza minimalną rozdzielczość ramki i dopasowywuje się tak by wypełnić cały ekran przez duplikowanie się obiektu. Wszystko dobrze działą gdy szerokość jest większa niż wysokość ramki, mogą być problemy z rozdzielczoścami które są w pionie.
+            </p>
+        </div>
+
+        <div class="warning-box">
+            <h3>Note</h3>
+            <p><b>Obiekt ten nie są domyślnie wyświetlany gdy API graficzne jest Direct3D8, CPU albo DirectDraw z powodu braku kompatybilności/wyświetlania shaderów w tych trybach.</b></p>
+            </p>
+        </div>
+
+        <div class="content-section">
+                <h2>Zmienne w shaderze Mode 7</h2>
+                <p>Zmienne tyczą wersji 1.9 (08.11.2025) shadera.</p>
+                <div class="tags-table-container">
+                    <table class="tags-table">
+                        <thead>
+                            <tr>
+                                <th>Zmienna</th>
+                                <th>Domyślna wartość</th>
+                                <th>Opis</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PosX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    A variable that determines the position of the texture in the X axis.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PosY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    A variable that determines the position of the texture in the Y axis.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PosZ</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">1.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    A variable that specifies the position of the texture in the Z-axis.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    A variable that determines rotation in the X axis.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    A variable that determines rotation in the Y axis.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotZ</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    *The variable that determines rotation in the Z-axis. (This is otherwise known as the displacement of the point of the center of the perspective in the Y axis).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotXPointX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    A variable that determines point position in the X axis for Rotation X.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotXPointY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                     A variable that determines point position in the Y axis for Rotation X.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotYPointX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                     A variable that determines point position in the X axis for Rotation Y.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotXPointY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                     A variable that determines point position in the Y axis for Rotation Y.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_OffsetX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    A variable that determines the shift of the perspective center point in the X axis.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Distortion</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">1.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    A variable specifying how much the texture should be curved to give perspective immediately. (0 is no curvature, 1 is the default value giving perspective effect).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Scale</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">1.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable determines the overall scale of the texture (in X and Y axes).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_ScaleX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">1.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable determines the scale of the texture in the X axis.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_ScaleY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">1.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable determines the scale of the texture in the Y axis.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PosOffsetX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable sets the offset of the texture position in the X axis. (For the _ScaleX and _Scale variable).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PosOffsetY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable sets the offset of the texture position in the Y axis. (For the _ScaleY and _Scale variable).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Looping_Mode</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable determines how the texture is repeated:
+                                    <br>REPEAT (repeats the texture image); 
+                                    <br>MIRRORED (repeats the texture image, but mirrors it with each repetition); 
+                                    <br>CLAMP (extends the texture beyond coordinates 0 and 1); 
+                                    <br>BORDER (the texture will be invisible after exceeding coordinates 0 and 1). 
+                                    <br>
+                                    <br>For more information, visit: <a href="https://learnopengl.com/Getting-started/Textures">https://learnopengl.com/Getting-started/Textures</a>
+                                    <br>
+                                    <br>List of modes for separately (X, Y) by _Looping_Mode:
+                                    <br>0: (REPEAT, REPEAT);
+                                    <br>1: (MIRRORED, MIRRORED);
+                                    <br>2: (CLAMP, CLAMP);
+                                    <br>3: (BORDER, BORDER);
+                                    <br>
+                                    <br>4: (MIRRORED, REPEAT);
+                                    <br>5: (CLAMP, REPEAT);
+                                    <br>6: (BORDER, REPEAT);
+                                    <br>
+                                    <br>7: (REPEAT, MIRRORED);
+                                    <br>8: (CLAMP, MIRRORED);
+                                    <br>9: (BORDER, MIRRORED);
+                                    <br>
+                                    <br>10: (REPEAT, CLAMP);
+                                    <br>11: (MIRRORED, CLAMP);
+                                    <br>12: (BORDER, CLAMP);
+                                    <br>
+                                    <br>13: (REPEAT, BORDER);
+                                    <br>14: (MIRRORED, BORDER);
+                                    <br>15: (CLAMP, BORDER)
+
+                                    Please note that _Looping_Mode from 0 to 15 only works for Direct3D11 and OpenGL (Android, iOS and Mac); For Direct3D9, only 0 to 3 are available.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-bool">_Render_Sky</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-bool">0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable determines whether the "sky" should be visible. (This is a reflection of the floor with the axes reversed.)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-bool">_Blending_Mode</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-bool">0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable determines what the base should be. Setting it to 0 sets the base as the texture of the object on which the effect is applied, and setting it to 1 sets this as the background.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-bool">_Is_Pre_296_Build</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-bool">0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    (Only applies to Android and iOS!) This variable determines whether to use the newer background formatting. In Clickteam Fusion 2.5 for build 295.10 and earlier, the background texture was flipped along the Y axis, but this was changed in build 296.1. Check this option if you are using an older build!
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Zmienne w Tails7 Render Ground</h2>
+
+                <p>Obiekt ten ma tylko dwie zmienne w sekcji <strong>Alterable Values</strong>
+                </p>
+                
+                <div class="tags-table-container">
+                    <table class="tags-table">
+                        <thead>
+                            <tr>
+                                <th>Zmienna</th>
+                                <th>Domyślna wartość</th>
+                                <th>Opis</th>
+                                <th>Data dodania</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RenderOffsetX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zmienna ta podczas tworzenia obiektu określa jaki ma być offset renderu w osi X.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RenderOffsetY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zmienna ta podczas tworzenia obiektu określa jaki ma być offset renderu w osi Y.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+                            <p>Obiekt ten ma tylko dwie zmienne w sekcji <strong>Flags</strong>
+                </p>
+                
+                <div class="tags-table-container">
+                    <table class="tags-table">
+                        <thead>
+                            <tr>
+                                <th>Zmienna</th>
+                                <th>Domyślna wartość</th>
+                                <th>Opis</th>
+                                <th>Data dodania</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-bool">_Active</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-bool">0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Zmienna ta gdy jest ustawiona na 0, roszerza obiekt by dopasować jego skalę, następnie ustawia tą zmienną na 1 uznając że obiekt ten jest gotowy.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+</div>
