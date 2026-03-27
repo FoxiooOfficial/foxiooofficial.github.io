@@ -1,0 +1,783 @@
+<div class="content-header">
+    <h1>Sprite Objects</h1>
+    <div class="date">29 November 2025</div>
+</div>
+
+<hr>
+
+<div class="main">
+
+        
+        <div class="content-section">
+            <p>
+                <span class="code-object">Sprites</span> are objects that are located in the <span class="code-object">3D.Object Group</span> and those that are mapped on the screen. They can serve as points for <code class="code-object">Polygon Objects</code> as well as <code class="code-object">Line Objects</code>.
+                <br><br>
+                These objects form the foundation of Mode 7 genesis; the background itself, which is the <span class="code-object">Tails7 Ground Render</span>, is not enough - we need some objects or points to create the illusion of three-dimensionality. Therefore, there are sprites that can obtain any position in space.
+                <br><br>
+                <strong>Tails7</strong> is a modular engine, meaning that additional modes can be easily added for how each sprite should behave individually - here for screen display, here for scale, here for layering, or even rotation.
+                All modes for sprites are specified in the prepared <code class="code-string">Alterable String</code>, namely:
+                <code class="code-string">_MappingScreenMode</code>, <code class="code-string">_MappingMode</code>,
+                <code class="code-string">_DistanceMode</code>, <code class="code-string">_ScaleMode</code>, <code class="code-string">_LayerMode</code>,
+                <code class="code-string">_VisibleMode</code> and <code class="code-string">_RotationMode</code> <i>(Descriptions of these variables are at the bottom of the page).</i>
+                <br><br>
+
+                <span class="code-object">Sprites</span> have pseudo *<strong>4 position vectors</strong>: <code class="code-string">_PositionX</code> and <code class="code-string">_PositionY</code> are the actual positions, while
+                <code class="code-string">_OffsetX</code> and <code class="code-string">_OffsetY</code> are the object's offsets on the screen. <i>(<code class="code-string">_OffsetY</code> can also be referred to as the Z position)</i>
+                <br><br>
+                <img src="/tails7-docs/media/objects/sprite/position.png">
+                <br><br>
+                These objects can also be scaled separately for the X and Y axes using the variables <code class="code-string">_ScaleX</code>, <code class="code-string">_ScaleY</code>, and <code class="code-string">_Scale</code>, where the latter multiplies X and Y.<br>
+                <i>(For example: _ScaleX is 5, _ScaleY is 10, and _Scale is 2; the final scale result is 5 * 2 = 10 for the X axis, 10 * 2 = 20 for the Y axis.)</i>
+                <br><br>
+                <img src="/tails7-docs/media/objects/sprite/scale.png">
+                <br><br>
+                <span class="code-object">Sprites</span> can have individual layering, meaning when a given object should be displayed under or above another object. The easiest way to set this is with the <code class="code-string">_LayerOffset</code> variable.
+                <div style="display: flex;">
+                <img src="/tails7-docs/media/objects/sprite/layer0.png">
+                <img src="/tails7-docs/media/objects/sprite/layer1.png">
+                <img src="/tails7-docs/media/objects/sprite/layer2.png">
+                </div>
+                <br><br>
+                And changing the object's angle is declared in the <code class="code-string">_RotationMod</code> variable.
+                <br><br>
+                <img src="/media/objects/sprite/rotation.png">
+
+            </p>
+        </div>
+
+
+            <div class="content-section">
+                <h2>Variables in Sprite Objects</h2>
+
+                <p>This object has several variables in the <strong>Alterable Values</strong> section
+                </p>
+                
+                <div class="tags-table-container">
+                    <table class="tags-table">
+                        <thead>
+                            <tr>
+                                <th>Variable</th>
+                                <th>Default value</th>
+                                <th>Description</th>
+                                <th>Date added</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PositionX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable specifies where the object should be located on the X axis.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PositionY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable specifies where the object should be located on the Y axis.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_OffsetX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable specifies the object's offset on the X axis on the screen. A negative value shifts the object to the left, a positive value shifts the object to the right.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_OffsetY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable specifies the object's offset on the Y axis on the screen. A negative value shifts the object upward, a positive value shifts the object downward.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Scale</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">5.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable specifies the object's scale on the X and Y axes.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_ScaleX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">1.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable specifies the object's scale on the X axis.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_ScaleY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">1.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable specifies the object's scale on the Y axis.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_LayerOffset</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable shifts the layering of the given object; positive values will display the object above those that are closer, negative values will display the object below those that are further away.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RenderDistance</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">-1.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable specifies when the object should hide and when it should not, depending on the distance. Setting the value to -1.0 will cause it to ignore the render distance function.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Distance</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-mode.html">Mapping Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>. It calculates the distance from the target position for further calculations in the <a class="button" href="/tails7-docs/pages/R1.0.2/objects/tails7-mapper-object.html">chain</a>.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_DistanceX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/distance-mode.html">Distance Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>. It calculates the distance from the target X position for further calculations in the <a class="button" href="/tails7-docs/pages/R1.0.2/objects/tails7-mapper-object.html">chain</a>.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_DistanceY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/distance-mode.html">Distance Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>. It calculates the distance from the target Y position for further calculations in the <a class="button" href="/tails7-docs/pages/R1.0.2/objects/tails7-mapper-object.html">chain</a>.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotXPosX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-mode.html">Mapping Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>, it rotates the target position X point by the camera's X-axis rotation for further calculations.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotXPosY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-mode.html">Mapping Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>, it rotates the target position Y point by the camera's X-axis rotation for further calculations.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotYPosX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-mode.html">Mapping Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>, it rotates the target position X point by the camera's Y-axis rotation for further calculations.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotYPosY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-mode.html">Mapping Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>, it rotates the target position Y point by the camera's Y-axis rotation for further calculations.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_InY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-mode.html">Mapping Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>, it specifies the distortion of the target position to match the shader's calculations, providing perspective.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_DistortedX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                     This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-mode.html">Mapping Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>, the <span class="code-variable">_InX</span> variable is applied to the X position in it.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_DistortedY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-mode.html">Mapping Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>, the <span class="code-variable">_InX</span> variable is applied to the Y position in it.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_OutX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-mode.html">Mapping Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>, it obtains the position of the <span class="code-variable">Tails7 Ground Render</span> object and adds the <span class="code-variable">_DistortedX</span> result to it.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_OutY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-mode.html">Mapping Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>, it obtains the position of the <span class="code-variable">Tails7 Ground Render</span> object and adds the <span class="code-variable">_DistortedY</span> result to it.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_FinalX</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-mode.html">Mapping Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>, it specifies the final result of mapping the object on the X axis.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_FinalY</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-mode.html">Mapping Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>, it specifies the final result of mapping the object on the Y axis.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_LayerDistance</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                     This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/layer-mode.html">Layer Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>, it is used to calculate the distance between the object's target position for layering.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Layer</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/layer-mode.html">Layer Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>, it specifies the current position for the object's layering.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Angle</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-mode.html">Mapping Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>, it specifies the angle difference between the camera's view direction and the sprite.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Angular</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-mode.html">Mapping Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>, it works similarly to <span class="code-variable">_Angle</span> but is limited from 0 to 360, looping the value.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_AngleVisibility</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/visible-mode.html">Visible Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>, it specifies the object's visibility angle.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_AngularVisibility</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/visible-mode.html">Visible Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>, it specifies the object's visibility angle but limits the value from 0 to 360, looping it.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotationBase</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                     This variable is calculated in <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/rotation-mode.html">Rotation Mode</a> by the <span class="code-object">Tails7 Mapper Object</span>, it is the base variable concerning the object's rotation, returning the sum of this object's <span class="code-variable">_RotationMod</span> value and the camera's Y-axis rotation.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_RotationMod</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0.0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable specifies the angle value by which to rotate the object.
+                                </td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+                <p>This object has several variables in the <strong>Alterable String</strong> section
+                </p>
+                
+                    <div class="tags-table-container">
+                        <table class="tags-table">
+                            <thead>
+                                <tr>
+                                    <th>Variable</th>
+                                    <th>Default value</th>
+                                    <th>Description</th>
+                                    <th>Date added</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="code-string">_MappingScreenMode</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-string">DEFAULT</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        This variable specifies which mode should be used to display the object on the screen. The list of modes can be found <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-screen-mode.html">here</a>.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-string">_MappingMode</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-string">R1.0.2</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        This variable specifies which mode should be used to calculate the mapping. The list of modes can be found <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-mode.html">here</a>.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-string">_DistanceMode</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-string">DEFAULT</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        This variable specifies which mode should be used to calculate the distance for the object. The list of modes can be found <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/distance-mode.html">here</a>.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-string">_ScaleMode</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-string">DEFAULT</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        This variable specifies which mode should be used to calculate the scale for the object. The list of modes can be found <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/scale-mode.html">here</a>.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-string">_LayerMode</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-string">TO_PLAYER_XY</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        This variable specifies which mode should be used to calculate the layering for the object. The list of modes can be found <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/layer-mode.html">here</a>.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-string">_VisibleMode</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-string">DEFAULT</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        This variable specifies which mode should be used to calculate the visibility for the object. The list of modes can be found <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/visible-mode.html">here</a>.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-string">_RotationMode</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-string">DEFAULT</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        This variable specifies which mode should be used to calculate the rotation for the object. The list of modes can be found <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/rotation-mode.html">here</a>.
+                                    </td>
+                                    <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                <br>
+
+                <p>This object has several variables in the <strong>Flags</strong> section
+                </p>
+                
+                    <div class="tags-table-container">
+                        <table class="tags-table">
+                            <thead>
+                                <tr>
+                                    <th>Variable</th>
+                                    <th>Default value</th>
+                                    <th>Description</th>
+                                    <th>Date added</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_Active</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">1</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        This flag specifies whether the object should be active, i.e., whether to calculate mapping at a given moment or not.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_ShouldVisible</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">(Automatically)</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        This flag is automatically calculated and specifies whether the object should be visible or not.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_IgnoreShowing</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">0</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        This flag specifies whether the object should ignore the object hiding/showing system.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_OutRenderDistance</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">(Automatically)</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        This flag specifies whether the object has exceeded the render distance; if yes, it sets this value to 1, if not, to 0.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_Visible</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">(Automatically)</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        This flag is calculated automatically and specifies the final stage of the object's visibility.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_QualityScale</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">0</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        This flag specifies whether the object should be pixelated or use Anti-Aliasing for scaling.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+
+</div>

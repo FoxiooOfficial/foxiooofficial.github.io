@@ -1,0 +1,62 @@
+<div class="content-header">
+    <h1>Tails7 Mapper Object - Distance Mode</h1>
+    <div class="date">29 November 2025</div>
+</div>
+
+<div class="main">
+    <div class="article-layout">
+        <div class="article-content">
+            
+            <div class="content-section">
+                <p>Distance Mode in the <span class="code-object">Tails7 Mapper Object</span> executes first in the chain.</p>
+                
+                <p>This behavior calculates the distance that will be required for the calculations of <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-mode.html">Mapping Mode</a>.</p>
+                
+            <div class="content-section">
+                <h2>Different modes in Distance Mode</h2>
+
+                <p>Distance Mode has its own 2 modes that every object from the <span class="code-object">3D.Objects Group</span> can use to behave individually.&nbsp;
+                    In the string variable <span class="code-string">_DistanceMode</span>, we assign a value that defines the given mode.
+                </p>
+                
+                <div class="tags-table-container">
+                    <table class="tags-table">
+                        <thead>
+                            <tr>
+                                <th>Value</th>
+                                <th>Description</th>
+                                <th>Date Added</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"DEFAULT"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>Sets the values of <span class="code-variable">_DistanceX</span> and <span class="code-variable">_DistanceY</span> to the difference between <span class="code-variable">_PositionX</span> and <span class="code-variable">_PositionY</span> 
+                                    of the <span class="code-object">3D.Objects</span> Group object and the position of the <span class="code-object">Tails7 Camera Object</span> on the X and Y axes.</td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"STATIC"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>Sets the values of <span class="code-variable">_DistanceX</span> and <span class="code-variable">_DistanceY</span> to <span class="code-variable">_PositionX</span> and <span class="code-variable">_PositionY</span>. The distance is constant in this case.</td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+            </div>
+
+            <div class="warning-box">
+                    <h3>Note</h3>
+                    <p>Setting a value other than those on the list will cause this behavior to be ignored.</p>
+                </div>
+        
+    </div>
+</div>

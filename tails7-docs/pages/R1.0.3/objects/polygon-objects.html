@@ -1,0 +1,315 @@
+<div class="content-header">
+    <h1>Polygon Objects</h1>
+    <div class="date">29 November 2025</div>
+</div>
+
+<hr>
+
+<div class="main">
+
+        
+        <div class="content-section">
+            <p>
+                <span class="code-object">Polygons</span> are objects that use shaders from the <strong>Quad</strong> family or similar ones that transform 4 points to modify the shape, creating a 3D illusion.
+                <br><br>
+                These objects mainly use 4 separate <span class="code-variable">Sprite</span>s for points <strong>A, B, C, D</strong>.
+                <br><br>
+                <img src="/tails7-docs/media/objects/polygon/0.png">
+                <br><br>
+                Each point has its own order, starting from the top-left corner (<strong>A (0; 0)</strong>), then top-right (<strong>B (1; 0)</strong>), then bottom-right (<strong>C (1; 1)</strong>), and finally bottom-left (<strong>D (0; 1)</strong>).
+                <br><br>
+                Polygon also has two behaviors, <strong>Startup</strong> and <strong>Set Points</strong>.
+                The first behavior initializes the polygon and expands it to fill the screen; at this stage the polygon can be scaled, which is noted below.
+                The second behavior <strong>Set Points</strong> sets points A, B, C, D at appropriate positions on the screen and sets the polygon's visibility.
+            </p>
+        </div>
+
+        <div class="warning-box">
+            <h3>Note</h3>
+            <p>Polygons are not perfect and may disappear when you are too close, or at direct camera angles there may be visual artifacts, which is the fault of the shaders that I partially fixed.
+            </p>
+            <br>
+            <p><b>Polygons are not created by default when the graphics API is Direct3D8, CPU or DirectDraw!</b></p>
+            </p>
+        </div>
+
+            <div class="content-section">
+                <h2>Variables in Polygon Objects</h2>
+
+                <p>This object has several variables in the <strong>Alterable Values</strong> section
+                </p>
+                
+                <div class="tags-table-container">
+                    <table class="tags-table">
+                        <thead>
+                            <tr>
+                                <th>Variable</th>
+                                <th>Default value</th>
+                                <th>Description</th>
+                                <th>Date added</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointX_A</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Variable that stores the X value of point A in the polygon shader.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointY_A</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Variable that stores the Y value of point A in the polygon shader.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointX_B</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Variable that stores the X value of point B in the polygon shader.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointY_B</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Variable that stores the Y value of point B in the polygon shader.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointX_C</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Variable that stores the X value of point C in the polygon shader.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointY_C</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Variable that stores the Y value of point C in the polygon shader.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointX_D</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Variable that stores the X value of point D in the polygon shader.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_PointY_D</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Variable that stores the Y value of point D in the polygon shader.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_LayerOffset</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">0</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Similar to <span class="code-object">Sprite</span>, it shifts the object in layers; a positive value means the object will be above other objects, a negative value means the opposite.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">_Layer</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">(Automatically)</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    Variable that stores which layer the polygon object is on; by default it is the average of points A and C.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-variable">FixValue</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    <span class="code-variable">1</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                    This variable partially fixes visual errors of polygons at direct camera angles at the cost of shifting point C.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            
+                <p>This object has several variables in the <strong>Flags</strong> section
+                </p>
+                
+                    <div class="tags-table-container">
+                        <table class="tags-table">
+                            <thead>
+                                <tr>
+                                    <th>Variable</th>
+                                    <th>Default value</th>
+                                    <th>Description</th>
+                                    <th>Date added</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_Active</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">(Automatically)</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        This variable determines whether the polygon is active; if not, it sets the correct position on the screen and the object's scale, then changes the value to 1.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_Visibility_A</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">(Automatically)</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        This variable determines whether point A is visible.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_Visibility_B</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">(Automatically)</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        This variable determines whether point B is visible.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_Visibility_C</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">(Automatically)</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        This variable determines whether point C is visible.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_Visibility_D</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">(Automatically)</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        This variable determines whether point D is visible.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="code-bool">_IgnoreShowing</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        <span class="code-bool">0</span>
+                                        <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                    </td>
+                                    <td>
+                                        This variable determines whether the polygon should ignore the visibility settings of points A, B, C, D and be always invisible or when needed.
+                                    </td>
+                                    <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+
+</div>

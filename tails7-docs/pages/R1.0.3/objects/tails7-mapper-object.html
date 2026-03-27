@@ -1,0 +1,28 @@
+<div class="content-header">
+    <h1>Tails7 Mapper Object</h1>
+    <div class="date">29 November 2025</div>
+</div>
+<div class="main">
+    <div class="article-layout">
+
+         <div class="content-section">
+            <p><span class="code-object">Tails7 Mapper Object</span> is responsible for operations such as: setting position, scaling, rotating, layering for <strong>ALL</strong> <span class="code-object">3D.Objects Group</span> objects when they are active.</p>
+            <p>This happens because this object has several behaviors that maintain a certain continuity.</p>
+                <img id="svg-icon" src="/tails7-docs/media/objects/mapper/chain.png" alt="Behavior chain diagram">
+            <p>We call this <strong>"Behavior chain mapping for 3D objects.Objects Group executable by Tails7 Mapper Object"</strong> <i>(A very long name, I know)</i>, or simply <strong>"the chain"</strong>.</p>
+            <br>
+        <h2>Chain sequence</h2>
+            <p>The chain sequence and order of subsequent behaviors:</p>
+            <ol style="padding-left: 30px">
+                <li><a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/distance-mode.html">Distance Mode</a> - Sets the distance between the target position of the <span class="code-object">3D.Object Group</span> and the reference point <i>(mainly the camera)</i>.</li>
+                <li><a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-mode.html">Mapping Mode</a> - Calculations of the shader's inverse are applied to transform a given position through perspective to be adequate with the shader.</li>
+                <li><a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-screen-mode.html">Mapping Screen Mode</a> - Displays the result of <strong>Mapping Mode</strong> but can also modify these results depending on the mode.</li>
+                <li><a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/scale-mode.html">Scale Mode</a> - Scales the object to fit the calculations from <strong>Mapping Mode</strong>.</li>
+                <li><a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/layer-mode.html">Layer Mode</a> - Layers each object individually to decide which should be on top and which underneath.</li>
+                <li><a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/visible-mode.html">Visible Mode</a> - Determines when the object should be visible and when not.</li>
+                <li><a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/rotation-mode.html">Rotation Mode</a> - Rotates each object.</li>
+            </ol>
+
+         </div>
+    </div>
+</div>
