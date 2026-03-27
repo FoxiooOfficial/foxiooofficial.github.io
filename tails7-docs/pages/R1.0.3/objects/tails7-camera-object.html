@@ -1,0 +1,210 @@
+<div class="content-header">
+    <h1>Tails7 Camera Object</h1>
+    <div class="date">29 November 2025</div>
+</div>
+
+<hr>
+
+<div class="main">
+    <div class="content-section">
+        <p>
+            <span class="code-object">Tails7 Camera Object</span> is responsible for setting the position and rotation in the shader applied to <span class="code-object">Tails7 Render Ground</span>
+            <br><br>
+            It has a built-in very basic 360° movement system located in the <strong>Position</strong> behavior <i>(Modifies the <span class="code-variable">_TargetX</span> and <span class="code-variable">_TargetY</span> variables)</i>.
+        </p>
+        
+        <ul>
+            <li><strong>W, A, S, D</strong> for movement on the X and Y axes.</li>
+            <li><strong>Left Arrow, Right Arrow</strong> responsible for rotation on the X axis.</li>
+            <li><strong>Z, X</strong> responsible for rotation on the Y axis.</li>
+            <li><strong>Up Arrow, Down Arrow</strong> responsible for rotation on the Z axis <i>(Limited from -60° to 60°)</i>.</li>
+            <li><strong>Q, E</strong> responsible for changing the distortion level <i>(Limited from 0 to 1)</i>.</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2>Variables in Tails7 Camera Object</h2>
+        <p>This object has several variables in the <strong>Alterable Values</strong> section</p>
+        
+        <div class="tags-table-container">
+            <table class="tags-table">
+                <thead>
+                    <tr>
+                        <th>Variable</th>
+                        <th>Default value</th>
+                        <th>Description</th>
+                        <th>Date added</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="code-variable">_TargetX</span>
+                            <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
+                        </td>
+                        <td>
+                            <span class="code-variable">*(Automatically, <br>but you can change)</span>
+                            <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
+                        </td>
+                        <td>
+                            Variable specifies where the camera should have its position on the X axis.
+                        </td>
+                        <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="code-variable">_TargetY</span>
+                            <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
+                        </td>
+                        <td>
+                            <span class="code-variable">*(Automatically, <br>but you can change)</span>
+                            <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
+                        </td>
+                        <td>
+                            Variable specifies where the camera should have its position on the Y axis.
+                        </td>
+                        <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="code-variable">_OffsetX</span>
+                            <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
+                        </td>
+                        <td>
+                            <span class="code-variable">0</span>
+                            <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
+                        </td>
+                        <td>
+                            Variable specifies the offset of the final position on the X axis.
+                        </td>
+                        <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="code-variable">_OffsetY</span>
+                            <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
+                        </td>
+                        <td>
+                            <span class="code-variable">0</span>
+                            <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
+                        </td>
+                        <td>
+                            Variable specifies the offset of the final position on the Y axis.
+                        </td>
+                        <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="code-variable">_Radius</span>
+                            <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
+                        </td>
+                        <td>
+                            <span class="code-variable">0</span>
+                            <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
+                        </td>
+                        <td>
+                            This variable specifies what the radius should be between the target point and the final point.
+                        </td>
+                        <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>This object has one variable in the <strong>Alterable Strings</strong> section</p>
+        
+        <div class="tags-table-container">
+            <table class="tags-table">
+                <thead>
+                    <tr>
+                        <th>Variable</th>
+                        <th>Default value</th>
+                        <th>Description</th>
+                        <th>Date added</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="code-string">_PositionMode</span>
+                            <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
+                        </td>
+                        <td>
+                            <span class="code-string">FIRST_PERSON_LERP</span>
+                            <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
+                        </td>
+                        <td>
+                            This variable specifies which position interpretation mode should be used, i.e., how the camera should behave.
+                        </td>
+                        <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2>Modes for <span class="code-string">_PositionMode</span></h2>
+
+        <p><span class="code-string">_PositionMode</span> has its own 4 modes that declare how this object should behave. These modes are located in the <strong>Position Mode</strong> behavior in the same object.</p>
+        
+        <div class="tags-table-container">
+            <table class="tags-table">
+                <thead>
+                    <tr>
+                        <th>Value</th>
+                        <th>Description</th>
+                        <th>Date added</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="code-string">"DEFAULT"</span>
+                            <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
+                        </td>
+                        <td>
+                            This mode causes the camera to follow the target object, maintaining a constant radius and distance. It moves in a circle around the target, maintaining a constant angle and distance. This is the basic tracking mode.
+                        </td>
+                        <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="code-string">"FIRST_PERSON"</span>
+                            <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
+                        </td>
+                        <td>
+                            This mode causes the camera to simulate a first-person perspective view, taking into account the distortion level. Its position is adjusted depending on the distortion value:
+                            <br>
+                            <ul style="padding-left: 20px">
+                                <li><strong>At high distortion levels</strong> <i>(extreme values)</i> the position is corrected using division</li>
+                                <li><strong>At low distortion levels</strong> <i>(values closer to zero)</i> the position is corrected using multiplication</li>
+                            </ul>
+                        </td>
+                        <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="code-string">"FIRST_PERSON_LERP"</span>
+                            <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
+                        </td>
+                        <td>
+                            This mode causes the camera to smoothly transition to a first-person view using interpolation. The distortion effect is softened by smooth transitions, resulting in smaller camera position changes than in the basic <strong>FIRST_PERSON</strong> mode.
+                        </td>
+                        <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="code-string">"ORBITAL_VIEW"</span>
+                            <button type="button" class="copy-button" onclick="copyCode(this)">Copy</button>
+                        </td>
+                        <td>
+                            This mode causes the camera to move in an orbit around the target object, with additional depth consideration.
+                        </td>
+                        <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

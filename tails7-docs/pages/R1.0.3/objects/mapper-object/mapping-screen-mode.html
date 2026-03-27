@@ -1,0 +1,205 @@
+<div class="content-header">
+    <h1>Tails7 Mapper Object - Mapping Screen Mode</h1>
+    <div class="date">29 November 2025</div>
+</div>
+
+<div class="main">
+    <div class="article-layout">
+        <div class="article-content">
+            
+            <div class="content-section">
+                <p>Mapping Screen Mode is a behavior in the <span class="code-object">Tails7 Mapper Object</span> to return the final screen position of objects from the <span class="code-object">3D.Objects Group</span>.</p>
+                
+                <p>This behavior uses the values <span class="code-variable">_FinalX</span> and <span class="code-variable">_FinalY</span>, which are the final results from <a class="button" href="/tails7-docs/pages/R1.0.2/objects/mapper-object/mapping-mode.html">Mapping Mode</a>.</p>
+                </p>
+            </div>
+
+                <div class="warning-box">
+                    <h3>Note</h3>
+                    <p>As of version <strong>R1.0.2_29.11.25</strong>, many modes have changed their names:</p>
+                    <p>From <strong>"CLAMPX"</strong> to <strong>"CLAMP_X"</strong>,</p>
+                    <p>From <strong>"CLAMPY"</strong> to <strong>"CLAMP_Y"</strong>,</p>
+                    <p>From <strong>"INVERTEDX"</strong> to <strong>"INVERTED_X"</strong>,</p>
+                    <p>From <strong>"INVERTEDY"</strong> to <strong>"INVERTED_Y"</strong></p>
+                </div>
+
+            <div class="content-section">
+                <h2>Different modes in Mapping Screen Mode</h2>
+
+                <p>Mapping Screen Mode has its own 10 modes that every object from the <span class="code-object">3D.Objects Group</span> can use to behave individually.&nbsp;
+                    The string variable <span class="code-string">_MappingScreenMode</span> is assigned a value that defines the given mode.
+                </p>
+                
+                <div class="tags-table-container">
+                    <table class="tags-table">
+                        <thead>
+                            <tr>
+                                <th>Value</th>
+                                <th>Description</th>
+                                <th>Date Added</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"DEFAULT"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>Returns
+                                    <span class="code-variable">_FinalX</span>
+                                    and 
+                                    <span class="code-variable">_FinalY</span>
+                                    from <span class="code-object">3D.Objects Group</span> directly to the object's position on the X and Y axes.</td>
+
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"DEFAULT_ONLY_X"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>Returns 
+                                    <span class="code-variable">_FinalX</span>
+                                    from 
+                                    <span class="code-object">3D.Objects Group</span> directly to the object's position on the X axis.</td>
+
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"DEFAULT_ONLY_Y"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>Returns
+                                    <span class="code-variable">_FinalY</span>
+                                    from <span class="code-object">3D.Objects Group</span> directly to the object's position on the Y axis.</td>
+
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"CLAMP"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>Returns 
+                                    <span class="code-variable">_FinalX</span>
+                                    and 
+                                    <span class="code-variable">_FinalY</span>
+                                    from <span class="code-object">3D.Objects Group</span> and modifies it to clamp the value from 
+                                    <span class="code-variable">0</span>
+                                    to 
+                                    <span class="code-variable">Frame Width</span>
+                                    for X and from 
+                                    <span class="code-variable">0</span>
+                                    to 
+                                    <span class="code-variable">Frame Height</span> for Y, 
+                                    then returns it to the object on the X and Y axes.</td>
+
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"CLAMP_X"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>Returns
+                                    <span class="code-variable">_FinalX</span>
+                                    and 
+                                    <span class="code-variable">_FinalY</span>
+                                    from <span class="code-object">3D.Objects Group</span> and modifies 
+                                    <span class="code-variable">_FinalX</span>
+                                    to clamp the value from 
+                                    <span class="code-variable">0</span>
+                                    to 
+                                    <span class="code-variable">Frame Width</span>
+                                    , then returns it to the object on the X and Y axes.</td>
+
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"CLAMP_Y"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>Returns
+                                    <span class="code-variable">_FinalX</span>
+                                    and 
+                                    <span class="code-variable">_FinalY</span>
+                                    from <span class="code-object">3D.Objects Group</span> and modifies 
+                                    <span class="code-variable">_FinalY</span>
+                                    to clamp the value from 
+                                    <span class="code-variable">0</span>
+                                    to 
+                                    <span class="code-variable">Frame Height</span>
+                                    , then returns it to the object on the X and Y axes.</td>
+
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"INVERTED"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>Returns 
+                                    <span class="code-variable">_FinalX</span>
+                                    and 
+                                    <span class="code-variable">_FinalY</span>
+                                    from <span class="code-object">3D.Objects Group</span> and modifies the values by inverting them from the center of the screen, i.e.
+                                    <span class="code-variable">Frame Width / 2.0 - _FinalX</span>
+                                    for X, and for Y, returns 
+                                    <span class="code-variable">Frame Height / 2.0 - _FinalY</span>
+                                    , then returns it to the object on the X and Y axes.</td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"INVERTED_X"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>Returns
+                                    <span class="code-variable">_FinalX</span>
+                                    and 
+                                    <span class="code-variable">_FinalY</span>
+                                    from <span class="code-object">3D.Objects Group</span> and modifies only X which is inverted from the center of the screen, i.e.
+                                    <span class="code-variable">Frame Width / 2.0 - _FinalX</span>
+                                    , then returns it to the object on the X and Y axes.</td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"INVERTED_Y"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>Returns
+                                    <span class="code-variable">_FinalX</span>
+                                    and 
+                                    <span class="code-variable">_FinalY</span>
+                                    from <span class="code-object">3D.Objects Group</span> and modifies only Y which is inverted from the center of the screen, i.e.
+                                    <span class="code-variable">Frame Height / 2.0 - _FinalY</span>
+                                    , then returns it to the object on the X and Y axes.</td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"PSX"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>Returns 
+                                    <span class="code-variable">_FinalX</span>
+                                    and 
+                                    <span class="code-variable">_FinalY</span>
+                                    from <span class="code-object">3D.Objects Group</span> and modifies them to simulate the characteristic PSX/PlayStation 1 style of object or polygon placement on the screen, then returns it to the object on the X and Y axes.</td>
+                                <td><span class="code-version">R1.0.2_29.11.25</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                    <h3>Note</h3>
+                    <p>Setting a value other than those on the list will cause this behavior to be ignored.</p>
+                </div>
+        </div>
+    </div>
+</div>

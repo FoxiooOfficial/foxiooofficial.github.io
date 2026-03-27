@@ -1,0 +1,110 @@
+<div class="content-header">
+    <h1>Tails7 Mapper Object - Layer Mode</h1>
+    <div class="date">29 November 2025</div>
+</div>
+
+<div class="main">
+    <div class="article-layout">
+        <div class="article-content">
+            
+            <div class="content-section">
+                <p>Layer Mode in the <span class="code-object">Tails7 Mapper Object</span> is responsible for the layer ordering of objects from the <span class="code-object">3D.Objects Group</span>.</p>
+            </div>
+
+                <div class="warning-box">
+                    <h3>Note</h3>
+                    <p>As of version <strong>R1.0.2_29.11.25</strong>, many modes have changed their names:</p>
+                    <p>From <strong>"TOCAMERA"</strong> to <strong>"TO_CAMERA_XY"</strong>,</p>
+                    <p>From <strong>"TOCAMERAZ"</strong> to <strong>"TO_PLAYER_XYZ"</strong>,</p>
+                    <p>From <strong>"TOPLAYER"</strong> to <strong>"TO_PLAYER_XY"</strong>,</p>
+                    <p>From <strong>"TOPLAYERZ"</strong> to <strong>"TO_PLAYER_XYZ"</strong>,</p>
+                </div>
+
+            <div class="content-section">
+                <h2>Different modes in Layer Mode</h2>
+
+                <p>Layer Mode has 4 different modes that every object from the <span class="code-object">3D.Objects Group</span> can use to behave individually.&nbsp;
+                    In the string variable <span class="code-string">_RotationMode</span>, we assign a value that defines the given mode.
+                </p>
+                
+                <div class="tags-table-container">
+                    <table class="tags-table">
+                        <thead>
+                            <tr>
+                                <th>Value</th>
+                                <th>Description</th>
+                                <th>Date Added</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"TO_CAMERA_XY"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Takes into account the distance between the <span class="code-object">3D.Objects Group</span> object and the <span class="code-object">Tails7 Camera Object</span> on the X and Y axes.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"TO_CAMERA_XYZ"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Takes into account the distance between the <span class="code-object">3D.Objects Group</span> object and the <span class="code-object">Tails7 Camera Object</span> on the X, Y, and Z axes.
+                                </td>
+                                <td><span class="code-version">R1.0.1_13.05.25</span></td>
+                            </tr>
+
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"STATIC"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Takes into account the distance from coordinates <strong>0; 0</strong> to <span class="code-variable">_PositionX</span> and <span class="code-variable">_PositionY</span> of the <span class="code-object">3D.Objects Group</span> object.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"TO_PLAYER_XY"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Takes into account the distance between the <span class="code-object">3D.Objects Group</span> object and the <span class="code-object">Player Hitbox</span> on the X and Y axes.
+                                </td>
+                                <td><span class="code-version">R1.0.1_10.05.25</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="code-string">"TO_PLAYER_XYZ"</span>
+                                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                                </td>
+                                <td>
+                                Takes into account the distance between the <span class="code-object">3D.Objects Group</span> object and the <span class="code-object">Player Hitbox</span> on the X, Y, and Z axes.
+                                </td>
+                                <td><span class="code-version">R1.0.1_13.05.25</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+            <div class="warning-box">
+                    <h3>Note</h3>
+                    <p>Setting a value other than those on the list will cause this behavior to be ignored.</p>
+                </div>
+        
+    </div>
+</div>
