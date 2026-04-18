@@ -1,146 +1,96 @@
-<!DOCTYPE html> <html lang="en">
-    
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Welcome to the "fox corner"!</title>
-    <link rel="stylesheet" href="Media/style_space.css">
-    <link rel="stylesheet" href="Media/Buttons/button_styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <script src="script/data.js"></script>
+    <script src="script/LastUpdate.js"></script>
 
-    <img src=".well-known/discord" hidden>
-
-    <script src="Scripts/MouseStars.js"></script>
-    <script src="Scripts/LastUpdate.js"></script>
-    <script src="Scripts/FlyingStars.js"></script>
-    <script src="Scripts/ButtonScroller.js"></script>
-
-    <div class="_Background_Layer_0"></div>
-    <div class="_Background_Layer_1"></div>
-    <div class="_Background_Layer_2"></div>
-    <div class="_Background_Layer_3"></div>
-
-    <!-- ################################################ -->
-    <!--
-    <div class="_Window_Info">
-        <div class="_Window_Header">
-            <img src="/Media/Icons/Warning.png" class="_Window_Header_Icon" alt="">
-            <span class="_Window_Header_Text">Uh uh...</span>
-        </div>
-        <div class="_Window_Layout">
-            <div class="_Window_Text">
-                Hey! Looks like you're here too early...<br>
-                The site is still under construction :3<br>
-                <br><br>
-                Come back... sometime later.<br>
-                <a style="font-size: 8px">Last Update: 03.08.25 23:32</a><br>
-            </div>
-            <img src="/Media/Foxioo/Smol.png" class="_Window_Image" alt="">
-        </div>
-    </div>
-    -->
-    <!-- ################################################ -->
-
-    <main class="_Main_Panel">
-        <img src="Media/Banner/Banner_0.png" class="_Main_Banner" alt="Banner">
-        <div class="_Main_Content">
-
-            <div class="_UI_Elements">
-                <img src="/Media/Banner/Paint Top.png" style="left: -16px; top: -20px;">
-                <img src="/Media/Banner/Paint Bottom.png" style="left: -12px; bottom: -50px;">
-            </div>
-            
-            <div class="_Main_Inner_Content">
-
-                <p><b>Hey! Looks like you're here too early..</b></p>
-                <p>The site is still under construction :3</p>
-                <p>Come back... sometime later.</p>
-                <p><img src="Media/Foxioo/OhNo.png" class="_Main_Image" alt="Foxioo" style="image-rendering: pixelated; float: left;"></p>
-                <p>ama ama pym</p>
-                <p><img src="Media/Photos/Main/Vaporeon.gif" style="width: 120px;" style="image-rendering: pixelated;"></p>
-                <p><img src="Media/Foxioo/300.png" class="_Main_Image" alt="Foxioo" style="image-rendering: pixelated;"></p>
+    <div class="main-container">
+        <table>
+            <tr>
+                <th></th>
+                <th>
+                    <header>
+                        <img src="media/baner.png" alt="Banner">
+                    </header>
+                </th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>
+                    <aside>
+                        <nav class="window-box" style="width: 170px;">
+                            <div class="window-title c0">
+                                <p class="window-title">Navigation</p>
+                                <img src="media/window/icon/title-navigation.png" width="48" height="48" class="window-title" alt="Navigation"/>
+                            </div>
+                            <div class="window-content">
+                                <ul>
+                                    <li class="selected"><a href="index.html">Home</a></li>
+                                    <li class="notselected"><a href="about-me.html">About me</a></li>
+                                    <li class="notselected"><a href="my-oc">My OC</a></li>
+                                    <li class="notselected"><a href="my-projects">My projects</a></li>
+                                    <li class="notselected"><a href="my-games">My games</a></li>
+                                    <li class="notselected"><a href="my-art">My art</a></li>
+                                    <li class="notselected"><a href="other">Other...?</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </aside>
+                </td>
                 
-                <!-- Przyciski -->
-                <div class="_Button_Container"></div>
-            </div>
-        </div>
+                <td>
+                    <main class="window-box" style="max-width: min(960px, 100%);">
+                        <div class="window-title c1">
+                            <p class="window-title">Home</p>
+                            <img src="media/window/icon/title-web.png" width="48" height="48" class="window-title" alt="Home"/>
+                        </div>
+                        <div class="window-content">
+                            <h1>Welcome to "Fox Corner"!</h1>
+                            <p>Hi, I'm Foxioo, and welcome to my website!</p>
+                            <p>This is where I share information about my projects all in one place
+                            <i>(Use the navigation to learn more!)</i></p>
+                            <br>
+                            <p id="switch_style"><b>Is this page too heavy for your device?</b> <a href="?style=no">Load the plain HTML version</a>.</p>
+                            <br>
+                            <p>This website was designed for a 1920x1080 monitor and a Chromium-based browser; there may be errors when viewed in other browsers, such as Firefox ;w;</p>
+                            <br>
+                            <img src="media/gifs/senko-discord.gif" alt="Senko :D">
+                            <img src="media/gifs/uwu-anime.gif" alt="More Senko!">
+                        </div>
+                    </main>
+                </td>
 
-        <!-- ############################################### -->
-
-        <div>
-            <div class="_Window_Info _Window_Side _Window_Nav">
-                <div class="_Window_Header">
-                    <img src="/Media/Icons/Navi.png" class="_Window_Header_Icon" alt="">
-                    <span class="_Window_Header_Text">Navigation</span>
-                </div>
-                <div class="_Window_Layout">
-                    <div class="_Window_Text">
-                        <ul class="_Nav_List">
-                            <li class="_ListYellow">
-                                <img src="Media/Icons/Star0.png" alt="" class="_Nav_Icon" style="color: #FFFFCC">
-                                <a href="/index.html" style="color: #FFFFCC">Home</a>
-                            </li>
-                            <li class="_ListPink">
-                                <img src="Media/Icons/Star1.png" alt="" class="_Nav_Icon" style="color: #FFCCF5">
-                                <a href="/projects.html" style="color: #FFCCF5">Projects</a>
-                            </li>
-                            <li class="_ListCyan">
-                                <img src="Media/Icons/Star2.png" alt="" class="_Nav_Icon" style="color: #CCFAFF">
-                                <a href="#games" style="color: #CCFAFF">Games</a>
-                            </li>
-                            <li class="_ListYellow">
-                                <img src="Media/Icons/Star0.png" alt="" class="_Nav_Icon" style="color: #FFFFCC">
-                                <a href="#links" style="color: #FFFFCC">Links</a>
-                            </li>
-                            <li class="_ListPink">
-                                <img src="Media/Icons/Star1.png" alt="" class="_Nav_Icon" style="color: #FFCCF5">
-                                <a href="#about" style="color: #FFCCF5">About</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="_Window_Info _Window_Side _Window_Update">
-                <div class="_Window_Header">
-                    <img src="/Media/Icons/Clock.png" class="_Window_Header_Icon" alt="">
-                    <span class="_Window_Header_Text">Info</span>
-                </div>
-                <div class="_Window_Layout">
-                    <div class="_Window_Text" id="last-update">
-                        Loading...<br>
-                    </div>
-                </div>
-            </div>
-
-            <div class="_Window_Info _Window_Side _Window_Senko">
-                <div class="_Window_Header">
-                    <img src="/Media/Icons/Senko.png" class="_Window_Header_Icon" alt="">
-                    <span class="_Window_Header_Text">Senko-san</span>
-                </div>
-                <div class="_Window_Layout">
-                    <div class="_Window_Text" id="Senko">
-                        <img src="/Media/Photos/Senko/uwu-anime.gif" style="width: 100%; image-rendering:pixelated;">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- ############################################### -->
-
-    </main>
-
-    <!-- ############################################### -->
-
-
-
-
-
-
-</div>
+                <td>
+                    <aside>
+                        <nav class="window-box" style="width: 170px;">
+                            <div class="window-title c2">
+                                <p class="window-title">Info</p>
+                                <img src="media/window/icon/title-update.png" width="48" height="48" class="window-title" alt="Updates"/>
+                            </div>
+                            <div class="window-content">
+                                <div id="info">Loading...</div>
+                                <strong><div id="clock">Loading...</div></strong>
+                            </div>
+                        </nav>
+                    </aside>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <footer class="window-box" style="max-width: min(960px, 100%);">
+                        <p id="footer_copyright">2026 &copy; Foxioo</p>
+                    </footer>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
