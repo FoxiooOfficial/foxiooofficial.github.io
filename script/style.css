@@ -30,6 +30,8 @@ body {
     image-rendering: pixelated;                 /* Universal support since 2021   */
     image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
     -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+
+    cursor: url('/media/cursor/black-xp.png'), auto;
 }
 
 .main-container {
@@ -321,3 +323,26 @@ div.window-content #clock
   font-size:12px;
   padding: 0px 6px 6px 6px;
 }
+
+/*******************************************************************************
+
+  Particle systems based on:
+  www.balbooa.com/help/tutorials/coding/interactions/confetti-cursor-trail
+
+*******************************************************************************/
+
+.circles
+{
+    position: fixed;
+    pointer-events: none;
+    opacity: 1.0;
+    transform: translateY(0);
+    z-index: 99999;
+}
+
+  @keyframes fall {
+    to {
+      transform: translateY(var(--fall-distance)) scale(var(--scale));
+      scale: var(0);
+    }
+  }
