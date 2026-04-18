@@ -20,7 +20,7 @@ body {
 
     min-height: 100vh;
 
-    background-image: url(/media//ced4d1b1-e135-4bcb-9695-73427c2acacf.gif);
+    background-image: url(/media//ced4d1b1-e135-4bcb-9695-73427c2acacf.png);
     background-size: 512px;
     background-repeat: repeat;
     image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
@@ -49,7 +49,9 @@ table {
 
 th:nth-child(1), td:nth-child(1),
 th:nth-child(3), td:nth-child(3) {
-    width: 180px; 
+    width: 200px;
+    padding-right: 24px;
+    padding-left: 12px;
 }
 
 table tr:first-child th {
@@ -170,6 +172,10 @@ div.window-title {
 
 .c2 {
   background: linear-gradient(45deg, #84ffe0, #af84ff);
+}
+
+.c3 {
+  background: linear-gradient(45deg, #ff84d6, #9dff84);
 }
 
 img.window-title {
@@ -322,6 +328,18 @@ div.window-content #clock
 {
   font-size:12px;
   padding: 0px 6px 6px 6px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.center img {
+  max-width: 100%;
+  height: auto;
 }
 
 /*******************************************************************************
