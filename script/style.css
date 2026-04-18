@@ -1,0 +1,323 @@
+* {
+  padding: 0px;
+  margin: 0px;
+
+  font-family: cursive;
+
+  /* disable antialiasing on font */
+  font-smooth: never;
+  -webkit-font-smoothing : none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: teal;
+    color: white;
+    
+    display: flex;
+    justify-content: center;
+
+    min-height: 100vh;
+
+    background-image: url(/media//ced4d1b1-e135-4bcb-9695-73427c2acacf.png);
+    background-size: 512px;
+    background-repeat: repeat;
+    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: pixelated;                 /* Universal support since 2021   */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-collapse: separate;
+    table-layout: fixed; 
+    width: 100%;
+    max-width: 1080px; 
+}
+
+th:nth-child(1), td:nth-child(1),
+th:nth-child(3), td:nth-child(3) {
+    width: 180px; 
+}
+
+table tr:first-child th {
+    height: 1px;
+    padding-bottom: 0; 
+}
+
+table tr:nth-child(2) td {
+    height: auto;         
+    vertical-align: top;
+}
+
+@media (max-width: 800px) {
+    
+    body {
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    table, thead, tbody, tr, td, th {
+        display: block;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    td:empty, th:empty {
+        display: none;
+    }
+
+    table {
+        border-spacing: 0;
+    }
+
+    tr {
+        margin-bottom: 20px; 
+    }
+
+    td, th {
+        margin-bottom: 15px;
+        height: auto !important;
+    }
+
+    .window-box {
+        width: 100% !important;
+        max-width: none !important;
+    }
+
+    header {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/*******************************************************************************/
+
+header img {
+  width: min(960px, 100%)
+}
+
+
+/*******************************************************************************
+    
+  A style based on "Windows 95 Recreation" created by Liam Reilly; it has been modified
+
+  Copyright (c) 2026 by Liam Reilly (https://codepen.io/supember/pen/BKmgNZ)
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+/*******************************************************************************/
+
+button:focus {
+  outline: none;
+}
+
+.window-box {
+  background: #3f3f3f;
+  border-color :#ffffff #000000 #000000 #ffffff;
+
+  border-width: 1px;
+  border-style: solid;
+  position: relative;
+  padding: 1px;
+}
+
+.window-box::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  
+  border: 1px solid;
+  border-color: #7F7F7F #262626 #262626 #7F7F7F;
+  
+  pointer-events: none; 
+}
+
+div.window-title {
+  height: 26px;
+  width: calc(100% - 2px);
+  color: #FFFFFF;
+  border-color :#3F3F3F #3F3F3F #3F3F3F #3F3F3F;
+
+  border-width: 1px;
+  border-style: solid;
+
+  box-shadow: 
+      1px 1px 0 #262626,
+      2px 2px 0 #000000;
+}
+.c0 {
+  background: linear-gradient(45deg, #ff80ff, #ffea84);
+}
+
+.c1 {
+  background: linear-gradient(45deg, #ffea84, #84ffe0);
+}
+
+.c2 {
+  background: linear-gradient(45deg, #84ffe0, #af84ff);
+}
+
+img.window-title {
+  margin:-12px 8px -12px 0;
+  float:right;
+  image-rendering: pixelated;
+}
+
+p.window-title {
+  margin: 1px 0px 0px 8px;
+  float: left;
+
+  font-weight: 540;
+  font-size: 14pt;
+
+  text-shadow: 1px 1px #000000;
+}
+
+.window-title button {
+  /*position:absolute;
+  right:3px;
+  top:3px;*/
+  margin:2px 2px 2px 0;
+  float:right;
+  width:14px;
+  height:13.5px;
+  background:#C0C0C0;
+  border-width:1px;
+  border-color:#FFFFFF #808080 #808080 #FFFFFF;
+  padding:0;
+  font-size:9px;
+  font-weight:bold;
+  font-family:Tahoma;
+  text-align:center;
+}
+
+div.window-content {
+  padding: 4px 2px 2px;
+  height:100%;
+  width:calc(100% - 4px);
+  display:inline-block;
+}
+
+div.window-content p {
+  font-size:14px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+div.window-content h1 {
+  padding-bottom: 12px;
+  padding-top: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+i {
+  color: rgb(180, 180, 180);
+}
+
+div.window-content a {
+  color: rgb(253, 231, 102);
+}
+
+
+div.window-content button {
+  font-family:"MS Sans Serif";
+  font-size:11px;
+  outline:1px solid #000000;
+  background:#C0C0C0;
+  border-width:1px;
+  border-style:solid;
+  border-color:#FFFFFF #808080 #808080 #FFFFFF;
+  padding:4px 10px;
+  margin:20px auto 3px;
+  display:block;
+  position:relative;
+  bottom:0px;
+}
+
+div.window-content ul {
+  list-style-position: inside;
+  background: none;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+div.window-content ul li
+{
+  border-bottom: 1px solid #3F3F3F; 
+  box-shadow: 0 1px 0 0 #7A7A7A; 
+}
+
+div.window-content ul li a {
+    text-decoration: none;
+}
+
+div.window-content ul li a:hover {
+    text-decoration:underline;
+}
+
+div.window-content ul li.notselected a:hover {
+    background-color: black;
+}
+
+
+div.window-content ul li {
+  padding: 5px 10px;
+}
+
+div.window-content ul li.notselected a {
+    color: rgb(255, 255, 255);
+}
+
+div.window-content ul li.notselected {
+  list-style-image: url("/media/window/icon/folder-closed.png");
+  background: linear-gradient(90deg, #00000000, #5f5f5f);
+}
+
+div.window-content ul li.selected a {
+  color: rgb(0, 0, 0);
+}
+
+div.window-content ul li.selected {
+  list-style-image: url("/media/window/icon/folder-open.png");
+  background: linear-gradient(45deg, #ff80ff, #ffea84);
+
+
+  text-shadow: 2px 2px #ffffff;
+  font-weight: bold;
+}
+
+div.window-content img
+{
+  max-width: 100%;
+  height: auto;
+}
+
+div.window-content #info
+{
+  font-size:12px;
+  padding: 6px;
+}
+
+div.window-content #clock
+{
+  font-size:12px;
+  padding: 0px 6px 6px 6px;
+}

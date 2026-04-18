@@ -17,15 +17,16 @@
 
         <div class="content-section">
             <h2 id="r102_291125">R1.0.3_22.03.26</h2>
-            <p><strong>Release date:</strong> March 22, 2026</p>
-            <p>Latest release from the R1.0.3.</p>
+            <p><strong>Release date:</strong> March 22, 2026 <i>(Latest release)</i></p>
             
             <h3>Initial Features</h3>
             <ul>
                 <li>There are now two types of polygons. The old polygons <i>(which were included in versions R1.0.1 and R1.0.2)</i> are now labeled <strong>"Quad"</strong>; the new polygons feature perspective corrections and do not disappear when they are too close. For more information, <a href="">click here</a>.</li>
                 <li>Calls to behavior calculations for engine objects are now <strong>explicit</strong>; the engine code contains a loop that calls each function individually.</li>
                 <li>Partial test support for Depth Buffer has been added <i>(for Direct3D 9 only)</i>. For more information, <a href="">click here</a>.</li>
-                <li>Fixed the <span class="code-string">"TO_CAMERA_XYZ"</span> layer mode; the Z position is now calculated correctly.</li>
+                <li>Fixed the <span class="code-string">"TO_CAMERA_XYZ"</span> <strong>Layer Mode</strong>; the Z position is now calculated correctly.</li>
+                <li>Entire <strong>Visible Mode</strong> has been fixed.</li>
+                <li><strong>Background gradients objects</strong> have been updated to support camera positioning along the Z-axis for negative coordinates.</li>
             </ul>
         </div>
 
