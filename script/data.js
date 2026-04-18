@@ -13,6 +13,10 @@ function Fun_Loaded() {
         document.head.appendChild(_Link);
 
         _Switch_Style.innerHTML = '<b>Is this page too heavy for your device?</b> <a href="?style=no">Load the plain HTML version</a>.'
+    
+        var _Script = document.createElement('script');
+        _Script.src = 'script/particles.js';
+        document.body.appendChild(_Script);
     }
     else
     {
