@@ -11,6 +11,8 @@ function Fun_Loaded() {
         _Link.rel = 'stylesheet';
         _Link.href = 'script/style.css';
         document.head.appendChild(_Link);
+
+        _Switch_Style.innerHTML = '<b>Is this page too heavy for your device?</b> <a href="?style=no">Load the plain HTML version</a>.'
     }
     else
     {
