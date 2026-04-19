@@ -21,6 +21,8 @@ body {
     min-height: 100vh;
 
     background-image: url(/media//ced4d1b1-e135-4bcb-9695-73427c2acacf.png);
+    animation: scrollbg 30s linear infinite;
+
     background-size: 512px;
     background-repeat: repeat;
     image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
@@ -32,6 +34,15 @@ body {
     -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
 
     cursor: url('/media/cursor/black-xp.png'), auto;
+}
+
+@keyframes scrollbg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -896px; 
+  }
 }
 
 .main-container {
@@ -129,7 +140,10 @@ button:focus {
 }
 
 .window-box {
-  background: #3f3f3f;
+  background:
+    linear-gradient(rgba(63, 63, 63, 0.5), rgba(63, 63, 63, 0.5)),
+    url("/media/26IG4T2VDVJORXUWRW2ZYH47QIHEVCHM.gif");
+
   border-color :#ffffff #000000 #000000 #ffffff;
 
   border-width: 1px;
@@ -185,13 +199,12 @@ img.window-title {
 }
 
 p.window-title {
+  color: rgb(255, 255, 255);
   margin: 1px 0px 0px 8px;
   float: left;
-
-  font-weight: 540;
   font-size: 14pt;
 
-  text-shadow: 1px 1px #000000;
+  background-color: black;
 }
 
 .window-title button {

@@ -12,7 +12,7 @@ function Fun_Loaded() {
         _Link.href = 'script/style.css';
         document.head.appendChild(_Link);
 
-        _Switch_Style.innerHTML = '<b>Is this page too heavy for your device?</b> <a href="?style=no">Load the plain HTML version</a>.'
+        _Switch_Style.innerHTML = '<strong>Is this page too heavy for your device?</strong> <a href="?style=no">Load the plain HTML version</a>.'
     
         var _Script = document.createElement('script');
         _Script.src = 'script/particles.js';
@@ -20,7 +20,7 @@ function Fun_Loaded() {
     }
     else
     {
-        _Switch_Style.innerHTML = '<b>Is this page too lightweight for your device?</b> <a href="?style=yes">View the HTML version with CSS</a> <i>(only if your browser supports it)</i>.';
+        _Switch_Style.innerHTML = '<strong>Is this page too lightweight for your device?</strong> <a href="?style=yes">View the HTML version with CSS</a> <em>(only if your browser supports it)</em>.';
 
         var _Links = document.querySelectorAll('div.window-content ul li a');
         for (var i = 0; i < _Links.length; i++)

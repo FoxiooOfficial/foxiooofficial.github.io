@@ -31,13 +31,14 @@ fetch('https://api.github.com/repos/FoxiooOfficial/foxiooofficial.github.io/comm
                 hour: '2-digit',
                 minute: '2-digit',
                 timeZone: 'Europe/Warsaw',
+                second: '2-digit',
                 hour12: false
             });
             document.getElementById('clock').textContent = nowDate;
         }
 
         updateClock();
-        setInterval(updateClock, 60000);
+        setInterval(updateClock, 1000);
     })
     .catch(error => {
         document.getElementById('info').innerHTML = 'Error loading update date.';
