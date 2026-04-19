@@ -1,0 +1,448 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 10.3.0.232">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Float</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Float">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Float" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Shaders in Clickteam Fusion" /> 
+
+  <!-- Bootstrap CSS -->
+  <link href="vendors/bootstrap-5.3.7/bootstrap.min.css" rel="stylesheet"/>
+  <link href="vendors/bootstrap-icons-1.13.1/bootstrap-icons.min.css" rel="stylesheet"/>
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.10/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+  <style type="text/css">.navigation #inline-toc { width: auto !important}</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="visually-hidden">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>Shaders in Clickteam Fusion</h1>
+    
+  </header>
+
+  <nav id="panel-left" class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close" role="presentation"> 
+        <button class="hnd-toggle btn btn-default" aria-label="close">
+          <span class="bi bi-x" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="nav-item tab">
+            <a href="#contents" id="tab-contents" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#contents" aria-controls="contents" aria-selected="true">
+                <i class="bi bi-list-ul"></i>
+                Contents
+            </a>
+        </li>
+      
+        <li role="presentation" class="nav-item tab">
+            <a href="#index" id="tab-index" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#index" aria-controls="index" aria-selected="false">
+                <i class="bi bi-asterisk"></i>
+                Index
+            </a>
+        </li>
+      
+        <li role="presentation" class="nav-item tab">
+            <a href="#search" id="tab-search" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#search" aria-controls="search" aria-selected="false">
+                <i class="bi bi-search"></i>
+                Search
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+      <div role="tabpanel" class="tab-pane" id="index">
+        <div id="keywords" class="tree-container unselectable"
+            data-url="_keywords.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /index-->
+      
+      <div role="tabpanel" class="tab-pane" id="search">
+        <div class="search-content">
+          <div class="search-input">
+            <form id="search-form">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="input-search" name="input-search" placeholder="Search..." aria-label="Search..." />
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit" aria-label="Search...">
+                      <span class="bi bi-search" aria-hidden="true"></span>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>  <!-- /search-input -->
+          <div class="search-result">
+            <div id="search-info"></div>
+            <div class="tree-container unselectable" id="search-tree"></div>
+          </div>  <!-- /search-result -->
+        </div>  <!-- /search-content -->
+      </div>  <!-- /search-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="Float"
+		  data-hnd-context="61"
+		  data-hnd-title="Float"
+		>
+            
+                <div class="navigation">
+                    <ol class="breadcrumb">
+                        <li><a href="ShaderFileSystem.html">Shader File System</a></li><li><a href="XMLFile.html">XML File</a></li><li><a href="Examples.html">Examples</a></li>
+                    </ol>
+                    <div class="nav-arrows">
+                        <div class="btn-group btn-group" role="group"><a class="btn btn-default" href="Examples.html" title="Examples" role="button"><span class="bi bi-chevron-up" aria-hidden="true"></span></a><a class="btn btn-default" href="IntegerBool.html" title="Integer / Bool" role="button"><span class="bi bi-chevron-left" aria-hidden="true"></span></a><a class="btn btn-default" href="Color.html" title="Color" role="button"><span class="bi bi-chevron-right" aria-hidden="true"></span></a></div>
+                    </div>
+                </div> 
+            
+
+            <a id="main-content"></a>
+
+            <h2>Float</h2>
+
+            <div class="main-content">
+                
+<h1 class="rvps4"><span class="rvts0"><span class="rvts11">XML File - Examples - Float </span></span><span class="rvts0"><a class="rvts30" href="http://library.clickteam.com/manuals/miscellaneous/hwa-direct3d/create-your-own-effects/" target="_blank">(Clickteam Library)</a></span></h1>
+<p class="rvps10"><span class="rvts24">Last edited 2026-04-05</span></p>
+<p class="rvps10"><span class="rvts24"></span><br/><span class="rvts63">The </span><span class="rvts64">float</span><span class="rvts63"> parameter allows you to enter an float value into the shader.</span></p>
+<p class="rvps10"><span class="rvts65"><br/></span></p>
+<p class="rvps2"><span class="rvts13">All text should be in </span><a class="rvts27" href="https://www.ascii-code.com/" target="_blank">ASCII</a><span class="rvts13"> standard, i.e. special characters will not display correctly in Fusion, for example: ą, ę, ł, ó, ń, ż, ь, ф, э, any emoticons, etc.</span></p>
+<h4 class="rvps6"><span class="rvts0"><span class="rvts58">Tag list for parametrs:</span></span></h4>
+<div class="rvps2">
+<table style="border-color: #000000; border-style: solid; border-width: 1px; background-color: #ffffff; border-spacing: 2px;">
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 59px;">
+   <p class="rvps3"><span class="rvts42">Type</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 164px;">
+   <p class="rvps3"><span class="rvts42">Tag</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 553px;">
+   <p class="rvps3"><span class="rvts42">Description</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 654px;">
+   <p class="rvps3"><span class="rvts42">Value</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 59px; height: 21px;">
+   <p class="rvps2"><span class="rvts56">xml</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 164px; height: 21px;">
+   <p class="rvps2"><span class="rvts35">&lt;</span><span class="rvts36">parametr</span><span class="rvts35">&gt;</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 553px; height: 21px;">
+   <p class="rvps2"><span class="rvts6">This tag defines a new parameter that the shader allows to be modified.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 654px; height: 21px;">
+   <p class="rvps2"><span class="rvts25">(None)</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 59px;">
+   <p class="rvps2"><span class="rvts56">xml</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 164px;">
+   <p class="rvps2"><span class="rvts35">&lt;</span><span class="rvts36">name</span><span class="rvts35">&gt;</span></p>
+  </td>
+  <td rowspan="2" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 553px;">
+   <p class="rvps2"><span class="rvts6">In this tag, it specifies the name of the parameter.</span></p>
+  </td>
+  <td rowspan="4" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 654px;">
+   <p class="rvps2"><span class="rvts25">(Any* Characters must be from the ASCII table)</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 59px;">
+   <p class="rvps2"><span class="rvts56">xml</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 164px;">
+   <p class="rvps2"><span class="rvts35">&lt;</span><span class="rvts36">code</span><span class="rvts35">&gt;</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 59px;">
+   <p class="rvps2"><span class="rvts56">xml</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 164px;">
+   <p class="rvps2"><span class="rvts35">&lt;</span><span class="rvts36">variable</span><span class="rvts35">&gt;</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 553px;">
+   <p class="rvps2"><span class="rvts6">Declaration of the variable name that you will refer to in the shader.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 59px;">
+   <p class="rvps2"><span class="rvts56">xml</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 164px;">
+   <p class="rvps2"><span class="rvts35">&lt;</span><span class="rvts36">description</span><span class="rvts35">&gt;</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 553px;">
+   <p class="rvps2"><span class="rvts6">Description of what a given parameter does in the shader.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 59px;">
+   <p class="rvps2"><span class="rvts56">xml</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 164px;">
+   <p class="rvps2"><span class="rvts35">&lt;</span><span class="rvts36">type</span><span class="rvts35">&gt;</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 553px;">
+   <p class="rvps2"><span class="rvts6">The type that your variable specifies</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 654px;">
+   <p class="rvps2"><span class="rvts57">int</span><span class="rvts6"> for Intergers or Flags;</span></p>
+   <p class="rvps2"><span class="rvts57">float</span><span class="rvts6"> for Floats;</span></p>
+   <p class="rvps2"><span class="rvts57">int_float4</span><span class="rvts6"> for Colors;</span></p>
+   <p class="rvps2"><span class="rvts57">image</span><span class="rvts6"> for Texture;</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 59px;">
+   <p class="rvps2"><span class="rvts56">xml</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 164px;">
+   <p class="rvps2"><span class="rvts35">&lt;</span><span class="rvts36">property</span><span class="rvts35">&gt;</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 553px;">
+   <p class="rvps2"><span class="rvts6">This tag determines how data is entered into the variable.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 654px;">
+   <p class="rvps2"><span class="rvts57">edit</span><span class="rvts6"> for entering a number like a textbox</span><span class="rvts13"> (only when </span><span class="rvts35">&lt;</span><span class="rvts36">type</span><span class="rvts35">&gt;</span><span class="rvts13"> is </span><span class="rvts59">int</span><span class="rvts13"> or </span><span class="rvts59">float</span><span class="rvts13">);</span></p>
+   <p class="rvps2"><span class="rvts57">spin</span><span class="rvts6"> for entering a number that you can add or subtract with the arrows</span><span class="rvts13"> (only when </span><span class="rvts35">&lt;</span><span class="rvts36">type</span><span class="rvts35">&gt;</span><span class="rvts13"> is </span><span class="rvts59">int</span><span class="rvts13"> or </span><span class="rvts59">float</span><span class="rvts13">);</span></p>
+   <p class="rvps2"><span class="rvts57">slider</span><span class="rvts6"> for a slider where you can change the number </span><span class="rvts13">(only when </span><span class="rvts35">&lt;</span><span class="rvts36">type</span><span class="rvts35">&gt;</span><span class="rvts13"> is </span><span class="rvts59">int</span><span class="rvts13"> or </span><span class="rvts59">float</span><span class="rvts13">);</span></p>
+   <p class="rvps2"><span class="rvts57">checkbox </span><span class="rvts6">for a bool variable, i.e. 0 or 1 </span><span class="rvts13">(only when </span><span class="rvts35">&lt;</span><span class="rvts36">type</span><span class="rvts35">&gt;</span><span class="rvts13"> is </span><span class="rvts59">int</span><span class="rvts13">);</span></p>
+   <p class="rvps2"><span class="rvts57">color</span><span class="rvts6"> for RGBA color variable </span><span class="rvts13">(only when </span><span class="rvts35">&lt;</span><span class="rvts36">type</span><span class="rvts35">&gt;</span><span class="rvts13"> is </span><span class="rvts59">int_float4</span><span class="rvts13">);</span></p>
+   <p class="rvps2"><span class="rvts57">image</span><span class="rvts6"> for texture variable </span><span class="rvts13">(only when </span><span class="rvts35">&lt;</span><span class="rvts36">type</span><span class="rvts35">&gt;</span><span class="rvts13"> is </span><span class="rvts59">image</span><span class="rvts13">);</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 59px; height: 35px;">
+   <p class="rvps2"><span class="rvts56">xml</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 164px; height: 35px;">
+   <p class="rvps2"><span class="rvts35">&lt;</span><span class="rvts36">value</span><span class="rvts35">&gt;</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 553px; height: 35px;">
+   <p class="rvps2"><span class="rvts6">The tag specifies what default value the parameter should have.</span></p>
+  </td>
+  <td rowspan="2" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 654px; height: 35px;">
+   <p class="rvps2"><span class="rvts6">32-bit number </span><span class="rvts13">(only when </span><span class="rvts35">&lt;</span><span class="rvts36">type</span><span class="rvts35">&gt;</span><span class="rvts13"> is </span><span class="rvts59">int</span><span class="rvts13">, </span><span class="rvts59">float</span><span class="rvts13"> or </span><span class="rvts59">int_float4</span><span class="rvts13">);</span><br/><span class="rvts6">0 or 1 </span><span class="rvts13">(only when </span><span class="rvts35">&lt;</span><span class="rvts36">type</span><span class="rvts35">&gt;</span><span class="rvts13"> is </span><span class="rvts59">int</span><span class="rvts13"> and when </span><span class="rvts35">&lt;</span><span class="rvts36">property</span><span class="rvts35">&gt;</span><span class="rvts13"> is </span><span class="rvts59">checkbox</span><span class="rvts13">);</span><br/><span class="rvts6">Path to texture file </span><span class="rvts13">(only when </span><span class="rvts35">&lt;</span><span class="rvts36">type</span><span class="rvts35">&gt;</span><span class="rvts13"> is </span><span class="rvts59">image</span><span class="rvts13">);</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 59px;">
+   <p class="rvps2"><span class="rvts56">xml</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 164px;">
+   <p class="rvps2"><span class="rvts35">&lt;</span><span class="rvts36">preview_value</span><span class="rvts35">&gt;</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 553px;">
+   <p class="rvps2"><span class="rvts6">The tag sets a preview value only in the effects selection window.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 59px;">
+   <p class="rvps2"><span class="rvts56">xml</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 164px;">
+   <p class="rvps2"><span class="rvts35">&lt;</span><span class="rvts36">min</span><span class="rvts35">&gt;</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 553px;">
+   <p class="rvps2"><span class="rvts6">Specifies the minimum value that can be set in the Properties window </span><span class="rvts25">(this does not work when setting the value from the Event Editor)</span><span class="rvts6">;</span></p>
+   <p class="rvps2"><span class="rvts6">It also requires that the </span><span class="rvts35">&lt;</span><span class="rvts36">property</span><span class="rvts35">&gt;</span><span class="rvts6"> tag be either </span><span class="rvts57">slider</span><span class="rvts6"> or </span><span class="rvts57">spin</span><span class="rvts6">.</span></p>
+  </td>
+  <td rowspan="2" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 654px;">
+   <p class="rvps2"><span class="rvts6">32-bit number </span><span class="rvts13">(only when </span><span class="rvts35">&lt;</span><span class="rvts36">type</span><span class="rvts35">&gt;</span><span class="rvts13"> is </span><span class="rvts59">int</span><span class="rvts13"> or </span><span class="rvts59">float</span><span class="rvts13">);</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 59px;">
+   <p class="rvps2"><span class="rvts56">xml</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 164px;">
+   <p class="rvps2"><span class="rvts35">&lt;</span><span class="rvts36">max</span><span class="rvts35">&gt;</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 553px;">
+   <p class="rvps2"><span class="rvts6">Specifies the maximum value that can be set in the Properties window </span><span class="rvts25">(this does not work when setting the value from the Event Editor)</span><span class="rvts6">;</span></p>
+   <p class="rvps2"><span class="rvts6">It also requires that the </span><span class="rvts35">&lt;</span><span class="rvts36">property</span><span class="rvts35">&gt;</span><span class="rvts6"> tag be either </span><span class="rvts57">slider</span><span class="rvts6"> or </span><span class="rvts57">spin</span><span class="rvts6">.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 59px;">
+   <p class="rvps2"><span class="rvts56">xml</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 164px;">
+   <p class="rvps2"><span class="rvts35">&lt;</span><span class="rvts36">delta</span><span class="rvts35">&gt;</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 553px;">
+   <p class="rvps2"><span class="rvts6">Specifies the step value when changing the value via arrows when </span><span class="rvts35">&lt;</span><span class="rvts36">type</span><span class="rvts35">&gt;</span><span class="rvts6"> is </span><span class="rvts60">float</span><span class="rvts6"> and </span><span class="rvts35">&lt;</span><span class="rvts36">property</span><span class="rvts35">&gt;</span><span class="rvts6"> is </span><span class="rvts57">spin</span><span class="rvts6">.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 654px;">
+   <p class="rvps2"><span class="rvts6">32-bit number </span><span class="rvts13">(only when </span><span class="rvts35">&lt;</span><span class="rvts36">type</span><span class="rvts35">&gt;</span><span class="rvts13"> is </span><span class="rvts59">float</span><span class="rvts13">);</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts13">Details for the </span><span class="rvts40">&lt;</span><span class="rvts36">type</span><span class="rvts40">&gt;</span><span class="rvts13"> tag:</span></p>
+<p class="rvps15"><span class="rvts59">int_float4</span><span class="rvts6"> - integer value that contains 4 values between 0 and 255, used for RGBA color values. These values are transformed to a float4 variable, that contains 4 floating point values between 0 and 1 (1 corresponds to 255). This parameter type is generally used with the COLOR property type.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts59">image</span><span class="rvts6"> - the value is the name of a graphic file in the Effects directory. This file is loaded when the user sets up the shader in the properties, and then the image is stored in the MFA file, the user can modify it with the Clickteam Fusion 2.5 picture editor. The IMAGE property type can be used only with the IMAGE variable type (and reciprocally).</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<hr style="height : 1px; background-color : #000000; border-style : none;">
+<h3 class="rvps5"><span class="rvts0"><span class="rvts12">Example parametr #1:</span></span></h3>
+<p class="rvps2"><span class="rvts6">The first example allows you to enter a variable called "</span><span class="rvts57">coeff_float</span><span class="rvts6">" which can be called in the shader. It is a 32-bit float number.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts13">In the shader you should define this variable as float.</span></p>
+<p class="rvps2"><span class="rvts6"></span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts35">&lt;</span><span class="rvts36">parameter</span><span class="rvts35">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts35">&lt;</span><span class="rvts36">name</span><span class="rvts35">&gt;</span><span class="rvts37">Coeff</span><span class="rvts35">&lt;/</span><span class="rvts36">name</span><span class="rvts35">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts35">&lt;</span><span class="rvts36">variable</span><span class="rvts35">&gt;</span><span class="rvts37">coeff_float</span><span class="rvts35">&lt;/</span><span class="rvts36">variable</span><span class="rvts35">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts35">&lt;</span><span class="rvts36">description</span><span class="rvts35">&gt;</span><span class="rvts37">This variable does this...</span><span class="rvts35">&lt;/</span><span class="rvts36">description</span><span class="rvts35">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts35">&lt;</span><span class="rvts36">type</span><span class="rvts35">&gt;</span><span class="rvts37">float</span><span class="rvts35">&lt;/</span><span class="rvts36">type</span><span class="rvts35">&gt;</span><br/><span class="rvts35"></span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts35">&lt;</span><span class="rvts36">property</span><span class="rvts35">&gt;</span><span class="rvts37">edit</span><span class="rvts35">&lt;/</span><span class="rvts36">property</span><span class="rvts35">&gt;</span><br/><span class="rvts35"></span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts35">&lt;</span><span class="rvts36">value</span><span class="rvts35">&gt;</span><span class="rvts37">1.5</span><span class="rvts35">&lt;/</span><span class="rvts36">value</span><span class="rvts35">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts35">&lt;</span><span class="rvts36">preview_value</span><span class="rvts35">&gt;</span><span class="rvts37">2.75</span><span class="rvts35">&lt;/</span><span class="rvts36">preview_value</span><span class="rvts35">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts35">&lt;/</span><span class="rvts36">parameter</span><span class="rvts35">&gt;</span></p>
+<h3 class="rvps5"><span class="rvts0"><span class="rvts12">Example parametr #2:</span></span></h3>
+<p class="rvps2"><span class="rvts6">The second example allows you to enter a variable called "</span><span class="rvts57">blend</span><span class="rvts6">" that you can call in the shader. This is a 32-bit flooat number. However, in the properties window, it's limited to a range of -100.0 to 100.0, but you can still enter a value outside of this range when using the Event Editor.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts13">In the shader you should define this variable as int.</span></p>
+<p class="rvps2"><span class="rvts13"></span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">parameter</span><span class="rvts40">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">name</span><span class="rvts40">&gt;</span><span class="rvts37">Blend</span><span class="rvts40">&lt;/</span><span class="rvts36">name</span><span class="rvts40">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">variable</span><span class="rvts40">&gt;</span><span class="rvts67">blend</span><span class="rvts40">&lt;/</span><span class="rvts36">variable</span><span class="rvts40">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">description</span><span class="rvts40">&gt;</span><span class="rvts37">This mode does this when...</span><span class="rvts40">&lt;/</span><span class="rvts36">description</span><span class="rvts40">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">type</span><span class="rvts40">&gt;</span><span class="rvts37">float</span><span class="rvts40">&lt;/</span><span class="rvts36">type</span><span class="rvts40">&gt;</span><br/><span class="rvts40"></span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">property</span><span class="rvts40">&gt;</span><span class="rvts37">slider</span><span class="rvts40">&lt;/</span><span class="rvts36">property</span><span class="rvts40">&gt;</span><br/><span class="rvts40"></span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">value</span><span class="rvts40">&gt;</span><span class="rvts37">1.5</span><span class="rvts40">&lt;/</span><span class="rvts36">value</span><span class="rvts40">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">min</span><span class="rvts40">&gt;</span><span class="rvts37">-100.0</span><span class="rvts40">&lt;/</span><span class="rvts36">min</span><span class="rvts40">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">max</span><span class="rvts40">&gt;</span><span class="rvts37">100.0</span><span class="rvts40">&lt;/</span><span class="rvts36">max</span><span class="rvts40">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">preview_value</span><span class="rvts40">&gt;</span><span class="rvts37">50.0</span><span class="rvts40">&lt;/</span><span class="rvts36">preview_value</span><span class="rvts40">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;/</span><span class="rvts36">parameter</span><span class="rvts40">&gt;</span><br/><span class="rvts35"></span><br/><span class="rvts66">Example parametr #3:</span></p>
+<p class="rvps2"><span class="rvts6">The third example allows you to enter a variable called "</span><span class="rvts57">test</span><span class="rvts6">" that you can call in the shader. This is a 32-bit float number. However, in the properties window, it's limited to a range of 1.0 to 4.0, but you can still enter a value outside of this range when using the Event Editor.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts13">In the shader you should define this variable as int.</span></p>
+<p class="rvps2"><span class="rvts35"></span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">parameter</span><span class="rvts40">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">name</span><span class="rvts40">&gt;</span><span class="rvts37">Test</span><span class="rvts40">&lt;/</span><span class="rvts36">name</span><span class="rvts40">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">variable</span><span class="rvts40">&gt;</span><span class="rvts37">test</span><span class="rvts40">&lt;/</span><span class="rvts36">variable</span><span class="rvts40">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">description</span><span class="rvts40">&gt;</span><span class="rvts37">This test variable does this...</span><span class="rvts40">&lt;/</span><span class="rvts36">description</span><span class="rvts40">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">type</span><span class="rvts40">&gt;</span><span class="rvts37">float</span><span class="rvts40">&lt;/</span><span class="rvts36">type</span><span class="rvts40">&gt;</span><br/><span class="rvts40"></span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">property</span><span class="rvts40">&gt;</span><span class="rvts37">spin</span><span class="rvts40">&lt;/</span><span class="rvts36">property</span><span class="rvts40">&gt;</span><br/><span class="rvts40"></span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">value</span><span class="rvts40">&gt;</span><span class="rvts37">1.0</span><span class="rvts40">&lt;/</span><span class="rvts36">value</span><span class="rvts40">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">min</span><span class="rvts40">&gt;</span><span class="rvts37">1.0</span><span class="rvts40">&lt;/</span><span class="rvts36">min</span><span class="rvts40">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">max</span><span class="rvts40">&gt;</span><span class="rvts37">4.0</span><span class="rvts40">&lt;/</span><span class="rvts36">max</span><span class="rvts40">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">preview_value</span><span class="rvts40">&gt;</span><span class="rvts37">2.0</span><span class="rvts40">&lt;/</span><span class="rvts36">preview_value</span><span class="rvts40">&gt;</span></p>
+<p class="rvps2"><span class="rvts40"><br/></span></p>
+<p class="rvps2"><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;</span><span class="rvts36">delta</span><span class="rvts40">&gt;</span><span class="rvts37">0.5</span><span class="rvts40">&lt;/</span><span class="rvts36">delta</span><span class="rvts40">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">&lt;/</span><span class="rvts36">parameter</span><span class="rvts40">&gt;</span><br/><span class="rvts40"></span><span class="rvts6"></span></p>
+<p class="rvps7" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com/feature-tour/create-chm-help-files/">Streamline Your CHM Help File Creation with HelpNDoc</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2026 by Foxioo. All Rights Reserved.</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-bs-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Splitter -->
+  <div id="hnd-splitter" style="left: 350px"></div>  
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-3.7.1/jquery.min.js"></script>
+  <script src="vendors/bootstrap-5.3.7/bootstrap.bundle.min.js"></script>
+  <script src="vendors/markjs-8.11.1/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.19.11/uri.min.js"></script>
+  <script src="vendors/imageMapResizer-1.0.10/imageMapResizer.min.js"></script>
+  <script src="vendors/headroom-0.11.0/headroom.min.js"></script>
+  <script src="vendors/jstree-3.3.10/jstree.min.js"></script>  
+  <script src="vendors/interactjs-1.9.22/interact.min.js"></script>  
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Init script -->
+  <script src="_topic_init.js"></script>
+
+
+
+</body>
+
+</html>
+

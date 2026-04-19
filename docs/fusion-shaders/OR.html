@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 10.3.0.232">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>OR</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="OR">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="OR" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Shaders in Clickteam Fusion" /> 
+
+  <!-- Bootstrap CSS -->
+  <link href="vendors/bootstrap-5.3.7/bootstrap.min.css" rel="stylesheet"/>
+  <link href="vendors/bootstrap-icons-1.13.1/bootstrap-icons.min.css" rel="stylesheet"/>
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.10/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+  <style type="text/css">.navigation #inline-toc { width: auto !important}</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="visually-hidden">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>Shaders in Clickteam Fusion</h1>
+    
+  </header>
+
+  <nav id="panel-left" class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close" role="presentation"> 
+        <button class="hnd-toggle btn btn-default" aria-label="close">
+          <span class="bi bi-x" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="nav-item tab">
+            <a href="#contents" id="tab-contents" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#contents" aria-controls="contents" aria-selected="true">
+                <i class="bi bi-list-ul"></i>
+                Contents
+            </a>
+        </li>
+      
+        <li role="presentation" class="nav-item tab">
+            <a href="#index" id="tab-index" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#index" aria-controls="index" aria-selected="false">
+                <i class="bi bi-asterisk"></i>
+                Index
+            </a>
+        </li>
+      
+        <li role="presentation" class="nav-item tab">
+            <a href="#search" id="tab-search" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#search" aria-controls="search" aria-selected="false">
+                <i class="bi bi-search"></i>
+                Search
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+      <div role="tabpanel" class="tab-pane" id="index">
+        <div id="keywords" class="tree-container unselectable"
+            data-url="_keywords.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /index-->
+      
+      <div role="tabpanel" class="tab-pane" id="search">
+        <div class="search-content">
+          <div class="search-input">
+            <form id="search-form">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="input-search" name="input-search" placeholder="Search..." aria-label="Search..." />
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit" aria-label="Search...">
+                      <span class="bi bi-search" aria-hidden="true"></span>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>  <!-- /search-input -->
+          <div class="search-result">
+            <div id="search-info"></div>
+            <div class="tree-container unselectable" id="search-tree"></div>
+          </div>  <!-- /search-result -->
+        </div>  <!-- /search-content -->
+      </div>  <!-- /search-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="OR"
+		  data-hnd-context="73"
+		  data-hnd-title="OR"
+		>
+            
+                <div class="navigation">
+                    <ol class="breadcrumb">
+                        <li><a href="IntroductiontoShaders.html">Introduction to Shaders</a></li><li><a href="Build-ineffects.html">Build-in effects</a></li>
+                    </ol>
+                    <div class="nav-arrows">
+                        <div class="btn-group btn-group" role="group"><a class="btn btn-default" href="Build-ineffects.html" title="Build-in effects" role="button"><span class="bi bi-chevron-up" aria-hidden="true"></span></a><a class="btn btn-default" href="AND.html" title="AND" role="button"><span class="bi bi-chevron-left" aria-hidden="true"></span></a><a class="btn btn-default" href="XOR.html" title="XOR" role="button"><span class="bi bi-chevron-right" aria-hidden="true"></span></a></div>
+                    </div>
+                </div> 
+            
+
+            <a id="main-content"></a>
+
+            <h2>OR</h2>
+
+            <div class="main-content">
+                
+<h1 class="rvps4"><span class="rvts0"><span class="rvts11">Build-in effects - OR</span></span></h1>
+<p class="rvps10"><span class="rvts24">Last edited 2026-02-27</span></p>
+<p class="rvps10"><span class="rvts24"><br/></span></p>
+<p class="rvps2"><span class="rvts6">This effect uses bitwise OR on the base layer and top layer.</span></p>
+<hr style="height : 1px; background-color : #000000; border-style : none;">
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts13">Input data:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps2 noindent"><span class="rvts13">Self</span><span class="rvts6"> </span><span class="rvts25">(Main texture of the object/layer, depending on where you apply the effect; contains information about Red, Green, Blue, Alpha)</span></li>
+ <li class="rvps2 noindent"><span class="rvts13">Background</span><span class="rvts6"> </span><span class="rvts25">(Second texture that contains information about Red, Green, Blue, Alpha* pixels that are underneath Self)</span></li>
+</ul>
+<p class="rvps2"><span class="rvts25"><br/></span></p>
+<p class="rvps2"><span class="rvts13">Output data:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps2 noindent"><span class="rvts13">Render</span><span class="rvts6"> </span><span class="rvts25">(Red, Green, Blue, Alpha colors that will be displayed on the screen)</span></li>
+</ul>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts47">Example written in pseudocode:</span><br/><span class="rvts45">load</span><span class="rvts39"> </span><span class="rvts40">float4</span><span class="rvts39"> Self;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">// LOAD Self texture</span><br/><span class="rvts45">load</span><span class="rvts39"> </span><span class="rvts40">float4</span><span class="rvts39"> Background;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">// LOAD texture underneath Self texture</span></p>
+<p class="rvps2"><span class="rvts41"><br/></span></p>
+<p class="rvps2"><span class="rvts40">int3</span><span class="rvts39"> Base = </span><span class="rvts40">int3</span><span class="rvts39">(Self * </span><span class="rvts48">255.0f</span><span class="rvts39">);</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">// Assign Self colors to Base, with a conversion from float to int.</span><br/><span class="rvts40">int3</span><span class="rvts39"> Blend = </span><span class="rvts40">int3</span><span class="rvts39">(Background *</span><span class="rvts48"> 255.0f</span><span class="rvts39">);</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">// Assign Self colors to Blend, with a conversion from float to int.</span></p>
+<p class="rvps2"><span class="rvts41"><br/></span></p>
+<p class="rvps2"><span class="rvts40">int3 </span><span class="rvts39">Color = Base | Blend;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">// Apply OR operation to Base and Blend and assign to Color</span><br/><span class="rvts41"></span><br/><span class="rvts40">float4</span><span class="rvts39"> Render;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">// Create an empty vector</span></p>
+<p class="rvps2"><span class="rvts41"></span><br/><span class="rvts39">Render.rgb = </span><span class="rvts40">float3</span><span class="rvts39">(Color) / </span><span class="rvts48">255.0f</span><span class="rvts39">;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">// Assign the result of the R, G, B color conversion from int to float.</span><br/><span class="rvts39">Render.a = Self.a;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">// Assign the Alpha color from Self to Alpha</span><br/><span class="rvts41"></span><br/><span class="rvts45">return</span><span class="rvts39"> Render;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">// Return the Render</span></p>
+<p class="rvps2"><span class="rvts41"><br/></span></p>
+<p class="rvps2"><span class="rvts13">Examples of recreation effects created by the community:</span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside;">
+ <li class="rvps2 noindent"><a class="rvts27" href="https://github.com/NaitorStudios/FusionShaderRepo/raw/main/Releases/OR.zip" target="_blank">OR by Cezra;</a><span class="rvts13"> </span><span class="rvts6">It does the same shader.</span></li>
+ <li class="rvps2 noindent"><a class="rvts27" href="https://github.com/FoxiooOfficial/FoxiooShaderPack/raw/main/Release/Blend%20Modes/Logical/Basic%20Operations/Logical%20OR%20(Background).zip" target="_blank">Logical OR (Background) by Foxioo;</a><span class="rvts6"> It is a modification of the effect created by Cazra, adding more options for modifying the output color.</span></li>
+</ol>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<hr style="height : 1px; background-color : #000000; border-style : none;">
+<p class="rvps2"><span class="rvts46"><br/></span></p>
+<p class="rvps2"><span class="rvts13">The meaning of colors in the Type column:</span></p>
+<div class="rvps2">
+<table style="border-color: #000000; border-style: solid; border-width: 1px; background-color: #ffffff; border-spacing: 2px;">
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 58px;">
+   <p class="rvps3"><span class="rvts42">Color</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 428px;">
+   <p class="rvps3"><span class="rvts42">Description</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 58px;">
+   <p class="rvps2"><span class="rvts6">Green</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 428px;">
+   <p class="rvps2"><span class="rvts6">This effect works in this runtime.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 58px;">
+   <p class="rvps2"><span class="rvts6">Yellow</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 428px;">
+   <p class="rvps2"><span class="rvts6">It is unknown whether it works (requires confirmation)</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 58px;">
+   <p class="rvps2"><span class="rvts6">Red</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 428px;">
+   <p class="rvps2"><span class="rvts6">This effect does not work in this runtime.</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts43"><br/></span></p>
+<div class="rvps2">
+<table style="border-color: #000000; border-style: solid; border-width: 1px; border-spacing: 2px;">
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 157px;">
+   <p class="rvps3"><span class="rvts42">Effect</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 476px;">
+   <p class="rvps3"><span class="rvts42">Description</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 150px;">
+   <p class="rvps3"><span class="rvts42">Windows&nbsp;</span></p>
+   <p class="rvps3"><span class="rvts42">(Software / DirectDraw)</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 81px;">
+   <p class="rvps3"><span class="rvts42">Windows (Direct3D 8)</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 79px;">
+   <p class="rvps3"><span class="rvts42">Windows (Direct3D 9)</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 84px;">
+   <p class="rvps3"><span class="rvts42">Windows (Direct3D 11)</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 86px;">
+   <p class="rvps3"><span class="rvts42">Android (OpenGL ES)</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 86px;">
+   <p class="rvps3"><span class="rvts42">iOS</span></p>
+   <p class="rvps3"><span class="rvts42">(OpenGL ES)</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 86px;">
+   <p class="rvps3"><span class="rvts42">macOS (OpenGL ES)</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 57px;">
+   <p class="rvps3"><span class="rvts42">HTML5</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 58px;">
+   <p class="rvps3"><span class="rvts42">Haxe</span></p>
+   <p class="rvps3"><span class="rvts42">(Linux)</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 65px;">
+   <p class="rvps3"><span class="rvts42">Haxe</span></p>
+   <p class="rvps3"><span class="rvts42">(WebGL)</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 157px;">
+   <p class="rvps2"><a class="rvts27" href="OR.html">OR</a></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 476px;">
+   <p class="rvps2"><span class="rvts6">An OR logic gate is used between Self and Background colors.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 150px;">
+   <p class="rvps2"><span class="rvts6">Yes</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 81px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 79px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 84px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 86px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 86px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 86px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 57px;">
+   <p class="rvps2"><span class="rvts6">Unknown</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 58px;">
+   <p class="rvps2"><span class="rvts6">Unknown</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 65px;">
+   <p class="rvps2"><span class="rvts6">Unknown</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts43"></span><span class="rvts6"></span></p>
+<p class="rvps7" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com/feature-tour/advanced-project-analyzer/">Elevate Your Documentation with HelpNDoc's Project Analyzer Features</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2026 by Foxioo. All Rights Reserved.</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-bs-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Splitter -->
+  <div id="hnd-splitter" style="left: 350px"></div>  
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-3.7.1/jquery.min.js"></script>
+  <script src="vendors/bootstrap-5.3.7/bootstrap.bundle.min.js"></script>
+  <script src="vendors/markjs-8.11.1/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.19.11/uri.min.js"></script>
+  <script src="vendors/imageMapResizer-1.0.10/imageMapResizer.min.js"></script>
+  <script src="vendors/headroom-0.11.0/headroom.min.js"></script>
+  <script src="vendors/jstree-3.3.10/jstree.min.js"></script>  
+  <script src="vendors/interactjs-1.9.22/interact.min.js"></script>  
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Init script -->
+  <script src="_topic_init.js"></script>
+
+
+
+</body>
+
+</html>
+

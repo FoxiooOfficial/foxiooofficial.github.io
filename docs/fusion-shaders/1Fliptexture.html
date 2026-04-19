@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 10.3.0.232">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>1. Flip texture</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="1. Flip texture">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="1. Flip texture" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Shaders in Clickteam Fusion" /> 
+
+  <!-- Bootstrap CSS -->
+  <link href="vendors/bootstrap-5.3.7/bootstrap.min.css" rel="stylesheet"/>
+  <link href="vendors/bootstrap-icons-1.13.1/bootstrap-icons.min.css" rel="stylesheet"/>
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.10/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+  <style type="text/css">.navigation #inline-toc { width: auto !important}</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="visually-hidden">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>Shaders in Clickteam Fusion</h1>
+    
+  </header>
+
+  <nav id="panel-left" class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close" role="presentation"> 
+        <button class="hnd-toggle btn btn-default" aria-label="close">
+          <span class="bi bi-x" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="nav-item tab">
+            <a href="#contents" id="tab-contents" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#contents" aria-controls="contents" aria-selected="true">
+                <i class="bi bi-list-ul"></i>
+                Contents
+            </a>
+        </li>
+      
+        <li role="presentation" class="nav-item tab">
+            <a href="#index" id="tab-index" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#index" aria-controls="index" aria-selected="false">
+                <i class="bi bi-asterisk"></i>
+                Index
+            </a>
+        </li>
+      
+        <li role="presentation" class="nav-item tab">
+            <a href="#search" id="tab-search" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#search" aria-controls="search" aria-selected="false">
+                <i class="bi bi-search"></i>
+                Search
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+      <div role="tabpanel" class="tab-pane" id="index">
+        <div id="keywords" class="tree-container unselectable"
+            data-url="_keywords.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /index-->
+      
+      <div role="tabpanel" class="tab-pane" id="search">
+        <div class="search-content">
+          <div class="search-input">
+            <form id="search-form">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="input-search" name="input-search" placeholder="Search..." aria-label="Search..." />
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit" aria-label="Search...">
+                      <span class="bi bi-search" aria-hidden="true"></span>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>  <!-- /search-input -->
+          <div class="search-result">
+            <div id="search-info"></div>
+            <div class="tree-container unselectable" id="search-tree"></div>
+          </div>  <!-- /search-result -->
+        </div>  <!-- /search-content -->
+      </div>  <!-- /search-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="1Fliptexture"
+		  data-hnd-context="85"
+		  data-hnd-title="1. Flip texture"
+		>
+            
+                <div class="navigation">
+                    <ol class="breadcrumb">
+                        <li><a href="IntroductiontoShaders.html">Introduction to Shaders</a></li><li><a href="Creatingyourowneffects.html">Creating your own effects</a></li><li><a href="Windows1.html">Windows</a></li><li><a href="Direct3D12.html">Direct3D 9</a></li>
+                    </ol>
+                    <div class="nav-arrows">
+                        <div class="btn-group btn-group" role="group"><a class="btn btn-default" href="Direct3D12.html" title="Direct3D 9" role="button"><span class="bi bi-chevron-up" aria-hidden="true"></span></a><a class="btn btn-default" href="Direct3D12.html" title="Direct3D 9" role="button"><span class="bi bi-chevron-left" aria-hidden="true"></span></a><a class="btn btn-default" href="Build-ineffects.html" title="Build-in effects" role="button"><span class="bi bi-chevron-right" aria-hidden="true"></span></a></div>
+                    </div>
+                </div> 
+            
+
+            <a id="main-content"></a>
+
+            <h2>1. Flip texture</h2>
+
+            <div class="main-content">
+                
+<h1 class="rvps4"><span class="rvts0"><span class="rvts11">1. Creating your own effects - Windows - Direct3D9 - Flip texture</span></span></h1>
+<p class="rvps10"><span class="rvts24">Last edited 2026-03-29</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts13">To start creating effects in Clickteam Fusion, you need to begin with the "absolute basics"</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts6">In this example, you'll learn how to create an effect that flips a texture for Direct3D 9.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">We'll need two files:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps2 noindent"><span class="rvts6">An XML file that contains information about the effect, such as who created it, which variables can be modified, and so on.</span></li>
+ <li class="rvps2 noindent"><span class="rvts6">An FX file containing the source code for the effect for Direct3D 9.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<hr style="height : 1px; background-color : #000000; border-style : none;">
+<h6 class="rvps17"><span class="rvts0"><span class="rvts34">1. Go to the folder where Clickteam Fusion 2.5 is installed, and within that folder, go to "/Effects"</span></span></h6>
+<h6 class="rvps17"><span class="rvts0"><span class="rvts34">2. Create two new empty files; they must have the same name but different file extensions (.xml and .fx)</span></span></h6>
+<p class="rvps2"><span class="rvts25">For example: </span><span class="rvts28">MyFirstShader.xml</span><span class="rvts25"> and </span><span class="rvts28">MyFirstShader.fx</span></p>
+<p class="rvps2"><span class="rvts28"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem%206.png"></p>
+<h6 class="rvps17"><span class="rvts0"><span class="rvts34">3. After refreshing, check the list of effects to see if "MyFirstShader.fx" appears.</span></span></h6>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem%205.png"></p>
+<h6 class="rvps17"><span class="rvts0"><span class="rvts34">4. Open "MyFirstShader.xml" in a text editor and paste the text below, which contains basic information about the effect; edit the elements to include your own information.</span></span></h6>
+<p class="rvps2"><span class="rvts25">You can find an explanation of what these tags do </span><a class="rvts38" href="XMLFile.html">here</a><span class="rvts25">.</span></p>
+<p class="rvps2"><span class="rvts6"></span><br/><span class="rvts35">&lt;</span><span class="rvts36">effect</span><span class="rvts35">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; </span><span class="rvts35">&lt;</span><span class="rvts36">name</span><span class="rvts35">&gt;</span><span class="rvts37">My First Shader</span><span class="rvts35">&lt;/</span><span class="rvts36">name</span><span class="rvts35">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; </span><span class="rvts35">&lt;</span><span class="rvts36">description</span><span class="rvts35">&gt;</span><span class="rvts37">This effect flips the texture</span><span class="rvts35">&lt;/</span><span class="rvts36">description</span><span class="rvts35">&gt;</span><br/><span class="rvts35"></span><br/><span class="rvts37">&nbsp; &nbsp; </span><span class="rvts35">&lt;</span><span class="rvts36">author</span><span class="rvts35">&gt;</span><span class="rvts37">Name / Nickname</span><span class="rvts35">&lt;/</span><span class="rvts36">author</span><span class="rvts35">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; </span><span class="rvts35">&lt;</span><span class="rvts36">company</span><span class="rvts35">&gt;</span><span class="rvts37">My Company</span><span class="rvts35">&lt;/</span><span class="rvts36">company</span><span class="rvts35">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; </span><span class="rvts35">&lt;</span><span class="rvts36">copyright</span><span class="rvts35">&gt;</span><span class="rvts37">Copyright @ 2026 My Company</span><span class="rvts35">&lt;/</span><span class="rvts36">copyright</span><span class="rvts35">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; </span><span class="rvts35">&lt;</span><span class="rvts36">website</span><span class="rvts35">&gt;</span><span class="rvts37">www.example.com/i-love-foxes/</span><span class="rvts35">&lt;/</span><span class="rvts36">website</span><span class="rvts35">&gt;</span><br/><span class="rvts37">&nbsp; &nbsp; </span><span class="rvts35">&lt;</span><span class="rvts36">email</span><span class="rvts35">&gt;</span><span class="rvts37">someone@somewhere.com</span><span class="rvts35">&lt;/</span><span class="rvts36">email</span><span class="rvts35">&gt;</span><br/><span class="rvts35">&lt;/</span><span class="rvts36">effect</span><span class="rvts35">&gt;</span></p>
+<h6 class="rvps17"><span class="rvts0"><span class="rvts34">5. Refresh the list of shaders and the information should appear.</span></span></h6>
+<p class="rvps11"><img alt="" style="padding : 1px;" src="lib/NewItem%207.png"></p>
+<h6 class="rvps17"><span class="rvts0"><span class="rvts34">6. Now it’s time to modify the shader itself.</span></span></h6>
+<p class="rvps2"><span class="rvts6">First, you need to figure out what you’ll need. If you want to flip the texture, you’ll need a sample of it.</span></p>
+<p class="rvps2"><span class="rvts6">At the beginning of the </span><span class="rvts13">"MyFirstShader.fx"</span><span class="rvts6"> file, add the following line:</span></p>
+<p class="rvps2"><span class="rvts6"></span><br/><span class="rvts39">sampler2D img : </span><span class="rvts40">register</span><span class="rvts39">(s0);</span></p>
+<p class="rvps2"><span class="rvts39"><br/></span></p>
+<p class="rvps2"><span class="rvts25">(This is a global variable that retrieves a texture from the </span><span class="rvts28">s0</span><span class="rvts25"> register)</span></p>
+<h6 class="rvps17"><span class="rvts0"><span class="rvts34">7. Add the following very simple function.</span></span></h6>
+<p class="rvps2"><span class="rvts6">It retrieves the colors from each pixel and displays them.</span></p>
+<p class="rvps2"><span class="rvts6"></span><br/><span class="rvts39">float4 ps_main(in float2 In : TEXCOORD0) : COLOR0</span><br/><span class="rvts39">{</span><br/><span class="rvts39">&nbsp; &nbsp; </span><span class="rvts41">/* Get Texture */</span><br/><span class="rvts39">&nbsp; &nbsp; float4 render = tex2D(img, In);</span><br/><span class="rvts39"></span><br/><span class="rvts39">&nbsp; &nbsp; </span><span class="rvts41">/* Return */</span><br/><span class="rvts39">&nbsp; &nbsp; </span><span class="rvts40">return</span><span class="rvts39"> render;</span><br/><span class="rvts39">}</span></p>
+<h6 class="rvps17"><span class="rvts0"><span class="rvts34">8. Finally, you need to include information about the technique;</span></span></h6>
+<p class="rvps2"><span class="rvts6">Direct3D 9 needs to know which version of the Pixel Shader you want to use, and what the main function is.</span></p>
+<p class="rvps2"><span class="rvts6"></span><br/><span class="rvts39">technique tech_main { pass P0 { PixelShader = compile ps_1_4 ps_main(); } }</span></p>
+<h6 class="rvps17"><span class="rvts0"><span class="rvts34">9. The final code should look like this:</span></span></h6>
+<p class="rvps11"><span class="rvts39">sampler2D img : </span><span class="rvts40">register</span><span class="rvts39">(s0);</span><br/><span class="rvts39"></span><br/><span class="rvts39">float4 ps_main(in float2 In : TEXCOORD0) : COLOR0</span><br/><span class="rvts39">{</span><br/><span class="rvts39">&nbsp; &nbsp; </span><span class="rvts41">/* Get Texture */</span><br/><span class="rvts39">&nbsp; &nbsp; float4 render = tex2D(img, In);</span><br/><span class="rvts39"></span><br/><span class="rvts39">&nbsp; &nbsp; </span><span class="rvts41">/* Return */</span><br/><span class="rvts39">&nbsp; &nbsp; </span><span class="rvts40">return</span><span class="rvts39"> render;</span><br/><span class="rvts39">}</span><br/><span class="rvts39"></span><br/><span class="rvts39">technique tech_main { pass P0 { PixelShader = compile ps_1_4 ps_main(); } }</span></p>
+<h6 class="rvps17"><span class="rvts0"><span class="rvts34">10. Refresh the list of results, and you'll see that the "Ps" column shows "1.4":</span></span></h6>
+<p class="rvps11"><img alt="" style="padding : 1px;" src="lib/NewItem%208.png"></p>
+<p class="rvps2"><span class="rvts13">Time to flip the texture!</span></p>
+<p class="rvps2"><span class="rvts6">You need to modify the main function.</span></p>
+<h6 class="rvps17"><span class="rvts0"><span class="rvts34">11. Modifying the shader.</span></span></h6>
+<p class="rvps2"><span class="rvts6">We add a new variable called </span><span class="rvts13">"texCoords"</span><span class="rvts6">; it contains information about the pixel's position, but the X-axis values are flipped.</span></p>
+<p class="rvps2"><span class="rvts6"></span><br/><span class="rvts39">float4 ps_main(in float2 In : TEXCOORD0) : COLOR0</span><br/><span class="rvts39">{</span><br/><span class="rvts39">&nbsp; &nbsp; </span><span class="rvts41">/* Flip */</span><br/><span class="rvts39">&nbsp; &nbsp; float2 texCoords;</span><br/><span class="rvts39">&nbsp; &nbsp; texCoords.x = </span><span class="rvts35">1.0</span><span class="rvts39"> - In.x;</span><br/><span class="rvts39">&nbsp; &nbsp; texCoords.y = In.y;</span><br/><span class="rvts39"></span><br/><span class="rvts39">&nbsp; &nbsp; </span><span class="rvts41">/* Get Texture */</span><br/><span class="rvts39">&nbsp; &nbsp; float4 render = tex2D(img, texCoords);</span><br/><span class="rvts39"></span><br/><span class="rvts39">&nbsp; &nbsp; </span><span class="rvts41">/* Return */</span><br/><span class="rvts39">&nbsp; &nbsp; </span><span class="rvts40">return</span><span class="rvts39"> render;</span><br/><span class="rvts39">}</span></p>
+<p class="rvps2"><span class="rvts39"><br/></span></p>
+<p class="rvps2"><span class="rvts6">To flip the image, we need to modify the texture coordinates </span><span class="rvts25">(UVs).</span></p>
+<p class="rvps2"><span class="rvts6">In the shader system, coordinates range from 0.0 to 1.0. If </span><span class="rvts13">x = 0.0</span><span class="rvts6">, we are at the left edge. If </span><span class="rvts13">x = 1.0</span><span class="rvts6">, we are at the right edge.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts25">By performing the operation </span><span class="rvts28">1.0 - x</span><span class="rvts25">, we make the left side become the right side.</span></p>
+<p class="rvps2"><span class="rvts39"><br/></span></p>
+<p class="rvps2"><span class="rvts13">The final result should look like this:</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem%209.png"></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts13">If you only want to flip along the Y-axis, you need to modify the assignment of the texCoords variable:</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts39">texCoords.x = In.x;</span><br/><span class="rvts39">texCoords.y = </span><span class="rvts35">1.0</span><span class="rvts39"> - In.y;</span></p>
+<p class="rvps2"><span class="rvts39"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem%2016.png"></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts13">If you want to flip the X and Y axes, you need to modify the assignment of the texCoords variable:</span></p>
+<p class="rvps2"><span class="rvts13"></span><br/><span class="rvts39">texCoords.x = </span><span class="rvts35">1.0</span><span class="rvts39"> - In.x;</span><br/><span class="rvts39">texCoords.y = </span><span class="rvts35">1.0</span><span class="rvts39"> - In.y;</span></p>
+<p class="rvps2"><span class="rvts39"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem%2012.png"></p>
+<p class="rvps2"><span class="rvts39"><br/></span></p>
+<p class="rvps2"><span class="rvts39"></span><span class="rvts6"></span></p>
+<p class="rvps7" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com/create-epub-ebooks">Write EPub books for the iPad</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2026 by Foxioo. All Rights Reserved.</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-bs-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Splitter -->
+  <div id="hnd-splitter" style="left: 350px"></div>  
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-3.7.1/jquery.min.js"></script>
+  <script src="vendors/bootstrap-5.3.7/bootstrap.bundle.min.js"></script>
+  <script src="vendors/markjs-8.11.1/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.19.11/uri.min.js"></script>
+  <script src="vendors/imageMapResizer-1.0.10/imageMapResizer.min.js"></script>
+  <script src="vendors/headroom-0.11.0/headroom.min.js"></script>
+  <script src="vendors/jstree-3.3.10/jstree.min.js"></script>  
+  <script src="vendors/interactjs-1.9.22/interact.min.js"></script>  
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Init script -->
+  <script src="_topic_init.js"></script>
+
+
+
+</body>
+
+</html>
+
