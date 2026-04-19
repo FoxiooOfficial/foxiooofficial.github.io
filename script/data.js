@@ -34,6 +34,21 @@ function Fun_Loaded()
         var _Script = document.createElement('script');
         _Script.src = 'script/particles.js';
         document.body.appendChild(_Script);
+    }
+    else
+    {
+        _Switch_Style.innerHTML = '<strong>Is this page too lightweight for your device?</strong> <a href="?style=yes">View the HTML version with CSS</a> <em>(only if your browser supports it)</em>.';
+
+        var _Links = document.querySelectorAll('div.window-content ul li a');
+        for (var i = 0; i < _Links.length; i++)
+        {
+            var _Href = _Links[i].getAttribute('href');
+            if (_Href && _Href.indexOf('http') !== 0)
+            {
+                _Links[i].href = _Href + "?style=no";
+            }
+        }
+    }
 
         /* updates */
         var _Updates = document.getElementById('updates');
@@ -63,21 +78,6 @@ function Fun_Loaded()
                 _Updates.appendChild(_Post);
             });
         }
-    }
-    else
-    {
-        _Switch_Style.innerHTML = '<strong>Is this page too lightweight for your device?</strong> <a href="?style=yes">View the HTML version with CSS</a> <em>(only if your browser supports it)</em>.';
-
-        var _Links = document.querySelectorAll('div.window-content ul li a');
-        for (var i = 0; i < _Links.length; i++)
-        {
-            var _Href = _Links[i].getAttribute('href');
-            if (_Href && _Href.indexOf('http') !== 0)
-            {
-                _Links[i].href = _Href + "?style=no";
-            }
-        }
-    }
 
     /* Footer */
     var _Footer = document.getElementById("footer_copyright");
