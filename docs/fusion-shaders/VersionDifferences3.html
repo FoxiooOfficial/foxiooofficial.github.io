@@ -1,0 +1,779 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 10.3.0.232">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Version Differences</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Version Differences">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Version Differences" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Shaders in Clickteam Fusion" /> 
+
+  <!-- Bootstrap CSS -->
+  <link href="vendors/bootstrap-5.3.7/bootstrap.min.css" rel="stylesheet"/>
+  <link href="vendors/bootstrap-icons-1.13.1/bootstrap-icons.min.css" rel="stylesheet"/>
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.10/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+  <style type="text/css">.navigation #inline-toc { width: auto !important}</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="visually-hidden">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>Shaders in Clickteam Fusion</h1>
+    
+  </header>
+
+  <nav id="panel-left" class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close" role="presentation"> 
+        <button class="hnd-toggle btn btn-default" aria-label="close">
+          <span class="bi bi-x" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="nav-item tab">
+            <a href="#contents" id="tab-contents" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#contents" aria-controls="contents" aria-selected="true">
+                <i class="bi bi-list-ul"></i>
+                Contents
+            </a>
+        </li>
+      
+        <li role="presentation" class="nav-item tab">
+            <a href="#index" id="tab-index" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#index" aria-controls="index" aria-selected="false">
+                <i class="bi bi-asterisk"></i>
+                Index
+            </a>
+        </li>
+      
+        <li role="presentation" class="nav-item tab">
+            <a href="#search" id="tab-search" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#search" aria-controls="search" aria-selected="false">
+                <i class="bi bi-search"></i>
+                Search
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+      <div role="tabpanel" class="tab-pane" id="index">
+        <div id="keywords" class="tree-container unselectable"
+            data-url="_keywords.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /index-->
+      
+      <div role="tabpanel" class="tab-pane" id="search">
+        <div class="search-content">
+          <div class="search-input">
+            <form id="search-form">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="input-search" name="input-search" placeholder="Search..." aria-label="Search..." />
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit" aria-label="Search...">
+                      <span class="bi bi-search" aria-hidden="true"></span>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>  <!-- /search-input -->
+          <div class="search-result">
+            <div id="search-info"></div>
+            <div class="tree-container unselectable" id="search-tree"></div>
+          </div>  <!-- /search-result -->
+        </div>  <!-- /search-content -->
+      </div>  <!-- /search-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="VersionDifferences3"
+		  data-hnd-context="36"
+		  data-hnd-title="Version Differences"
+		>
+            
+                <div class="navigation">
+                    <ol class="breadcrumb">
+                        <li><a href="Runtime.html">Runtime</a></li><li><a href="Windows.html">Windows</a></li><li><a href="Direct3D9.html">Direct3D 9</a></li><li><a href="VertexShader2.html">Vertex Shader</a></li>
+                    </ol>
+                    <div class="nav-arrows">
+                        <div class="btn-group btn-group" role="group"><a class="btn btn-default" href="VertexShader2.html" title="Vertex Shader" role="button"><span class="bi bi-chevron-up" aria-hidden="true"></span></a><a class="btn btn-default" href="VertexShader2.html" title="Vertex Shader" role="button"><span class="bi bi-chevron-left" aria-hidden="true"></span></a><a class="btn btn-default" href="Direct3D11.html" title="Direct3D 11" role="button"><span class="bi bi-chevron-right" aria-hidden="true"></span></a></div>
+                    </div>
+                </div> 
+            
+
+            <a id="main-content"></a>
+
+            <h2>Version Differences</h2>
+
+            <div class="main-content">
+                
+<h1 class="rvps4"><span class="rvts0"><span class="rvts11">Direct3D 9 - Vertex Shader - Version Differences</span></span></h1>
+<p class="rvps10"><span class="rvts24">Last edited 2026-02-28</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Each version supports a different number of maximum instruction slots.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts13">The meaning of colors in the Type, Version and Working column:</span></p>
+<div class="rvps2">
+<table style="border-color: #000000; border-style: solid; border-width: 1px; background-color: #ffffff; border-spacing: 2px;">
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 58px;">
+   <p class="rvps3"><span class="rvts42">Color</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 428px;">
+   <p class="rvps3"><span class="rvts42">Description</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 58px;">
+   <p class="rvps2"><span class="rvts6">Green</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 428px;">
+   <p class="rvps2"><span class="rvts6">The version works in Fusion.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 58px;">
+   <p class="rvps2"><span class="rvts6">Yellow</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 428px;">
+   <p class="rvps2"><span class="rvts6">The version has not been confirmed to work in Fusion.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 58px;">
+   <p class="rvps2"><span class="rvts6">Red</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 428px;">
+   <p class="rvps2"><span class="rvts6">The version does not work in Fusion.</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+<h3 class="rvps5"><span class="rvts0"><span class="rvts12">Vertex Shader Version Comparison</span></span><span class="rvts0"><span class="rvts77"> </span></span><span class="rvts0"><a class="rvts78" href="https://en.wikipedia.org/wiki/High-Level_Shader_Language#Vertex_shader_comparison" target="_blank">(Wikipedia)</a></span></h3>
+<div class="rvps2">
+<table style="border-color: #000000; border-style: solid; border-width: 1px; border-spacing: 2px;">
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 37px;">
+   <p class="rvps3"><span class="rvts13">Type</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 57px;">
+   <p class="rvps3"><span class="rvts13">Version</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 67px;">
+   <p class="rvps3"><span class="rvts13">Working?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 79px;">
+   <p class="rvps3"><span class="rvts13">Number of instruction slots</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 114px;">
+   <p class="rvps3"><span class="rvts13">Max number of instructions executed</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 77px;">
+   <p class="rvps3"><span class="rvts13">Instruction</span></p>
+   <p class="rvps3"><span class="rvts13">predication</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 61px;">
+   <p class="rvps3"><span class="rvts13">Temp</span></p>
+   <p class="rvps3"><span class="rvts13">register</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 68px;">
+   <p class="rvps3"><span class="rvts13">Number</span></p>
+   <p class="rvps3"><span class="rvts13">constant</span></p>
+   <p class="rvps3"><span class="rvts13">registers</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 73px;">
+   <p class="rvps3"><span class="rvts13">Address</span></p>
+   <p class="rvps3"><span class="rvts13">register</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 63px;">
+   <p class="rvps3"><span class="rvts13">Static</span></p>
+   <p class="rvps3"><span class="rvts13">flow</span></p>
+   <p class="rvps3"><span class="rvts13">control</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 73px;">
+   <p class="rvps3"><span class="rvts13">Dynamic</span></p>
+   <p class="rvps3"><span class="rvts13">flow</span></p>
+   <p class="rvps3"><span class="rvts13">control</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 94px;">
+   <p class="rvps3"><span class="rvts13">Dynamic flow</span></p>
+   <p class="rvps3"><span class="rvts13">control depth</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 73px;">
+   <p class="rvps3"><span class="rvts13">Vertex texture</span></p>
+   <p class="rvps3"><span class="rvts13">fetch</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 85px;">
+   <p class="rvps3"><span class="rvts13">Number of</span></p>
+   <p class="rvps3"><span class="rvts13">texture</span></p>
+   <p class="rvps3"><span class="rvts13">samplers</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 85px;">
+   <p class="rvps3"><span class="rvts13">Geometry</span></p>
+   <p class="rvps3"><span class="rvts13">instancing</span></p>
+   <p class="rvps3"><span class="rvts13">support</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 72px;">
+   <p class="rvps3"><span class="rvts13">Bitwise</span></p>
+   <p class="rvps3"><span class="rvts13">operators</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 73px;">
+   <p class="rvps3"><span class="rvts13">Native</span></p>
+   <p class="rvps3"><span class="rvts13">integers</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 627px;">
+   <p class="rvps3"><span class="rvts13">Note</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 37px;">
+   <p class="rvps2"><span class="rvts37">hlsl</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 57px;">
+   <p class="rvps2"><span class="rvts37">vs_1_0</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 67px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 79px;">
+   <p class="rvps2"><span class="rvts6">128</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 114px;">
+   <p class="rvps2"><span class="rvts6">128</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 77px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 61px;">
+   <p class="rvps2"><span class="rvts6">12</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 68px;">
+   <p class="rvps2"><span class="rvts6">&gt;= 96</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 73px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 63px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 73px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 94px;">
+   <p class="rvps2"><span class="rvts6">0</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 73px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 85px;">
+   <p class="rvps2"><span class="rvts6">0</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 85px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 72px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 73px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 627px;">
+   <p class="rvps2"><span class="rvts6">Compiler throws a warning about lack of support for </span><span class="rvts13">vs.1.0</span><span class="rvts6"> and uses </span><span class="rvts13">vs.1.1</span><span class="rvts6">.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 37px;">
+   <p class="rvps2"><span class="rvts37">hlsl</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 57px;">
+   <p class="rvps2"><span class="rvts37">vs_1_1</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 67px;">
+   <p class="rvps2"><span class="rvts6">Yes</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 79px;">
+   <p class="rvps2"><span class="rvts6">128</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 114px;">
+   <p class="rvps2"><span class="rvts6">128</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 77px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 61px;">
+   <p class="rvps2"><span class="rvts6">12</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 68px;">
+   <p class="rvps2"><span class="rvts6">&gt;= 96</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 73px;">
+   <p class="rvps2"><span class="rvts6">Yes</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 63px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 73px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 94px;">
+   <p class="rvps2"><span class="rvts6">0</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 73px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 85px;">
+   <p class="rvps2"><span class="rvts6">0</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 85px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 72px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 73px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 627px;">
+   <br/>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 37px;">
+   <p class="rvps2"><span class="rvts37">hlsl</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 57px;">
+   <p class="rvps2"><span class="rvts37">vs_2_0</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 67px;">
+   <p class="rvps2"><span class="rvts6">Yes?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 79px;">
+   <p class="rvps2"><span class="rvts6">256</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 114px;">
+   <p class="rvps2"><span class="rvts6">1024</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 77px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 61px;">
+   <p class="rvps2"><span class="rvts6">12</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 68px;">
+   <p class="rvps2"><span class="rvts6">&gt;= 256</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 73px;">
+   <p class="rvps2"><span class="rvts6">Yes</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 63px;">
+   <p class="rvps2"><span class="rvts6">Yes</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 73px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 94px;">
+   <p class="rvps2"><span class="rvts6">0</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 73px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 85px;">
+   <p class="rvps2"><span class="rvts6">0</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 85px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 72px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 73px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 627px;">
+   <br/>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 37px;">
+   <p class="rvps2"><span class="rvts37">hlsl</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 57px;">
+   <p class="rvps2"><span class="rvts37">vs_2_a</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 67px;">
+   <p class="rvps2"><span class="rvts6">Yes?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 79px;">
+   <p class="rvps2"><span class="rvts6">256</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 114px;">
+   <p class="rvps2"><span class="rvts97">65536</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 77px;">
+   <p class="rvps2"><span class="rvts6">Yes</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 61px;">
+   <p class="rvps2"><span class="rvts6">16</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 68px;">
+   <p class="rvps2"><span class="rvts6">256</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 73px;">
+   <p class="rvps2"><span class="rvts6">Yes</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 63px;">
+   <p class="rvps2"><span class="rvts6">Yes</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 73px;">
+   <p class="rvps2"><span class="rvts6">Yes</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 94px;">
+   <p class="rvps2"><span class="rvts6">24</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 73px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 85px;">
+   <p class="rvps2"><span class="rvts6">0</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 85px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 72px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 73px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 627px;">
+   <br/>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 37px;">
+   <p class="rvps2"><span class="rvts37">hlsl</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 57px;">
+   <p class="rvps2"><span class="rvts37">vs_2_sw</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 67px;">
+   <p class="rvps2"><span class="rvts6">Unknown</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 79px;">
+   <p class="rvps2"><span class="rvts6">256?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 114px;">
+   <p class="rvps2"><span class="rvts6">1024?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 77px;">
+   <p class="rvps2"><span class="rvts6">No?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 61px;">
+   <p class="rvps2"><span class="rvts6">12?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 68px;">
+   <p class="rvps2"><span class="rvts6">&gt;= 256?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 73px;">
+   <p class="rvps2"><span class="rvts6">Yes?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 63px;">
+   <p class="rvps2"><span class="rvts6">Yes?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 73px;">
+   <p class="rvps2"><span class="rvts6">No?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 94px;">
+   <p class="rvps2"><span class="rvts6">0?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 73px;">
+   <p class="rvps2"><span class="rvts6">No?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 85px;">
+   <p class="rvps2"><span class="rvts6">0?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 85px;">
+   <p class="rvps2"><span class="rvts6">No?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 72px;">
+   <p class="rvps2"><span class="rvts6">No?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 73px;">
+   <p class="rvps2"><span class="rvts6">No?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 627px;">
+   <p class="rvps2"><span class="rvts6">Executed in software (CPU). Primarily used for debugging, it allows you to verify whether a graphics driver is generating rendering errors by comparing hardware results with a reference software implementation. This is very slow compared to execution on the GPU due to the serial nature of the CPU architecture.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 37px;">
+   <p class="rvps2"><span class="rvts37">hlsl</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 57px;">
+   <p class="rvps2"><span class="rvts37">vs_3_0</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 67px;">
+   <p class="rvps2"><span class="rvts6">Unknown</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 79px;">
+   <p class="rvps2"><span class="rvts6">&gt;= 512</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 114px;">
+   <p class="rvps2"><span class="rvts97">65536</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 77px;">
+   <p class="rvps2"><span class="rvts6">Yes</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 61px;">
+   <p class="rvps2"><span class="rvts6">32</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 68px;">
+   <p class="rvps2"><span class="rvts6">&gt;= 256</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,1.99); width: 73px;">
+   <p class="rvps2"><span class="rvts6">Yes</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,1.99); width: 63px;">
+   <p class="rvps2"><span class="rvts6">Yes</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,1.99); width: 73px;">
+   <p class="rvps2"><span class="rvts6">Yes</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 94px;">
+   <p class="rvps2"><span class="rvts6">24</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 73px;">
+   <p class="rvps2"><span class="rvts6">Yes</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 85px;">
+   <p class="rvps2"><span class="rvts6">4</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 85px;">
+   <p class="rvps2"><span class="rvts6">Yes</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 72px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); width: 73px;">
+   <p class="rvps2"><span class="rvts6">No</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 627px;">
+   <br/>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 37px;">
+   <p class="rvps2"><span class="rvts37">hlsl</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 57px;">
+   <p class="rvps2"><span class="rvts37">vs_3_sw</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 67px;">
+   <p class="rvps2"><span class="rvts6">Unknown</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 79px;">
+   <p class="rvps2"><span class="rvts6">&gt;= 512?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 114px;">
+   <p class="rvps2"><span class="rvts6">65536?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 77px;">
+   <p class="rvps2"><span class="rvts6">Yes?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 61px;">
+   <p class="rvps2"><span class="rvts6">32?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 68px;">
+   <p class="rvps2"><span class="rvts6">&gt;= 256?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 73px;">
+   <p class="rvps2"><span class="rvts6">Yes?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 63px;">
+   <p class="rvps2"><span class="rvts6">Yes?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 73px;">
+   <p class="rvps2"><span class="rvts6">Yes?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 94px;">
+   <p class="rvps2"><span class="rvts6">24?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 73px;">
+   <p class="rvps2"><span class="rvts6">Yes?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 85px;">
+   <p class="rvps2"><span class="rvts6">4?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 85px;">
+   <p class="rvps2"><span class="rvts6">Yes?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 72px;">
+   <p class="rvps2"><span class="rvts6">No?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 73px;">
+   <p class="rvps2"><span class="rvts6">No?</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 627px;">
+   <p class="rvps2"><span class="rvts6">Executed in software (CPU). Primarily used for debugging, it allows you to verify whether a graphics driver is generating rendering errors by comparing hardware results with a reference software implementation. This is very slow compared to execution on the GPU due to the serial nature of the CPU architecture.</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps15"><span class="rvts13">"&gt;= 96" for</span><span class="rvts6"> </span><span class="rvts13">Number constant registers:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+  <li class="rvps15 noindent"><span class="rvts25">The specification guarantees at least 96 constant registers.</span></li>
+  <li class="rvps15 noindent"><span class="rvts25">The GPU can have more, but not less.</span></li>
+ </ul>
+</ul>
+<p class="rvps2"><span class="rvts25"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps2 noindent"><span class="rvts13">Number of instruction slots</span><span class="rvts6"> - The maximum number of assembly instructions (instruction slots) that a saved vertex shader program can contain.</span></li>
+ <li class="rvps2 noindent"><span class="rvts13">Max number of instructions executed</span><span class="rvts6"> - The maximum number of instructions the GPU can execute for a single vertex when running a vertex shader.</span></li>
+ <li class="rvps2 noindent"><span class="rvts13">Instruction predication</span><span class="rvts6"> - A predicate instruction mechanism that allows conditional execution without expensive branching: instructions marked with a predicate write their result only if the predicate is true.</span></li>
+ <li class="rvps2 noindent"><span class="rvts13">Temp register -</span><span class="rvts6"> are used to store intermediate values ​​of shader computations (local variables). The limit on the number of temp registers determines how much intermediate data can be stored without additional cost.</span></li>
+ <li class="rvps2 noindent"><span class="rvts13">Number constant registers</span><span class="rvts6"> - Number of constant registers intended for values ​​sent from the application (e.g. matrices, light positions).</span></li>
+ <li class="rvps2 noindent"><span class="rvts13">Address register</span><span class="rvts6"> - Address register used for indirect addressing/tables.</span></li>
+ <li class="rvps2 noindent"><span class="rvts13">Static flow control </span><span class="rvts6">- Loops/conditions that the compiler can unroll or optimize because their number/nature is known at compilation.</span></li>
+ <li class="rvps2 noindent"><span class="rvts13">Dynamic flow control</span><span class="rvts6"> - True conditions and loops depending on data calculated at runtime (if/else, while, for with variable condition) - that is, control flow depending on values ​​calculated during shader execution.</span></li>
+ <li class="rvps2 noindent"><span class="rvts13">Dynamic flow control depth</span><span class="rvts6"> - Maximum allowed nesting depth for dynamic control statements (if/loop etc.) - This determines how deep data-dependent conditions/loops can be nested.</span></li>
+ <li class="rvps2 noindent"><span class="rvts13">Vertex texture fetch</span><span class="rvts6"> - Ability to sample textures inside the vertex shader.</span></li>
+ <li class="rvps2 noindent"><span class="rvts13">Number of texture samplers</span><span class="rvts6"> - The number of available texture samplers/slots that the vertex shader can use for sampling (if the VF is capable of fetching textures).</span></li>
+ <li class="rvps2 noindent"><span class="rvts13">Geometry instancing support</span><span class="rvts6"> - Geometry instantiation support: ability to read instance ID and draw multiple copies of the same mesh with different parameters in the vertex shader.</span></li>
+ <li class="rvps2 noindent"><span class="rvts13">Bitwise Operators</span><span class="rvts6"> - Support for bitwise logical operations (AND, OR, XOR, bit shifts &lt;&lt;, &gt;&gt;).</span></li>
+ <li class="rvps2 noindent"><span class="rvts13">Native Integers</span><span class="rvts6"> - Support for integer types (int), the lack of which means that everything is a floating-point number (float), which makes precision difficult.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"></span></p>
+<p class="rvps7" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com/create-epub-ebooks">Produce electronic books easily</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2026 by Foxioo. All Rights Reserved.</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-bs-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Splitter -->
+  <div id="hnd-splitter" style="left: 350px"></div>  
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-3.7.1/jquery.min.js"></script>
+  <script src="vendors/bootstrap-5.3.7/bootstrap.bundle.min.js"></script>
+  <script src="vendors/markjs-8.11.1/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.19.11/uri.min.js"></script>
+  <script src="vendors/imageMapResizer-1.0.10/imageMapResizer.min.js"></script>
+  <script src="vendors/headroom-0.11.0/headroom.min.js"></script>
+  <script src="vendors/jstree-3.3.10/jstree.min.js"></script>  
+  <script src="vendors/interactjs-1.9.22/interact.min.js"></script>  
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Init script -->
+  <script src="_topic_init.js"></script>
+
+
+
+</body>
+
+</html>
+

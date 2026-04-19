@@ -1,0 +1,319 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 10.3.0.232">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Shaders installation</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Shaders installation">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Shaders installation" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Shaders in Clickteam Fusion" /> 
+
+  <!-- Bootstrap CSS -->
+  <link href="vendors/bootstrap-5.3.7/bootstrap.min.css" rel="stylesheet"/>
+  <link href="vendors/bootstrap-icons-1.13.1/bootstrap-icons.min.css" rel="stylesheet"/>
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.10/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+  <style type="text/css">.navigation #inline-toc { width: auto !important}</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="visually-hidden">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>Shaders in Clickteam Fusion</h1>
+    
+  </header>
+
+  <nav id="panel-left" class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close" role="presentation"> 
+        <button class="hnd-toggle btn btn-default" aria-label="close">
+          <span class="bi bi-x" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="nav-item tab">
+            <a href="#contents" id="tab-contents" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#contents" aria-controls="contents" aria-selected="true">
+                <i class="bi bi-list-ul"></i>
+                Contents
+            </a>
+        </li>
+      
+        <li role="presentation" class="nav-item tab">
+            <a href="#index" id="tab-index" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#index" aria-controls="index" aria-selected="false">
+                <i class="bi bi-asterisk"></i>
+                Index
+            </a>
+        </li>
+      
+        <li role="presentation" class="nav-item tab">
+            <a href="#search" id="tab-search" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#search" aria-controls="search" aria-selected="false">
+                <i class="bi bi-search"></i>
+                Search
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+      <div role="tabpanel" class="tab-pane" id="index">
+        <div id="keywords" class="tree-container unselectable"
+            data-url="_keywords.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /index-->
+      
+      <div role="tabpanel" class="tab-pane" id="search">
+        <div class="search-content">
+          <div class="search-input">
+            <form id="search-form">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="input-search" name="input-search" placeholder="Search..." aria-label="Search..." />
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit" aria-label="Search...">
+                      <span class="bi bi-search" aria-hidden="true"></span>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>  <!-- /search-input -->
+          <div class="search-result">
+            <div id="search-info"></div>
+            <div class="tree-container unselectable" id="search-tree"></div>
+          </div>  <!-- /search-result -->
+        </div>  <!-- /search-content -->
+      </div>  <!-- /search-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="Shadersinstallation"
+		  data-hnd-context="7"
+		  data-hnd-title="Shaders installation"
+		>
+            
+                <div class="navigation">
+                    <ol class="breadcrumb">
+                        <li><a href="IntroductiontoShaders.html">Introduction to Shaders</a></li>
+                    </ol>
+                    <div class="nav-arrows">
+                        <div class="btn-group btn-group" role="group"><a class="btn btn-default" href="IntroductiontoShaders.html" title="Introduction to Shaders" role="button"><span class="bi bi-chevron-up" aria-hidden="true"></span></a><a class="btn btn-default" href="InkEffectsvsShaders.html" title="Ink Effects vs. Shaders" role="button"><span class="bi bi-chevron-left" aria-hidden="true"></span></a><a class="btn btn-default" href="Creatingyourowneffects.html" title="Creating your own effects" role="button"><span class="bi bi-chevron-right" aria-hidden="true"></span></a></div>
+                    </div>
+                </div> 
+            
+
+            <a id="main-content"></a>
+
+            <h2>Shaders installation</h2>
+
+            <div class="main-content">
+                
+<h1 class="rvps4"><span class="rvts0"><span class="rvts11">Shaders installation</span></span></h1>
+<p class="rvps10"><span class="rvts24">Last edited 2026-04-05</span></p>
+<p class="rvps10"><span class="rvts22"><br/></span></p>
+<p class="rvps2"><span class="rvts13">Clickteam Fusion allows you to install "custom" or “third-party” shaders created by the community.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts13">Examples of sources where you can download effects:</span></p>
+<div class="rvps2">
+<table width="100%" style="border-color: #000000; border-style: solid; border-width: 1px; border-spacing: 2px;">
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 223px;">
+   <p class="rvps3"><span class="rvts13">Website</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 961px;">
+   <p class="rvps3"><span class="rvts13">Description</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 223px;">
+   <p class="rvps2"><a class="rvts14" href="https://clickstore.clickteam.com/libraries/shaders" target="_blank">Clickstore</a></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 961px;">
+   <p class="rvps2"><span class="rvts6">The official Clickteam store where you can buy or download effects.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 223px;">
+   <p class="rvps2"><a class="rvts14" href="https://dark-wire.com/storage/shaderlist.php" target="_blank">Dark-Wire</a></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 961px;">
+   <p class="rvps2"><span class="rvts6">A huge list of shaders from various sources (for example, from GitHub, as shown in the table below)</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 223px;">
+   <p class="rvps2"><a class="rvts14" href="https://github.com/FoxiooOfficial/FoxiooShaderPack" target="_blank">GitHub (Foxioo Shader Pack)</a></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 961px;">
+   <p class="rvps2"><span class="rvts6">This repository contains only shaders created or modified by Foxioo (the repository's author); it is updated frequently and has a well-organized structure.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 223px;">
+   <p class="rvps2"><a class="rvts14" href="https://github.com/NaitorStudios/FusionShaderRepo" target="_blank">GitHub (FusionShaderRepo)</a></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 961px;">
+   <p class="rvps2"><span class="rvts6">This repository contains some shaders created by NaitorStudios (the repository's author) as well as modified versions designed to improve upon the originals; it also includes shaders from other repositories and other sources.</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts13">Important:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps2 noindent"><span class="rvts6">All installed effects must be located in the </span><span class="rvts13">"/Effects"</span><span class="rvts6"> folder within the directory where Clickteam Fusion is installed.</span></li>
+ <li class="rvps2 noindent"><span class="rvts6">File names must not be duplicated from other subdirectories within </span><span class="rvts13">"/Effects"</span><span class="rvts6">.</span></li>
+ <li class="rvps2 noindent"><span class="rvts6">Shaders must be </span><span class="rvts13">UNZIPPED</span></li>
+</ul>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<hr style="height : 1px; background-color : #000000; border-style : none;">
+<h2 class="rvps16"><span class="rvts0"><span class="rvts33">Guide to installing a sample effect from Dark-Wire:</span></span></h2>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts25">(For example, I need a simple </span><span class="rvts28">blur</span><span class="rvts25"> effect for my project.)</span></p>
+<h6 class="rvps17"><span class="rvts0"><span class="rvts34">1. I go to Dark-Wire via the link in the table. When a new tab opens in my browser with the list, I press Ctrl+F and type in what I’m looking for.</span></span></h6>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem%2017.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h6 class="rvps17"><span class="rvts0"><span class="rvts34">2. Once I find the effect I’m interested in, I click the download link - for example, "GitMir".</span></span></h6>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem%2018.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h6 class="rvps17"><span class="rvts0"><span class="rvts34">3. Once the ZIP file with the effects has downloaded, I open it.</span></span></h6>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem%2019.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h6 class="rvps17"><span class="rvts0"><span class="rvts34">4. I open a new Explorer window, navigate to the "/Effects" folder where Clickteam Fusion is installed, and create a new folder named "Blur."</span></span></h6>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem%2020.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h6 class="rvps17"><span class="rvts0"><span class="rvts34">5. I copy the files from the ZIP file into the "Blur" folder.</span></span></h6>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem%2021.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h6 class="rvps17"><span class="rvts0"><span class="rvts34">6. In Clickteam Fusion, I refresh the list of installed effects using the "Refresh" button, and I can now use this shader.</span></span><span class="rvts0"><span class="rvts34"></span></span></h6>
+<p class="rvps7" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com/feature-tour/stunning-user-interface/">Streamline Your Documentation Process with HelpNDoc's Intuitive Interface</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2026 by Foxioo. All Rights Reserved.</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-bs-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Splitter -->
+  <div id="hnd-splitter" style="left: 350px"></div>  
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-3.7.1/jquery.min.js"></script>
+  <script src="vendors/bootstrap-5.3.7/bootstrap.bundle.min.js"></script>
+  <script src="vendors/markjs-8.11.1/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.19.11/uri.min.js"></script>
+  <script src="vendors/imageMapResizer-1.0.10/imageMapResizer.min.js"></script>
+  <script src="vendors/headroom-0.11.0/headroom.min.js"></script>
+  <script src="vendors/jstree-3.3.10/jstree.min.js"></script>  
+  <script src="vendors/interactjs-1.9.22/interact.min.js"></script>  
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Init script -->
+  <script src="_topic_init.js"></script>
+
+
+
+</body>
+
+</html>
+

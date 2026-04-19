@@ -1,0 +1,463 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 10.3.0.232">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Input/Output Registers</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Input/Output Registers">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Input/Output Registers" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Shaders in Clickteam Fusion" /> 
+
+  <!-- Bootstrap CSS -->
+  <link href="vendors/bootstrap-5.3.7/bootstrap.min.css" rel="stylesheet"/>
+  <link href="vendors/bootstrap-icons-1.13.1/bootstrap-icons.min.css" rel="stylesheet"/>
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.10/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+  <style type="text/css">.navigation #inline-toc { width: auto !important}</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="visually-hidden">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>Shaders in Clickteam Fusion</h1>
+    
+  </header>
+
+  <nav id="panel-left" class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close" role="presentation"> 
+        <button class="hnd-toggle btn btn-default" aria-label="close">
+          <span class="bi bi-x" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="nav-item tab">
+            <a href="#contents" id="tab-contents" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#contents" aria-controls="contents" aria-selected="true">
+                <i class="bi bi-list-ul"></i>
+                Contents
+            </a>
+        </li>
+      
+        <li role="presentation" class="nav-item tab">
+            <a href="#index" id="tab-index" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#index" aria-controls="index" aria-selected="false">
+                <i class="bi bi-asterisk"></i>
+                Index
+            </a>
+        </li>
+      
+        <li role="presentation" class="nav-item tab">
+            <a href="#search" id="tab-search" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#search" aria-controls="search" aria-selected="false">
+                <i class="bi bi-search"></i>
+                Search
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+      <div role="tabpanel" class="tab-pane" id="index">
+        <div id="keywords" class="tree-container unselectable"
+            data-url="_keywords.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /index-->
+      
+      <div role="tabpanel" class="tab-pane" id="search">
+        <div class="search-content">
+          <div class="search-input">
+            <form id="search-form">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="input-search" name="input-search" placeholder="Search..." aria-label="Search..." />
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit" aria-label="Search...">
+                      <span class="bi bi-search" aria-hidden="true"></span>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>  <!-- /search-input -->
+          <div class="search-result">
+            <div id="search-info"></div>
+            <div class="tree-container unselectable" id="search-tree"></div>
+          </div>  <!-- /search-result -->
+        </div>  <!-- /search-content -->
+      </div>  <!-- /search-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="InputOutputRegisters"
+		  data-hnd-context="27"
+		  data-hnd-title="Input/Output Registers"
+		>
+            
+                <div class="navigation">
+                    <ol class="breadcrumb">
+                        <li><a href="Runtime.html">Runtime</a></li><li><a href="Windows.html">Windows</a></li><li><a href="Direct3D8.html">Direct3D 8</a></li><li><a href="PixelShader.html">Pixel Shader</a></li>
+                    </ol>
+                    <div class="nav-arrows">
+                        <div class="btn-group btn-group" role="group"><a class="btn btn-default" href="PixelShader.html" title="Pixel Shader" role="button"><span class="bi bi-chevron-up" aria-hidden="true"></span></a><a class="btn btn-default" href="VersionDifferences.html" title="Version Differences" role="button"><span class="bi bi-chevron-left" aria-hidden="true"></span></a><a class="btn btn-default" href="Instructions.html" title="Instructions" role="button"><span class="bi bi-chevron-right" aria-hidden="true"></span></a></div>
+                    </div>
+                </div> 
+            
+
+            <a id="main-content"></a>
+
+            <h2>Input/Output Registers</h2>
+
+            <div class="main-content">
+                
+<h1 class="rvps4"><span class="rvts0"><span class="rvts11">Direct3D 8 - Pixel Shader - Input/Output Registers</span></span></h1>
+<p class="rvps10"><span class="rvts24">Last edited 2026-01-27</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts42">For Pixel Shader 1.0 to 1.4, they rely on registers to:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps18 noindent"><span class="rvts6">Fetch vertex data</span></li>
+ <li class="rvps18 noindent"><span class="rvts6">Output pixel data</span></li>
+ <li class="rvps18 noindent"><span class="rvts6">Store temporary results during computation</span></li>
+ <li class="rvps18 noindent"><span class="rvts6">Identify texture sampling steps</span></li>
+</ul>
+<h3 class="rvps5"><span class="rvts0"><span class="rvts12">Input/Output registers for Pixel Shader </span></span><span class="rvts0"><a class="rvts82" href="https://learn.microsoft.com/en-us/windows/win32/direct3dhlsl/dx9-graphics-reference-asm-ps-registers-ps-1-x" target="_blank">(Microsoft)</a></span></h3>
+<p class="rvps15"><span class="rvts13">Information for the entire table:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+  <li class="rvps15 noindent"><span class="rvts6">The Register column describes what it looks like. The "#" should be replaced by a value, for example: "c0", "t1", "r0", "v2". The description describes the register's purpose.</span></li>
+  <li class="rvps15 noindent"><span class="rvts6">Read Port Limit describes the restrictions on using multiple registers in a single instruction.</span></li>
+  <li class="rvps15 noindent"><span class="rvts6">Read-Only or Read/Write describes which registers can be used for reading, writing, or both.</span></li>
+  <li class="rvps15 noindent"><span class="rvts6">Range describes the component's data range.</span><span class="rvts25"> </span><span class="rvts28">(In Fusion 2.5, the value of `PixelShader1xMaxValue` and `MaxTextureRepeat` is unknown</span><span class="rvts13">)</span></li>
+ </ul>
+</ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2">
+<table style="border-color: #000000; border-style: solid; border-width: 1px; background-color: #ffffff; border-spacing: 2px;">
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 43px;">
+   <p class="rvps3"><span class="rvts42">Type</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 62px;">
+   <p class="rvps3"><span class="rvts42">Register</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 127px;">
+   <p class="rvps3"><span class="rvts42">Description</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 145px;">
+   <p class="rvps3"><span class="rvts42">Input / Output</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 96px;">
+   <p class="rvps3"><span class="rvts56">ps.1.0</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 236px;">
+   <p class="rvps3"><span class="rvts56">ps.1.1</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 238px;">
+   <p class="rvps3"><span class="rvts56">ps.1.2</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 250px;">
+   <p class="rvps3"><span class="rvts56">ps.1.3</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 242px;">
+   <p class="rvps3"><span class="rvts56">ps.1.4</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 380px;">
+   <p class="rvps3"><span class="rvts42">Note</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 43px;">
+   <p class="rvps2"><span class="rvts37">asm</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 62px;">
+   <p class="rvps2"><span class="rvts56">c#</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 127px;">
+   <p class="rvps2"><span class="rvts6">Constant register</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 145px;">
+   <p class="rvps2"><span class="rvts13">Input</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 96px;">
+   <p class="rvps2"><span class="rvts6">Unknown</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 236px;">
+   <p class="rvps2"><span class="rvts6">Count: </span><span class="rvts42">8</span><br/><span class="rvts6">Read limit: </span><span class="rvts42">2</span><br/><span class="rvts6"></span><br/><span class="rvts42">Read-Only</span><br/><span class="rvts6"></span><br/><span class="rvts6">Range: </span><span class="rvts42">-1 to 1</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 238px;">
+   <p class="rvps2"><span class="rvts6">Count: </span><span class="rvts42">8</span><br/><span class="rvts6">Read limit: </span><span class="rvts42">2</span><br/><span class="rvts6"></span><br/><span class="rvts42">Read-Only</span><br/><span class="rvts6"></span><br/><span class="rvts6">Range: </span><span class="rvts42">-1 to 1</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 250px;">
+   <p class="rvps2"><span class="rvts6">Count: </span><span class="rvts42">8</span><br/><span class="rvts6">Read limit: </span><span class="rvts42">2</span><br/><span class="rvts6"></span><br/><span class="rvts42">Read-Only</span><br/><span class="rvts6"></span><br/><span class="rvts6">Range: </span><span class="rvts42">-1 to 1</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 242px;">
+   <p class="rvps2"><span class="rvts6">Count: </span><span class="rvts42">8</span><br/><span class="rvts6">Read limit: </span><span class="rvts42">2</span><br/><span class="rvts6"></span><br/><span class="rvts42">Read-Only</span><br/><span class="rvts6"></span><br/><span class="rvts6">Range: </span><span class="rvts42">-1 to 1</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 380px;">
+   <br/>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 43px;">
+   <p class="rvps2"><span class="rvts56">asm</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 62px;">
+   <p class="rvps2"><span class="rvts56">r#</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 127px;">
+   <p class="rvps2"><span class="rvts6">Temporary register</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 145px;">
+   <p class="rvps2"><span class="rvts13">Internal</span></p>
+   <p class="rvps2"><span class="rvts13"><br/></span></p>
+   <p class="rvps2"><span class="rvts25">They are neither input nor output of the shader</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 96px;">
+   <p class="rvps2"><span class="rvts6">Unknown</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 236px;">
+   <p class="rvps2"><span class="rvts6">Count: </span><span class="rvts42">2</span><br/><span class="rvts6">Read limit: </span><span class="rvts42">2</span><br/><span class="rvts6"></span><br/><span class="rvts42">Read/Write</span><br/><span class="rvts6"></span><br/><span class="rvts6">Range: </span><span class="rvts42">-PixelShader1xMaxValue to PixelShader1xMaxValue</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 238px;">
+   <p class="rvps2"><span class="rvts6">Count: </span><span class="rvts42">2</span><br/><span class="rvts6">Read limit: </span><span class="rvts42">2</span><br/><span class="rvts6"></span><br/><span class="rvts42">Read/Write</span><br/><span class="rvts6"></span><br/><span class="rvts6">Range: </span><span class="rvts42">-PixelShader1xMaxValue to PixelShader1xMaxValue</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 250px;">
+   <p class="rvps2"><span class="rvts6">Count: </span><span class="rvts42">2</span><br/><span class="rvts6">Read limit: </span><span class="rvts42">2</span><br/><span class="rvts6"></span><br/><span class="rvts42">Read/Write</span><br/><span class="rvts6"></span><br/><span class="rvts6">Range: </span><span class="rvts42">-PixelShader1xMaxValue to PixelShader1xMaxValue</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 242px;">
+   <p class="rvps2"><span class="rvts6">Count: </span><span class="rvts42">6</span><br/><span class="rvts6">Read limit: </span><span class="rvts42">3</span><br/><span class="rvts6"></span><br/><span class="rvts42">Read/Write</span><br/><span class="rvts6"></span><br/><span class="rvts6">Range: </span><span class="rvts42">-PixelShader1xMaxValue to PixelShader1xMaxValue</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 380px;">
+   <br/>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 43px;">
+   <p class="rvps2"><span class="rvts56">asm</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 62px;">
+   <p class="rvps2"><span class="rvts56">t#</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 127px;">
+   <p class="rvps2"><span class="rvts6">Texture register</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 145px;">
+   <p class="rvps2"><span class="rvts13">Input</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 96px;">
+   <p class="rvps2"><span class="rvts6">Unknown</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 236px;">
+   <p class="rvps2"><span class="rvts6">Count: </span><span class="rvts42">4</span><br/><span class="rvts6">Read limit: </span><span class="rvts42">2</span><br/><span class="rvts6"></span><br/><span class="rvts42">Read/Write</span><br/><span class="rvts6"></span><br/><span class="rvts6">Range: </span><span class="rvts42">-MaxTextureRepeat to &nbsp; &nbsp; &nbsp;MaxTextureRepeat</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 238px;">
+   <p class="rvps2"><span class="rvts6">Count: </span><span class="rvts42">4</span><br/><span class="rvts6">Read limit: </span><span class="rvts42">3</span><br/><span class="rvts6"></span><br/><span class="rvts42">Read/Write</span><br/><span class="rvts6"></span><br/><span class="rvts6">Range: </span><span class="rvts42">-MaxTextureRepeat to MaxTextureRepeat</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 250px;">
+   <p class="rvps2"><span class="rvts6">Count: </span><span class="rvts42">4</span><br/><span class="rvts6">Read limit: </span><span class="rvts42">3</span><br/><span class="rvts6"></span><br/><span class="rvts42">Read/Write</span><br/><span class="rvts6"></span><br/><span class="rvts6">Range: </span><span class="rvts42">-MaxTextureRepeat to MaxTextureRepeat</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 242px;">
+   <p class="rvps2"><span class="rvts6">Count: </span><span class="rvts42">6</span><br/><span class="rvts6">Read limit: </span><span class="rvts42">1</span><br/><span class="rvts6"></span><br/><span class="rvts28">*See following note*</span><br/><span class="rvts6"></span><br/><span class="rvts6">Range: </span><span class="rvts42">-MaxTextureRepeat to MaxTextureRepeat</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 380px;">
+   <p class="rvps2"><span class="rvts6">For </span><span class="rvts13">ps.1.4</span><span class="rvts6">, texture registers are RO for texture addressing instructions, and texture registers can be neither read from nor written to by arithmetic instructions.&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts6"><br/></span></p>
+   <p class="rvps2"><span class="rvts6">Also, because texture registers have become texture coordinate registers, having RO access is not a regression of previous functionality.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 43px;">
+   <p class="rvps2"><span class="rvts56">asm</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 62px;">
+   <p class="rvps2"><span class="rvts56">v#</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 127px;">
+   <p class="rvps2"><span class="rvts6">Color register</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 145px;">
+   <p class="rvps2"><span class="rvts13">Input</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; width: 96px;">
+   <p class="rvps2"><span class="rvts6">Unknown</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 236px;">
+   <p class="rvps2"><span class="rvts6">Count: </span><span class="rvts42">4</span><br/><span class="rvts6">Read limit: </span><span class="rvts42">2</span><br/><span class="rvts6"></span><br/><span class="rvts42">Read/Write</span><br/><span class="rvts6"></span><br/><span class="rvts6">Range: </span><span class="rvts42">0 to 1</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 238px;">
+   <p class="rvps2"><span class="rvts6">Count: </span><span class="rvts42">2</span><br/><span class="rvts6">Read limit: </span><span class="rvts42">2</span><br/><span class="rvts6"></span><br/><span class="rvts42">Read-Only</span><br/><span class="rvts6"></span><br/><span class="rvts6">Range: </span><span class="rvts42">0 to 1</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 250px;">
+   <p class="rvps2"><span class="rvts6">Count: </span><span class="rvts42">2</span><br/><span class="rvts6">Read limit: </span><span class="rvts42">2</span><br/><span class="rvts6"></span><br/><span class="rvts42">Read-Only</span><br/><span class="rvts6"></span><br/><span class="rvts6">Range: </span><span class="rvts42">0 to 1</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffcc; width: 242px;">
+   <p class="rvps2"><span class="rvts6">Count: </span><span class="rvts42">2</span><span class="rvts6"> in </span><span class="rvts42">phase 2</span><br/><span class="rvts6">Read limit: </span><span class="rvts42">2</span><br/><span class="rvts6"></span><br/><span class="rvts42">Read-Only</span><br/><span class="rvts6"></span><br/><span class="rvts6">Range: </span><span class="rvts42">0 to 1</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 380px;">
+   <br/>
+  </td>
+ </tr>
+</table>
+</div>
+<h3 class="rvps5"><span class="rvts0"><span class="rvts81">Description of each register</span></span></h3>
+<p class="rvps15"><span class="rvts42">Constant register:</span></p>
+<p class="rvps18"><span class="rvts6">Contain constant data. Data can be loaded into a constant register using the </span><span class="rvts79">def</span><span class="rvts6"> instruction. Constant registers are not suitable for use in texture addressing instructions. The only exception is the </span><span class="rvts79">texm3x3spec</span><span class="rvts6"> instruction, which uses a constant register to provide the eye radiation vector.</span></p>
+<p class="rvps20"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts42">Temporary register:</span></p>
+<p class="rvps18"><span class="rvts6">Used to store intermediate results. </span><span class="rvts79">r0</span><span class="rvts6"> also serves as the output of the pixel shader. The value in </span><span class="rvts57">r0</span><span class="rvts6"> at the end of the shader is the pixel color for the shader.</span></p>
+<p class="rvps20"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts42">Texture register:</span></p>
+<p class="rvps18"><span class="rvts6">For pixel shader versions </span><span class="rvts79">ps.1.1</span><span class="rvts6"> through </span><span class="rvts79">ps.1.3</span><span class="rvts6">, texture registers contain texture data or texture coordinates.</span><br/><span class="rvts6"></span><br/><span class="rvts6">Texture data is loaded into a texture register during texture sampling.</span><br/><span class="rvts6"></span><br/><span class="rvts6">Texture sampling uses texture coordinates to lookup or sample color values ​​at specific coordinates </span><span class="rvts80">(U'V, W'Q)</span><span class="rvts6">, taking into account the texture stage state attributes.</span><br/><span class="rvts6"></span><br/><span class="rvts6">Texture coordinate data is </span><span class="rvts42">interpolated</span><span class="rvts6"> from the vertex texture coordinate data and is associated with a specific texture stage.</span><br/><span class="rvts6"></span><br/><span class="rvts6">There is a default one-to-one correspondence between the texture stage number and the texture coordinate declaration order.</span><br/><span class="rvts6"></span><br/><span class="rvts6">By default, the first set of texture coordinates defined in the vertex format is associated with texture stage 0.</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+  <ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: square;">
+   <li class="rvps21 noindent"><span class="rvts13">For these pixel shader versions, texture registers behave the same as temporary registers when used by arithmetic instructions.</span></li>
+   <li class="rvps21 noindent"><span class="rvts13">For Pixel Shader version </span><span class="rvts56">ps.1.4</span><span class="rvts13">, the </span><span class="rvts56">(t#)</span><span class="rvts13"> texture registers contain read-only texture coordinate data.</span></li>
+  </ul>
+ </ul>
+</ul>
+<p class="rvps20"><span class="rvts6"><br/></span></p>
+<p class="rvps18"><span class="rvts6">This means that the texture coordinate set and the texture stage number are independent of each other. The texture stage number </span><span class="rvts80">(from which the texture can be sampled)</span><span class="rvts6"> is specified by the destination register number </span><span class="rvts42">(r0 to r5)</span><span class="rvts6">.</span><br/><span class="rvts6"></span><br/><span class="rvts6">For the </span><span class="rvts79">texld</span><span class="rvts6"> instruction, the texture coordinate set is specified by the source register </span><span class="rvts42">(t0 to t5)</span><span class="rvts6">, allowing the texture coordinate set to be mapped to any texture stage.</span><br/><span class="rvts6"></span><br/><span class="rvts6">Furthermore, the source register </span><span class="rvts80">(specifying the texture coordinates)</span><span class="rvts6"> for </span><span class="rvts79">texld</span><span class="rvts6"> can also be the temporary register </span><span class="rvts79">(r#)</span><span class="rvts6">, in which case the contents of the temporary register are used as texture coordinates.</span></p>
+<p class="rvps18"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts42">Color register:</span></p>
+<p class="rvps18"><span class="rvts6">Used to pass data from the vertex shader to the pixel shader.</span></p>
+<p class="rvps18"><span class="rvts6"><br/></span></p>
+<h3 class="rvps5"><span class="rvts0"><span class="rvts12">Details information</span></span></h3>
+<p class="rvps15"><span class="rvts42">Read Limit:</span></p>
+<p class="rvps18"><span class="rvts6">The read port limit specifies the number of different registers of each register type that can be used as a source register in a single instruction.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts42">Read-Only and Read/Write:</span></p>
+<p class="rvps18"><span class="rvts6">Register types are identified by their Read-Only or Read/Write capabilities. Read-only registers can only be used as source registers in an instruction; they can never be used as a destination register.</span></p>
+<p class="rvps20"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts42">Range:</span></p>
+<p class="rvps18"><span class="rvts6">The range is the maximum and minimum value of the register data. The ranges vary depending on the register type.</span></p>
+<p class="rvps18"><span class="rvts6">Early pixel shader hardware represented the data in registers using fixed-point numbers. This limits the precision to a maximum of about eight bits for the fractional part of the number.</span><span class="rvts6"></span></p>
+<p class="rvps7" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com/feature-tour/advanced-project-analyzer/">Enhance Your Documentation with HelpNDoc's Advanced Project Analyzer</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2026 by Foxioo. All Rights Reserved.</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-bs-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Splitter -->
+  <div id="hnd-splitter" style="left: 350px"></div>  
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-3.7.1/jquery.min.js"></script>
+  <script src="vendors/bootstrap-5.3.7/bootstrap.bundle.min.js"></script>
+  <script src="vendors/markjs-8.11.1/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.19.11/uri.min.js"></script>
+  <script src="vendors/imageMapResizer-1.0.10/imageMapResizer.min.js"></script>
+  <script src="vendors/headroom-0.11.0/headroom.min.js"></script>
+  <script src="vendors/jstree-3.3.10/jstree.min.js"></script>  
+  <script src="vendors/interactjs-1.9.22/interact.min.js"></script>  
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Init script -->
+  <script src="_topic_init.js"></script>
+
+
+
+</body>
+
+</html>
+
