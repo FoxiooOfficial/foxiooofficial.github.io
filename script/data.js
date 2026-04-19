@@ -74,7 +74,7 @@ function Fun_Loaded()
 
                 _Post.innerHTML = 
                 `
-                    <p><strong>${item.title}</strong> <em style="color: gray; font-size: 12px;">(${item.date} <strong>#${idx}</strong>)</em></p>
+                    <p><strong>${item.title}</strong> <em style="color: gray; font-size: 12px;">(${item.date} <strong>#${_Posts.length - idx - 1}</strong>)</em></p>
                     <p>${item.content}</p>
                     ${_img}
                     <hr>
