@@ -1,6 +1,13 @@
 const _Year_Copyright = "2025-2026";
 
 const _Posts = [
+     {
+        title: "Added 'my-games.html'",
+        date: "19.04.2026 20:47",
+        content: "Oh, and a screenshot from September 10, 2023 :P",
+        img: "/media/posts/3/battle.png",
+        imgalt: "oh no!1! The Robocat is attacking!!!"
+    },
     {
         title: "The 'My Project' page is back!",
         date: "19.04.2026 19:42",
