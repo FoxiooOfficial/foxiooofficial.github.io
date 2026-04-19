@@ -17,7 +17,7 @@ fetch('https://api.github.com/repos/FoxiooOfficial/foxiooofficial.github.io/comm
             Last update of the website:<br>
             <strong>${formattedCommitDate}</strong>
             <br>
-            <i style="color: gray; font-size: 12px;">(Information from GitHub)</i>
+            <em style="color: gray; font-size: 12px;">(Information from GitHub)</em>
             <br><br>
             Current time:<br>
             <strong id="live-clock"></strong>

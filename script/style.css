@@ -192,6 +192,10 @@ div.window-title {
   background: linear-gradient(45deg, #ff84d6, #9dff84);
 }
 
+.c4 {
+  background: linear-gradient(45deg, #8eff84, #8c84ff);
+}
+
 img.window-title {
   margin:-12px 8px -12px 0;
   float:right;
@@ -337,6 +341,12 @@ div.window-content #info
   padding: 6px;
 }
 
+#updates-container
+{
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
 div.window-content #clock
 {
   font-size:12px;
@@ -359,6 +369,16 @@ hr {
   opacity: 33%;
   margin: 4px;
 
+}
+
+#updates {
+    max-height: 300px;
+    overflow-y: auto;
+    font-size: 0.9em;
+}
+
+.updates-post p {
+    margin: 5px 0;
 }
 
 /*******************************************************************************
