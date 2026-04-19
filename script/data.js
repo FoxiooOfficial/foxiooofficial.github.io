@@ -59,7 +59,7 @@ function Fun_Loaded()
         var _Updates = document.getElementById('updates');
         _Updates.innerHTML = "";
 
-        if (_Updates && typeof _Posts !== undefined)
+        if (_Updates)
         {
             _Posts.forEach((item, idx) =>
             {
