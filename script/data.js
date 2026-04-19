@@ -1,6 +1,13 @@
 const _Year_Copyright = "2025-2026";
 
 const _Posts = [
+    {
+        title: ":O",
+        date: "19.04.2026 22:40",
+        content: "This site is now Suzu approved!",
+        img: "/media/posts/4/suzu.webp",
+        imgalt: "Suzu :O"
+    },
      {
         title: "Added 'my-games.html'",
         date: "19.04.2026 20:47",
