@@ -2,6 +2,11 @@ const _Year_Copyright = "2025-2026";
 
 const _Posts = [
     {
+        title: "The 'My Project' page is back!",
+        date: "19.04.2026 19:42",
+        content: "(The title says it all)",
+    },
+    {
         title: "New website design!",
         date: "19.04.2026 16:41",
         content: "Say hi to new website look!<br><br>The site is being built from scratch and is designed to run more smoothly (my computer used to lag ;w;) and work on old browsers :D",

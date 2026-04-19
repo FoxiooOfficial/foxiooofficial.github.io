@@ -31,10 +31,10 @@
                             </div>
                             <div class="window-content">
                                 <ul id="navigation">
-                                    <li class="selected"><a href="index.html">Home</a></li>
+                                    <li class="notselected"><a href="index.html">Home</a></li>
                                     <li class="notselected"><a href="about-me.html">About me</a></li>
                                     <li class="notselected"><a href="my-oc.html">My OC</a></li>
-                                    <li class="notselected"><a href="my-projects.html">My projects</a></li>
+                                    <li class="selected"><a href="my-projects.html">My projects</a></li>
                                     <li class="notselected"><a href="my-games.html">My games</a></li>
                                     <li class="notselected"><a href="my-art.html">My art</a></li>
                                     <li class="notselected"><a href="other.html">Other...?</a></li>
@@ -61,20 +61,73 @@
                             <img src="media/window/icon/title-web.png" width="48" height="48" class="window-title" alt="Home icon"/>
                         </div>
                         <div class="window-content">
-                            <h1>Welcome to "Fox Corner"!</h1>
-                            <p>Hi, I'm Foxioo, and welcome to my website!</p>
-                            <p>This is where I share information about my projects all in one place
-                            <em>(Use the navigation to learn more!)</em></p>
-                            <br>
-                            <p>This website was designed for a 1920x1080 monitor with 200% zoom and a Chromium-based browser; there may be errors when viewed in other browsers, such as Firefox ;w;</p>
-                            <br>
-                            <div class="center">
-                                <img src="media/gifs/senko-discord.gif" alt="Senko :D">
-                                <img src="media/gifs/uwu-anime.gif" alt="More Senko!">
-                            </div>
-                            <div class="center">
-                                <h3>This site is under construction!</h3>
-                            </div>
+                            <h1>My projects</h1>
+                            <p>Here you'll find a list of projects I'm currently working on or have worked on:</p>
+                            <hr>
+                            <ul id="list">
+                                <li>
+                                    <table>
+                                        <tr>
+                                            <td rowspan="3" class="list-img"><img src="/media/projects/fsp.png" alt="Foxioo Shader Pack logo"></td>
+                                            <td><h2><a href="https://github.com/FoxiooOfficial/FoxiooShaderPack">FSP - Foxioo Shader Pack</a></h2></td>
+                                        </tr>
+                                        <tr>
+                                        <td><p>
+                                            FSP is a massive shader pack designed to work with Clickteam Fusion 2.5.<br><br>
+                                            It supports platforms such as: Windows <em>(Direct3D9, Direct3D11, <strong>(full Direct3D8 support MAYBE coming soon)</strong>)</em>, Android, iOS, macOS, <em>(HTML in the future)</em>.<br><br>
+                                            The shader pack currently includes over 420 effects!
+                                        </p></td>
+                                        </tr>
+                                        <tr class="list-button">
+                                            <td><button><a href="https://github.com/FoxiooOfficial/FoxiooShaderPack">Download</a></button></td>
+                                        </tr>
+                                    </table>
+                                </li>
+
+                                <li>
+                                    <table>
+                                        <tr>
+                                            <td rowspan="3" class="list-img"><br><br><br><img src="/media/projects/t7.png" alt="Tails7 logo"></td>
+                                            <td><h2><a href="https://github.com/FoxiooOfficial/Tails7">Tails7</a></h2></td>
+                                        </tr>
+                                        <tr>
+                                        <td><p>
+                                            An open-source framework/engine <em>(idk what the difference is)</em> called Mode 7 has been released for Clickteam Fusion 2.5+<br><br>
+                                            It features an object mapping system designed to create a 3D illusion.<br>
+                                            It also includes built-in polygons and the ability to switch to orthographic projection.<br>
+                                            It uses shaders <strong>(FSP)</strong>, which allows for compilation on Windows, Android, iOS, and macOS.<br>
+                                        </p></td>
+                                        </tr>
+                                        <tr class="list-button">
+                                            <td>
+                                                <button><a href="https://github.com/FoxiooOfficial/Tails7">Download</button>
+                                                <button><a href="https://foxioo.itch.io/tails7examples">Examples</button>
+                                                <button><a href="https://foxiooofficial.github.io/tails7-docs/index.html">Documentation</button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </li>
+
+                                <li>
+                                    <table>
+                                        <tr>
+                                            <td rowspan="3" class="list-img"><img src="/media/projects/fvep.png" alt="FVEP logo"></td>
+                                            <td><h2>FVEP - Foxioo's Vanilla Extension Plus!</h2></td>
+                                        </tr>
+                                        <tr>
+                                        <td><p>
+                                        This extension is intended to replace the older "VanillaExt" version, which was only for testing purposes.<br><br>
+                                        FVEP is designed to introduce a scripting system using its own language, "VanillaScript," and to add a wide range of features not included by default in Fusion.<br><br>
+                                        <strong>It is currently unavailable.</strong>
+                                        </p></td>
+                                        </tr>
+                                        <tr class="list-button">
+                                            <td>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
                         </div>
                     </main>
                 </td>

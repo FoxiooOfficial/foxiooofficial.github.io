@@ -114,6 +114,10 @@ table tr:nth-child(2) td {
         width: 100%;
         text-align: center;
     }
+
+    .list-button td {
+      flex-wrap: wrap; 
+    }
 }
 
 /*******************************************************************************/
@@ -150,7 +154,7 @@ button:focus {
   border-style: solid;
   position: relative;
   padding: 1px;
-}
+} 
 
 .window-box::after {
   content: "";
@@ -211,23 +215,13 @@ p.window-title {
   background-color: black;
 }
 
-.window-title button {
-  /*position:absolute;
-  right:3px;
-  top:3px;*/
-  margin:2px 2px 2px 0;
-  float:right;
-  width:14px;
-  height:13.5px;
-  background:#C0C0C0;
-  border-width:1px;
-  border-color:#FFFFFF #808080 #808080 #FFFFFF;
-  padding:0;
-  font-size:9px;
-  font-weight:bold;
-  font-family:Tahoma;
-  text-align:center;
+/*
+p, h1, h2, h3, h4, h5, h6 {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
 }
+*/
 
 div.window-content {
   padding: 4px 2px 2px;
@@ -262,18 +256,18 @@ div.window-content button {
   font-family:"MS Sans Serif";
   font-size:11px;
   outline:1px solid #000000;
-  background:#C0C0C0;
+  background:#1f1f1f;
   border-width:1px;
   border-style:solid;
-  border-color:#FFFFFF #808080 #808080 #FFFFFF;
+  border-color:#FFFFFF #3F3F3F #3F3F3F #FFFFFF;
   padding:4px 10px;
-  margin:20px auto 3px;
   display:block;
   position:relative;
   bottom:0px;
 }
 
-div.window-content ul {
+/* navigation */
+div.window-content ul#navigation {
   list-style-position: inside;
   background: none;
 
@@ -284,43 +278,43 @@ div.window-content ul {
   gap: 2px;
 }
 
-div.window-content ul li
+div.window-content ul#navigation li
 {
   border-bottom: 1px solid #3F3F3F; 
   box-shadow: 0 1px 0 0 #7A7A7A; 
 }
 
-div.window-content ul li a {
+div.window-content ul#navigation li a {
     text-decoration: none;
 }
 
-div.window-content ul li a:hover {
+div.window-content ul#navigation li a:hover {
     text-decoration:underline;
 }
 
-div.window-content ul li.notselected a:hover {
+div.window-content ul#navigation li.notselected a:hover {
     background-color: black;
 }
 
 
-div.window-content ul li {
+div.window-content ul#navigation li {
   padding: 5px 10px;
 }
 
-div.window-content ul li.notselected a {
+div.window-content ul#navigation li.notselected a {
     color: rgb(255, 255, 255);
 }
 
-div.window-content ul li.notselected {
+div.window-content ul#navigation li.notselected {
   list-style-image: url("/media/window/icon/folder-closed.png");
   background: linear-gradient(90deg, #00000000, #5f5f5f);
 }
 
-div.window-content ul li.selected a {
+div.window-content ul#navigation li.selected a {
   color: rgb(0, 0, 0);
 }
 
-div.window-content ul li.selected {
+div.window-content ul#navigation li.selected {
   list-style-image: url("/media/window/icon/folder-open.png");
   background: linear-gradient(45deg, #ff80ff, #ffea84);
 
@@ -328,6 +322,68 @@ div.window-content ul li.selected {
   text-shadow: 2px 2px #ffffff;
   font-weight: bold;
 }
+/* ^^^ navigation //////////////////////////////////////////// */
+
+/* list */
+div.window-content ul#list {
+  list-style-position: inside;
+  background: none;
+  list-style: none;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+div.window-content ul#list li
+{
+  border-bottom: 1px solid #3F3F3F; 
+  box-shadow: 0 1px 0 0 #7A7A7A; 
+  background: linear-gradient(90deg, #00000000, #5f5f5f);
+  padding: 5px 10px;
+}
+
+div.window-content ul#list li a {
+    text-decoration: none;
+    color: rgb(0, 255, 234);
+}
+
+div.window-content ul#list li a:hover {
+    text-decoration:underline;
+    background-color: black;
+    color: rgb(251, 255, 0);
+}
+
+div.window-content ul#list li img {
+  min-width: 150%;
+  transform: translate(-20px);
+}
+
+.list-img {
+  width: 120px;
+  max-width: 120px;
+  white-space: nowrap;
+}
+
+.list-button td {
+  display: flex;
+  gap: 5px;
+}
+
+.list-button td button {
+  margin-top: 5px;
+}
+
+
+@media (max-width: 1080px) {
+  .list-img {
+    display: none;
+  }
+}
+
+/* ^^^ list //////////////////////////////////////////// */
 
 div.window-content img
 {
@@ -348,6 +404,12 @@ div.window-content #info
 }
 
 div.window-content #clock
+{
+  font-size:12px;
+  padding: 0px 6px 6px 6px;
+}
+
+div.window-content #switch_style
 {
   font-size:12px;
   padding: 0px 6px 6px 6px;
