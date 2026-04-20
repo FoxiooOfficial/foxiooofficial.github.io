@@ -1,12 +1,17 @@
 const _Posts = [
     {
+        title: "Super-duper (small) fixes!!!!",
+        date: "20.04.2026 20:43",
+        content: "For the lightweight version, i improved the page layout; the content now flows from top to bottom (instead of from the center)<br><br>ALSO a better awesome background for CSS!!1111!",
+    },
+    {
         title: ":O",
         date: "19.04.2026 22:40",
         content: "This site is now Suzu approved!",
         img: "/media/posts/4/suzu.webp",
         imgalt: "Suzu :O"
     },
-     {
+    {
         title: "Added 'my-games.html'",
         date: "19.04.2026 20:47",
         content: "Oh, and a concept art from September 10, 2023 :P",
