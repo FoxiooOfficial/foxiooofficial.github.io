@@ -64,7 +64,6 @@ body {
     animation: scrollbg3 75s linear infinite, changehue 15s linear infinite;
 }
 
-
 @keyframes scrollbg1 {
   from { background-position: 0 0; }
   to { background-position: -512px 0; }
@@ -370,6 +369,15 @@ div.window-content ul#navigation li.selected {
   text-shadow: 2px 2px #ffffff;
   font-weight: bold;
 }
+
+.window-small {
+  width: 210px;
+}
+
+.window-big {
+  max-width: min(960px, 100%);
+}
+
 /* ^^^ navigation //////////////////////////////////////////// */
 
 /* list */
