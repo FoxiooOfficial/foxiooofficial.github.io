@@ -156,6 +156,10 @@ button:focus {
   padding: 1px;
 } 
 
+div.window-box, nav.window-box {
+  margin-bottom: 12px;
+} 
+
 .window-box::after {
   content: "";
   position: absolute;
@@ -202,8 +206,11 @@ div.window-title {
 
 img.window-title {
   margin:-12px 8px -12px 0;
+  position: relative;
+  z-index: 10;
   float:right;
   image-rendering: pixelated;
+  
 }
 
 p.window-title {
