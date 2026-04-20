@@ -12,19 +12,14 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: teal;
+
+    min-height: 100vh;
+
     color: white;
     
     display: flex;
     justify-content: center;
 
-    min-height: 100vh;
-
-    background-image: url(/media//ced4d1b1-e135-4bcb-9695-73427c2acacf.png);
-    animation: scrollbg 30s linear infinite;
-
-    background-size: 512px;
-    background-repeat: repeat;
     image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
     image-rendering: -moz-crisp-edges;          /* Firefox                        */
     image-rendering: -o-crisp-edges;            /* Opera                          */
@@ -36,13 +31,59 @@ body {
     cursor: url('/media/cursor/black-xp.png'), auto;
 }
 
-@keyframes scrollbg {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 0 -896px; 
-  }
+.bg-1, .bg-2, .bg-3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-size: 512px;
+    background-repeat: repeat;
+    will-change: filter, background-position;
+    opacity: 0.55;
+}
+
+.bg-1 {
+    z-index: -1;
+    background-image: url(/media/bg-1.png);
+
+    animation: scrollbg1 60s linear infinite, changehue 5s linear infinite;
+}
+
+.bg-2 {
+    z-index: -2;
+    background-image: url(/media/bg-2.png);
+
+    animation: scrollbg2 60s linear infinite, changehue 10s linear infinite;
+}
+
+.bg-3 {
+    z-index: -3;
+    background-image: url(/media/ced4d1b1-e135-4bcb-9695-73427c2acacf.gif);
+
+    animation: scrollbg3 75s linear infinite, changehue 15s linear infinite;
+}
+
+
+@keyframes scrollbg1 {
+  from { background-position: 0 0; }
+  to { background-position: -512px 0; }
+}
+
+@keyframes scrollbg2 {
+  from { background-position: 0 0; }
+  to { background-position: 512px 0 }
+}
+
+@keyframes scrollbg3 {
+  from { background-position: 0 0; }
+  to { background-position: 0px 896px; }
+}
+
+
+@keyframes changehue {
+  from { filter: hue-rotate(0deg); }
+  to { filter: hue-rotate(360deg); }
 }
 
 .main-container {
