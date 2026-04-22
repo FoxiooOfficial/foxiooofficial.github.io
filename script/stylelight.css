@@ -57,3 +57,11 @@ img {
 .window-title img {
     display: none;
 }
+
+ul {
+    list-style-type: none;
+}
+
+.list-img {
+    display: none;
+}
