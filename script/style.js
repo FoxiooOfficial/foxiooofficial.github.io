@@ -1,13 +1,15 @@
-var _Parms = new URLSearchParams(window.location.search);
-var _IsNoStyle = _Parms.get('style') === 'no';
+var _IsNoStyle = window.location.search.indexOf('style=no') !== -1;
 
 function Fun_Check_Style()
 {
     var _Switch_Style = document.getElementById("switch_style");
+    var _LightStyle = document.getElementById("style_light");
 
     if (!_IsNoStyle)
     {
         /* css */
+        _LightStyle.setAttribute("disabled","disabled");
+        
         var _Link = document.createElement('link');
         _Link.rel = 'stylesheet';
         _Link.href = 'script/style.css';
@@ -21,7 +23,7 @@ function Fun_Check_Style()
     }
     else
     {
-        _Switch_Style.innerHTML = '<strong>Is this page too lightweight for your device?</strong> <a href="?style=yes">View the HTML version with CSS</a> <em>(only if your browser supports it)</em>.';
+        _Switch_Style.innerHTML = '<strong>Is this page too lightweight for your device?</strong> <a href="?style=yes">View the HTML version with CSS</a>.';
 
         var _Links = document.querySelectorAll('div.window-content ul li a');
         for (var i = 0; i < _Links.length; i++)

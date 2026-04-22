@@ -6,16 +6,7 @@
     <link rel="icon" type="image/png" href="/media/favicon.png">
     <title>My projects</title>
 
-    <style>
-        body{
-            background-color: #000000 !important;
-            color: #ffffff !important;
-        }
-        a { color: #00ffff; }
-        a:visited { color: #ff00ff; }
-        
-        .window-content, .window-title, p, h3, li, td { color: #ffffff !important; }
-    </style>
+    <link rel="stylesheet" href="script/stylelight.css" id="style_light">
 </head>
 <body>
     <script type="text/javascript" src="script/posts.js"></script>
@@ -58,8 +49,7 @@
                                 </ul>
                             </div>
                         </nav>
-                        <article>
-                            <nav class="window-box window-small">
+                        <article class="window-box window-small">
                             <div class="window-title c4">
                                 <p class="window-title">Posts & Updates</p>
                                 <img src="media/window/icon/title-updates.png" width="48" height="48" class="window-title" alt="Update icon"/>
@@ -72,7 +62,7 @@
                 </td>
                 
                 <td valign="top">
-                    <main class="window-box" class="window-big">
+                    <main class="window-box window-big">
                         <div class="window-title c2">
                             <p class="window-title">My projects</p>
                             <img src="media/window/icon/title-web.png" width="48" height="48" class="window-title" alt="Home icon"/>
@@ -160,10 +150,10 @@
                                 <img src="media/window/icon/title-info.png" width="48" height="48" class="window-title" alt="Info icon"/>
                             </div>
                             <div class="window-content">
-                                <div id="info">Loading...</div>
-                                <strong><div id="clock">Loading...</div></strong>
+                                <div id="info"><!-- Loading... --></div>
+                                <strong><div id="clock"><!-- Loading... --></div></strong>
                                 <hr>
-                                <p id="switch_style">Is this page too heavy for your device? <a href="?style=no">Load the plain HTML version</a> <em>If you see this message, it means your browser doesn't fully support JavaScript...</em></p>
+                                <p id="switch_style">Is this page too heavy for your device? <a href="?style=no">Load the plain HTML version</a> <em>CSS style switching and information about the time and date of the page update are available in browsers with full JavaScript support ;w;</em></p>
                             </div>
                         </div>
                     </aside>
@@ -217,7 +207,7 @@
             <tr>
                 <td></td>
                 <td>
-                    <footer class="window-box" class="window-big">
+                    <footer class="window-box window-big">
                         <div id="banners"></div>
                         <p id="footer_copyright">2026 &copy; Foxioo</p>
                     </footer>

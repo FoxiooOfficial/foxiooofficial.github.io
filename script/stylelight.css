@@ -1,0 +1,57 @@
+/* CSS styles for older browsers / Opera Mini Extreme Mode */
+
+body {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    margin: 0;
+    padding: 2px;
+}
+
+a:visited {
+    color: #00ffff; 
+}
+
+a {
+    color: #ff00ff;
+}
+        
+.window-content, .window-title, p, h3, li, td {
+    color: #ffffff !important; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th:nth-child(1), td:nth-child(1) { width: 25%; }
+th:nth-child(2), td:nth-child(2) { width: 50%; }
+th:nth-child(3), td:nth-child(3) { width: 25%; }
+
+td {
+    vertical-align: top;
+    padding: 5px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+.window-box {
+    border: 1px solid #ffff00;
+    margin-bottom: 10px;
+    padding: 3px;
+}
+
+.window-title {
+    font-weight: bold;
+    border-bottom: 1px dashed #aaaaaa;
+    margin-bottom: 5px;
+    padding-bottom: 2px;
+}
+
+.window-title img {
+    display: none;
+}
