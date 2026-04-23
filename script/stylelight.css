@@ -65,3 +65,7 @@ ul {
 .list-img {
     display: none;
 }
+
+textarea {
+    width: 100%;
+}
