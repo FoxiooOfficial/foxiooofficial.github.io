@@ -4,70 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/media/favicon.png">
-    <title>My games</title>
+    <title>My games!</title>
 
+    <!-- style that is intended for old devices / main style is loaded from scripts -->
     <link rel="stylesheet" href="script/stylelight.css" id="style_light">
 </head>
 <body>
-    <script type="text/javascript" src="script/posts.js"></script>
-    <script type="text/javascript" src="script/updates.js"></script>
-    <script type="text/javascript" src="script/style.js"></script>
-    <script type="text/javascript" src="script/data.js"></script>
-    <script type="text/javascript" src="script/LastUpdate.js"></script>
+    <script type="text/javascript" src="script/posts.js"></script>      <!-- * list of posts from JSON -->
+    <script type="text/javascript" src="script/updates.js"></script>    <!-- * displaying posts from JSON in the Post & Updates window -->
+    <script type="text/javascript" src="script/style.js"></script>      <!-- * handling which CSS style should be selected -->
+    <script type="text/javascript" src="script/data.js"></script>       <!-- linking to and executing functions from the scripts above -->
+    <script type="text/javascript" src="script/LastUpdate.js"></script> <!-- displaying information about the page update date in the Info window -->
 
+    <!-- background -->
     <div class="bg-1"></div>
     <div class="bg-2"></div>
     <div class="bg-3"></div>
+
+    <!-- main content of the page! /////////////////////////////////////////////////////////////////////////// -->
     <div class="main-container">
         <table>
-            <tr>
+            <tr> <!-- 1 / 3 -->
                 <th></th>
-                <th>
+                <th> <!-- header banner -->
                     <header>
                         <img src="media/baner.png" alt="Banner">
                     </header>
                 </th>
                 <th></th>
             </tr>
-            <tr>
-                <td valign="top">
+            <tr> <!-- 2 / 3 -->
+                <td valign="top"> <!-- left side (Navigation and Posts/Updates) -->
                     <aside>
-                        <nav class="window-box window-small">
-                            <div class="window-title c0">
+                        <nav class="window-box window-small"> <!-- Navigation -->
+                            <div class="window-title c0"> <!-- title -->
                                 <p class="window-title">Navigation</p>
                                 <img src="media/window/icon/title-navigation.png" width="48" height="48" class="window-title" alt="Navigation icon"/>
                             </div>
-                            <div class="window-content">
+                            <div class="window-content"> <!-- content -->
                                 <ul id="navigation">
-                                    <li class="notselected"><a href="index.html">Home</a></li>
-                                    <li class="notselected"><a href="about-me.html">About me</a></li>
-                                    <li class="notselected"><a href="my-oc.html">My OC</a></li>
-                                    <li class="notselected"><a href="my-projects.html">My projects</a></li>
-                                    <li class="selected"><a href="my-games.html">My games</a></li>
-                                    <li class="notselected"><a href="my-art.html">My art</a></li>
-                                    <li class="notselected"><a href="other.html">Other...?</a></li>
+                                    <li class="self_link notselected"><a href="index.html">Home</a></li>
+                                    <li class="self_link notselected"><a href="about-me.html">About me</a></li>
+                                    <li class="self_link notselected"><a href="my-oc.html">My OC</a></li>
+                                    <li class="self_link notselected"><a href="my-projects.html">My projects</a></li>
+                                    <li class="self_link selected"><a href="my-games.html">My games</a></li>
+                                    <li class="self_link notselected"><a href="my-art.html">My art</a></li>
+                                    <li class="self_link notselected"><a href="other.html">Other...?</a></li>
                                 </ul>
                             </div>
                         </nav>
-                        <article class="window-box window-small">
-                            <div class="window-title c4">
+                        <article class="window-box window-small"> <!-- Posts & Updates -->
+                            <div class="window-title c4"> <!-- title -->
                                 <p class="window-title">Posts & Updates</p>
                                 <img src="media/window/icon/title-updates.png" width="48" height="48" class="window-title" alt="Update icon"/>
                             </div>
-                            <div class="window-content" id="updates">
-                                <p><em>Posts/Updates are displayed only in browsers that support JavaScript ;w;</em></p>
+                            <div class="window-content" id="updates"> <!-- content -->
+                                <!-- the content is automatically generated by the script -->
+                                <p><em>Posts and updates are displayed in browsers that fully support JavaScript ;w;</em></p>
                             </div>
                         </article>
                     </aside>
                 </td>
                 
-                <td valign="top">
-                    <main class="window-box window-big">
-                        <div class="window-title c2">
-                            <p class="window-title">My games</p>
+                <td valign="top"> <!-- middle (Main Content)-->
+                    <main class="window-box window-big"> <!-- Main Content -->
+                        <div class="window-title c2"> <!-- title -->
+                            <p class="window-title">My games!</p>
                             <img src="media/window/icon/title-web.png" width="48" height="48" class="window-title" alt="Home icon"/>
                         </div>
-                        <div class="window-content">
+                        <div class="window-content"> <!-- content -->
                             <h1>My games</h1>
                             <p>Here you'll find a list of games I'm currently working on or have worked on:</p>
                             <hr>
@@ -97,38 +102,45 @@
                                     </table>
                                 </li>
                             </ul>
+
                         </div>
                     </main>
                 </td>
 
-                <td valign="top">
+                <td valign="top"> <!-- right side (Info and Buttons) -->
                     <aside>
-                        <div class="window-box window-small">
-                            <div class="window-title c3">
+                        <div class="window-box window-small"> <!-- Info -->
+                            <div class="window-title c3"> <!-- title -->
                                 <p class="window-title">Info</p>
                                 <img src="media/window/icon/title-info.png" width="48" height="48" class="window-title" alt="Info icon"/>
                             </div>
-                            <div class="window-content">
-                                <div id="info"><!-- Loading... --></div>
-                                <strong><div id="clock"><!-- Loading... --></div></strong>
+                            <div class="window-content"> <!-- content -->
+                                <div id="info"></div> <!-- last update of the website -->
+                                <strong><div id="clock"></div></strong> <!-- current time -->
                                 <hr>
-                                <p id="switch_style">Is this page too heavy for your device? <a href="?style=no">Load the plain HTML version</a> <em>CSS style switching and information about the time and date of the page update are available in browsers with full JavaScript support ;w;</em></p>
+                                <p id="switch_style">Is this page too heavy for your device? <a href="?style=no">Load the plain HTML version</a> 
+                                    <em>CSS style switching and information about the time and date of the page update are available in browsers with full JavaScript support ;w;</em>
+                                </p>
+                                <!-- the content is automatically generated by the script -->
                             </div>
                         </div>
                     </aside>
-                        <div class="window-box window-small">
-                            <div class="window-title c1">
+                        <div class="window-box window-small"> <!-- Buttons -->
+                            <div class="window-title c1"> <!-- title -->
                                 <p class="window-title">Buttons!</p>
                                 <img src="media/window/icon/title-buttons.png" width="48" height="48" class="window-title" alt="Button icon"/>
                             </div>
-                            <div class="window-content">
+                            <div class="window-content"> <!-- content -->
                                 <!-- Fox stuff -->
-                                <p><strong>Here you'll find buttons I created:</strong></p>
+                                <p><strong>Here you'll find buttons I created <a class="self_link" href="other_buttons.html">(See all)</a>:</strong></p>
                                 
                                 <hr>
 
                                 <div class="center">
                                     <a href="https://foxiooofficial.github.io/" target="_blank"><img src="/media/buttons/foxioo_corner_1.gif" alt="Foxioo's Corner!"><img src="/media/buttons/foxioo_corner_2.gif" alt="Foxioo's Corner!"></a>
+                                </div>
+                                <div class="center">
+                                    <textarea disabled><a href="https://foxiooofficial.github.io/" target="_blank"><img src="/media/buttons/foxioo_corner_1.gif" alt="Foxioo's Corner!"><img src="/media/buttons/foxioo_corner_2.gif" alt="Foxioo's Corner!"></a></textarea>
                                 </div>
 
                                 <hr>
@@ -141,31 +153,13 @@
                                     <a href="https://senkosan.fandom.com/wiki/Fukuda" target="_blank"><img src="/media/buttons/this_site_is_fukuda_approved.gif" alt="This site is Fukuda Approved!"></a>
                                     <a href="https://senkosan.fandom.com/wiki/Suzu" target="_blank"><img src="/media/buttons/this_site_is_suzu_approved.gif" alt="This site is Suzu Approved!"></a>
                                 </div>
-
-                                <hr>
-
-                                <!-- Clickteam stuff -->
-                                <div class="center">
-                                    <a href="https://www.clickteam.com/clickteam-fusion-2-5" target="_blank"><img src="/media/buttons/getfusion2_5.png" alt="Get Clicktean Fusion 2.5!"></a>
-                                    <a href="https://www.clickteam.com/clickteam-fusion-2-5-developer" target="_blank"><img src="/media/buttons/getfusion2_5_dev.png" alt="Get Clicktean Fusion 2.5 Developer!"></a>
-                                    <a href="https://www.clickteam.com/clickteam-fusion-2-5-plus" target="_blank"><img src="/media/buttons/getfusion2_5_plus.png" alt="Get Clicktean Fusion 2.5+ DLC!"></a>
-                                    <a href="https://www.clickteam.com/clickteam-fusion-2-5-free-edition" target="_blank"><img src="/media/buttons/getfusion2_5_free.png" alt="Get Clicktean Fusion 2.5 Free!"></a>
-                                    <a href="https://www.clickteam.com/multimedia-fusion-2" target="_blank"><img src="/media/buttons/getfusion2_0.png" alt="Get Multimedia Fusion 2!"></a>
-                                    <a href="https://www.clickteam.com/multimedia-fusion-2-developer" target="_blank"><img src="/media/buttons/getfusion2_0_dev.png" alt="Get Multimedia Fusion 2 Developer!"></a>
-                                    <a href="https://www.clickteam.com/the-games-factory-2" target="_blank"><img src="/media/buttons/getfactory2_0_free.png" alt="Get The Games Factory 2!"></a>
-                                    <a href="" target="_blank"><img src="/media/buttons/getfusion1_5.png" alt="Get Multimedia Fusion 1.5!"></a>
-                                    <a href=""><img src="/media/buttons/getfusion_1_06_express.png" alt="Get Multimedia Fusion Express!"></a>
-                                    <a href=""><img src="/media/buttons/getcreate.png" alt="Get Click and Create!"></a>
-                                    <a href=""><img src="/media/buttons/getfactory.png" alt="Get The Games Factory!"></a>
-                                    <a href=""><img src="/media/buttons/getklikandplay.png" alt="Get Klik & Play!"></a>
-                                </div>
                             </div>
                         </div>
                 </td>
             </tr>
-            <tr>
+            <tr> <!-- 3 / 3 -->
                 <td></td>
-                <td>
+                <td> <!-- footer -->
                     <footer class="window-box window-big">
                         <div id="banners"></div>
                         <p id="footer_copyright">2026 &copy; Foxioo</p>
