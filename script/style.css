@@ -31,6 +31,8 @@ body {
     -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
 
     cursor: url('/media/cursor/black-xp.png'), auto;
+
+     overflow-x: hidden;
 }
 
 .bg-1, .bg-2, .bg-3 {
@@ -531,7 +533,7 @@ hr {
 #foxioo {
   position: absolute;
   z-index: 20;
-  left: 102.25%;
+  left: 101%;
   top: -2px;
   transform: scale(2);
   pointer-events: none;
