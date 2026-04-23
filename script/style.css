@@ -523,3 +523,23 @@ hr {
       scale: var(0);
     }
   }
+
+/*******************************************************************************
+  characters
+*******************************************************************************/
+
+#foxioo {
+  position: absolute;
+  z-index: 20;
+  left: 102.25%;
+  top: -2px;
+  transform: scale(2);
+  pointer-events: none;
+}
+
+@media (max-width: 800px) {
+  #foxioo {
+    left: calc(100% - 24px);
+    transform: scale(1);
+  }
+}
