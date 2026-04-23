@@ -25,7 +25,7 @@ function Fun_Check_Style()
     {
         _Switch_Style.innerHTML = '<strong>Is this page too lightweight for your device?</strong> <a href="?style=yes">View the HTML version with CSS</a>.';
 
-        var _Links = document.querySelectorAll('div.window-content ul li a');
+        var _Links = document.querySelectorAll('a.self_link, .self_link a');
         for (var i = 0; i < _Links.length; i++)
         {
             var _Href = _Links[i].getAttribute('href');
