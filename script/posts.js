@@ -1,4 +1,11 @@
 const _Posts = [
+    { // 7
+        title: "update",
+        date: "26.04.2026 01:37",
+        content: "I feel better and can breathe normally<br><br>oh, and the VanillaScript tests are going well",
+        img: "/media/posts/7/va.png",
+        imgalt: "VanillaScript in Clickteam Fusion"
+    },
     { // 6
         title: "important information",
         date: "22.04.2026 21:25",
