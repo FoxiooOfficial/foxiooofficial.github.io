@@ -1,4 +1,9 @@
 const _Posts = [
+    { // 8
+        title: "FSP info",
+        date: "20.06.2026 22:55",
+        content: "Work is currently underway to fix all the shaders from FSP using a tool that Naitor shared with me; it makes the job a lot easier, but I still have to go through all 420 shaders again...",
+    },
     { // 7
         title: "update",
         date: "26.04.2026 01:37",
