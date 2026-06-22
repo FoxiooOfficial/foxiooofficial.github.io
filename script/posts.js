@@ -1,4 +1,9 @@
 const _Posts = [
+    { // 9
+        title: "Tails7 R1.0.3 Preview",
+        date: "22.06.2026 15:07",
+        content: "it's out.<br><a href=\"https://github.com/FoxiooOfficial/Tails7/releases/tag/R1.0.3_04.04.26\">download</a>",
+    },
     { // 8
         title: "FSP info",
         date: "20.06.2026 22:55",
