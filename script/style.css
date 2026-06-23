@@ -287,11 +287,15 @@ div.window-content p {
   padding-right: 12px;
 }
 
-div.window-content h1 {
+div.window-content h1, div.window-content h2, div.window-content h3, div.window-content h4, div.window-content h5 {
   padding-bottom: 12px;
   padding-top: 6px;
   padding-left: 12px;
   padding-right: 12px;
+}
+
+.link-list li {
+  transform: translateX(40px);
 }
 
 i {
