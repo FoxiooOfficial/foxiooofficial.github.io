@@ -1,4 +1,9 @@
 const _Posts = [
+    { // 10
+        title: "Tails7 Documentation",
+        date: "24.06.2026 03:18",
+        content: "updated documentation, now have r1.0.3 stuff! also new <a href=\"https://foxiooofficial.github.io/docs/tails7/Introduction.html\">link</a><br><br>BRRRRRRRR",
+    },
     { // 9
         title: "Tails7 R1.0.3 Preview",
         date: "22.06.2026 15:07",
