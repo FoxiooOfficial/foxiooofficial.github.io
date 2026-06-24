@@ -1,0 +1,808 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 10.3.0.232">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Variables</title>
+  <meta name="description" content="Tails7 official documentation" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Variables">
+  <meta name="twitter:description" content="Tails7 official documentation">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Variables" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="Tails7 official documentation" />
+  <meta property="og:site_name" content="Tails7" /> 
+
+  <!-- Bootstrap CSS -->
+  <link href="vendors/bootstrap-5.3.7/bootstrap.min.css" rel="stylesheet"/>
+  <link href="vendors/bootstrap-icons-1.13.1/bootstrap-icons.min.css" rel="stylesheet"/>
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.10/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+  <style type="text/css">.navigation #inline-toc { width: auto !important}</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="visually-hidden">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>Tails7</h1>
+    
+  </header>
+
+  <nav id="panel-left" class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close" role="presentation"> 
+        <button class="hnd-toggle btn btn-default" aria-label="close">
+          <span class="bi bi-x" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="nav-item tab">
+            <a href="#contents" id="tab-contents" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#contents" aria-controls="contents" aria-selected="true">
+                <i class="bi bi-list-ul"></i>
+                Contents
+            </a>
+        </li>
+      
+        <li role="presentation" class="nav-item tab">
+            <a href="#index" id="tab-index" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#index" aria-controls="index" aria-selected="false">
+                <i class="bi bi-asterisk"></i>
+                Index
+            </a>
+        </li>
+      
+        <li role="presentation" class="nav-item tab">
+            <a href="#search" id="tab-search" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#search" aria-controls="search" aria-selected="false">
+                <i class="bi bi-search"></i>
+                Search
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+      <div role="tabpanel" class="tab-pane" id="index">
+        <div id="keywords" class="tree-container unselectable"
+            data-url="_keywords.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /index-->
+      
+      <div role="tabpanel" class="tab-pane" id="search">
+        <div class="search-content">
+          <div class="search-input">
+            <form id="search-form">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="input-search" name="input-search" placeholder="Search..." aria-label="Search..." />
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit" aria-label="Search...">
+                      <span class="bi bi-search" aria-hidden="true"></span>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>  <!-- /search-input -->
+          <div class="search-result">
+            <div id="search-info"></div>
+            <div class="tree-container unselectable" id="search-tree"></div>
+          </div>  <!-- /search-result -->
+        </div>  <!-- /search-content -->
+      </div>  <!-- /search-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="Variables1"
+		  data-hnd-context="25"
+		  data-hnd-title="Variables"
+		>
+            
+                <div class="navigation">
+                    <ol class="breadcrumb">
+                        <li><a href="Objects.html">Objects</a></li><li><a href="Tails7Objects.html">Tails7 Objects</a></li><li><a href="InfoObject.html">Info Object</a></li>
+                    </ol>
+                    <div class="nav-arrows">
+                        <div class="btn-group btn-group" role="group"><a class="btn btn-default" href="InfoObject.html" title="Info Object" role="button"><span class="bi bi-chevron-up" aria-hidden="true"></span></a><a class="btn btn-default" href="InfoObject.html" title="Info Object" role="button"><span class="bi bi-chevron-left" aria-hidden="true"></span></a><a class="btn btn-default" href="RenderGround.html" title="Render Ground" role="button"><span class="bi bi-chevron-right" aria-hidden="true"></span></a></div>
+                    </div>
+                </div> 
+            
+
+            <a id="main-content"></a>
+
+            <h2>Variables</h2>
+
+            <div class="main-content">
+                
+<h1 class="rvps4"><span class="rvts0"><a class="rvts15" href="Objects.html">Objects</a></span><span class="rvts0"><span class="rvts21"> / </span></span><span class="rvts0"><a class="rvts15" href="Tails7Objects.html">Tails7 Objects</a></span><span class="rvts0"><span class="rvts21"> / </span></span><span class="rvts0"><a class="rvts15" href="InfoObject.html">Info Object</a></span><span class="rvts0"><span class="rvts21"> / </span></span><span class="rvts0"><a class="rvts15" href="Variables1.html">Variables</a></span><span class="rvts0"><span class="rvts16"> </span></span><span class="rvts0"><span class="rvts17">(</span></span><span class="rvts0"><span class="rvts18">23 June, 2026)</span></span></h1>
+<p class="rvps2" style="break-before: always;"><span class="rvts6"><br/></span></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts29">Alterable Values&nbsp;</span></span></h3>
+<div class="rvps2">
+<table width="100%" style="border-color: #000000; border-style: solid; border-width: 1px; border-spacing: 2px;">
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 107px;">
+   <p class="rvps3"><span class="rvts11">Variable index</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 156px;">
+   <p class="rvps3"><span class="rvts11">Variable name</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 915px;">
+   <p class="rvps3"><span class="rvts11">Description</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 196px;">
+   <p class="rvps3"><span class="rvts11">Default value</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 175px;">
+   <p class="rvps3"><span class="rvts11">Required version</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">12 / M</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_WorldSize</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">This variable specifies the world density level, by default it is set to 1, if for example we set it to 2 then the movement distance, as well as objects, will be 2 times smaller.</span></p>
+   <p class="rvps2"><span class="rvts6"></span><br/><span class="rvts22">(Don't recommend changing this variable)</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">1.0</span></p>
+  </td>
+  <td rowspan="30" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; vertical-align: middle; width: 175px;">
+   <p class="rvps3"><span class="rvts22">R1.0.1_10.05.25</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">5 / F</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_TargetZLayer</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">This variable specifies on which layer the Tails7 Render Ground object should be created.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">2</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">6 / G</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_PosX</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts22">A value calculated automatically by Position Mode;</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts6">Variable returns information about the X position of the Tails7 Camera Object.</span></p>
+  </td>
+  <td rowspan="2" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,153,255,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts22">(Automatically)</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">7 / H</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_PosY</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts22">A value calculated automatically by Position Mode;</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts6">Variable returns information about the Y position of the Tails7 Camera Object.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">8 / I</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_PosZ</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Variable contains information about the Z position and can simultaneously set this Z position of the camera.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">1.0</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">9 / J</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_RotX</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Variable contains information about the rotation on the X axis and can simultaneously set this X rotation of the camera.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">0.0</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">10 / K</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_RotY</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Variable contains information about the rotation on the Y axis and can simultaneously set this Y rotation of the camera.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">0.0</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">11 / L</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_RotZ</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Variable contains information about the rotation on the Z axis and can simultaneously set this Z rotation of the camera.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">0.0</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">4 / E</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_Distortion</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Variable contains information about the distortion level and can simultaneously set this distortion of the camera.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">1.0</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">13 / N</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_RotXPointX</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Variable contains information about the X rotation point offset on the X axis and can simultaneously set this value.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">0.0</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">14 / O</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_RotXPointY</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Variable contains information about the X rotation point offset on the Y axis and can simultaneously set this value.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">0.0</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">28 / </span><span class="rvts6">AC</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_RotYPointX</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Variable contains information about the Y rotation point offset on the X axis and can simultaneously set this value.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">0.0</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">29 / </span><span class="rvts6">AD</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_RotYPointY</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Variable contains information about the Y rotation point offset on the Y axis and can simultaneously set this value.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">0.0</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">15 / P</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_Scale</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Variable contains information about the ground texture scale on both axes and can simultaneously set this value.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">1.0</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">16 / Q</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_ScaleX</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Variable contains information about the ground texture scale on the X axis and can simultaneously set this value</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">1.0</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">17 / R</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_ScaleY</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Variable contains information about the ground texture scale on the Y axis and can simultaneously set this value.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">1.0</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">18 / S</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_PosOffsetX</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Variable contains information about the texture offset on the X axis (given in texCoord values i.e., from 0 to 1) and can simultaneously set this value.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">0.0</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">19 / T</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_PosOffsetY</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Variable contains information about the texture offset on the Y axis (given in texCoord values i.e., from 0 to 1) and can simultaneously set this value.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">0.0</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">3 / D</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_TextureID</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Variable contains information about which ground texture frame should be used when creating the Tails7 Ground Render object and can simultaneously set this value.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">1</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">20 / U</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_TextureSizeX</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Variable contains information about the ground texture scale on the X axis, similar to _ScaleX but here pixel units are used and can simultaneously set this value.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">2048</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">25 / Z</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_TextureSizeY</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Variable contains information about the ground texture scale on the Y axis, similar to _ScaleY but here pixel units are used and can simultaneously set this value.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">2048</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">23 / X</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_ResolutionX</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">This variable specifies what target resolution you plan for the X axis, it matters for calculations that use, for example, the factor.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">1280</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">24 / Y</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_ResolutionY</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">This variable specifies what target resolution you plan for the Y axis, it matters for calculations that use, for example, the factor.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">720</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">0 / A</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_RenderMinimumSize</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts22">A value calculated automatically by Startup Set Render;</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts6">This variable contains information about the smallest value among _ResolutionX and _ResolutionY;</span></p>
+   <p class="rvps2"><span class="rvts26">TODO: Should this be moved to the Cache object?</span></p>
+  </td>
+  <td rowspan="7" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,153,255,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts22">(Automatically)</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">1 / B</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_RenderMiddleSizeX</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts22">A value calculated automatically by Startup Set Render;</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts6">This variable returns </span><span class="rvts11">Frame Width / 2.0</span></p>
+   <p class="rvps2"><span class="rvts26">TODO: Should this be moved to the Cache object?</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">2 / C</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_RenderMiddleSizeY</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts22">A value calculated automatically by Startup Set Render;</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts6">This variable returns </span><span class="rvts11">Frame Height / 2.0</span></p>
+   <p class="rvps2"><span class="rvts26">TODO: Should this be moved to the Cache object?</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">21 / V</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_ScaleFactorX</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts22">A value calculated automatically by Startup Set Render;</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts6">This variable returns </span><span class="rvts11">Frame Width / ( _ResolutionX( "Tails7 Info Object" ) + 0.0 )</span></p>
+   <p class="rvps2"><span class="rvts26">TODO: Should this be moved to the Cache object?</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">22 / W</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_ScaleFactorY</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts22">A value calculated automatically by Startup Set Render;</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts6">This variable returns</span><span class="rvts11"> Frame Height / ( _ResolutionY( "Tails7 Info Object" ) + 0.0 )</span></p>
+   <p class="rvps2"><span class="rvts26">TODO: Should this be moved to the Cache object?</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">26 / AA</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_WidthRatio</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts22">A value calculated automatically by Startup Set Render;</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts6">This variable returns</span><span class="rvts11"> Frame Width / 320.0</span></p>
+   <p class="rvps2"><span class="rvts26">TODO: Should this be moved to the Cache object?</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">27 / AB</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_AspectCorrection</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts22">A value calculated automatically by Startup Set Render;</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts6">This variable returns</span><span class="rvts11"> 1.25 - ( _WidthRatio( "Tails7 Info Object" ) - 1.0 ) * 0.3</span></p>
+   <p class="rvps2"><span class="rvts26">TODO: Should this be moved to the Cache object?</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts29">Alterable Strings</span></span></h3>
+<div class="rvps2">
+<table width="100%" style="border-color: #000000; border-style: solid; border-width: 1px; border-spacing: 2px;">
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 107px;">
+   <p class="rvps3"><span class="rvts11">Variable index</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 156px;">
+   <p class="rvps3"><span class="rvts11">Variable name</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 915px;">
+   <p class="rvps3"><span class="rvts11">Description</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 196px;">
+   <p class="rvps3"><span class="rvts11">Default value</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 175px;">
+   <p class="rvps3"><span class="rvts11">Required version</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">0 / A</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffcc99; width: 156px;">
+   <p class="rvps2"><span class="rvts11">_Version</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">This variable informs which version of Tails7 you are currently using.</span></p>
+   <p class="rvps2"><span class="rvts6">This value always changes with each new release.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffcc99; vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">R1.0.3_04.04.26</span></p>
+  </td>
+  <td rowspan="2" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; vertical-align: middle; width: 175px;">
+   <p class="rvps3"><span class="rvts22">R1.0.1_10.05.25</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">1 / B</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffcc99; width: 156px;">
+   <p class="rvps2"><span class="rvts11">_API</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts22">A value calculated automatically by Startup Set Render;</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts6">Variable informs which graphics API the game is currently;</span></p>
+   <ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+    <li class="rvps2 noindent"><span class="rvts6">On Windows, this returns: </span><span class="rvts11">Direct3D 8</span><span class="rvts6">, </span><span class="rvts11">Direct3D 9</span><span class="rvts6">, </span><span class="rvts11">Direct3D 11</span><span class="rvts6">, </span><span class="rvts11">DirectDraw</span><span class="rvts6"> or </span><span class="rvts11">CPU;</span></li>
+    <li class="rvps2 noindent"><span class="rvts6">On iOS and Android, this returns </span><span class="rvts11">OpenGL ES</span><span class="rvts6">;</span></li>
+    <li class="rvps2 noindent"><span class="rvts6">On macOS this return </span><span class="rvts11">OpenGL</span><span class="rvts6">;</span></li>
+   </ul>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,153,255,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts22">(Automatically)</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts29">Flags</span></span></h3>
+<div class="rvps2">
+<table width="100%" style="border-color: #000000; border-style: solid; border-width: 1px; border-spacing: 2px;">
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 107px;">
+   <p class="rvps3"><span class="rvts11">Variable index</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 156px;">
+   <p class="rvps3"><span class="rvts11">Variable name</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 915px;">
+   <p class="rvps3"><span class="rvts11">Description</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 196px;">
+   <p class="rvps3"><span class="rvts11">Default value</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 175px;">
+   <p class="rvps3"><span class="rvts11">Required version</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px; height: 4px;">
+   <p class="rvps2"><span class="rvts22">0 / A</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(153,204,255,0.5); width: 156px; height: 4px;">
+   <p class="rvps2"><span class="rvts11">_Update</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px; height: 4px;">
+   <p class="rvps2"><span class="rvts6">This variable activates the creation of Tails7 Ground Render objects from scratch. It is useful when you want to change the ground object texture if the texture has a different resolution.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(255,128,128,0.5); vertical-align: middle; width: 196px; height: 4px;">
+   <p class="rvps3"><span class="rvts11">False</span></p>
+  </td>
+  <td rowspan="2" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; vertical-align: middle; width: 175px; height: 4px;">
+   <p class="rvps3"><span class="rvts22">R1.0.1_10.05.25</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">1 / B</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(153,204,255,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_IsUpdating</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts22">A value calculated automatically by Startup Set Render;</span><br/><span class="rvts6"></span><br/><span class="rvts6">Temporary variable that informs about the status of creating Tails7 Ground Render objects when the _Update flag is activated.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,153,255,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts22">(Automatically)</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts19">Created with the Personal Edition of HelpNDoc: </span><a class="rvts20" href="https://www.helpndoc.com/step-by-step-guides/how-to-generate-an-encrypted-password-protected-pdf-document/">Add an Extra Layer of Security to Your PDFs with Encryption</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2026  by Foxioo. All Rights Reserved.</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-bs-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Splitter -->
+  <div id="hnd-splitter" style="left: 350px"></div>  
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-3.7.1/jquery.min.js"></script>
+  <script src="vendors/bootstrap-5.3.7/bootstrap.bundle.min.js"></script>
+  <script src="vendors/markjs-8.11.1/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.19.11/uri.min.js"></script>
+  <script src="vendors/imageMapResizer-1.0.10/imageMapResizer.min.js"></script>
+  <script src="vendors/headroom-0.11.0/headroom.min.js"></script>
+  <script src="vendors/jstree-3.3.10/jstree.min.js"></script>  
+  <script src="vendors/interactjs-1.9.22/interact.min.js"></script>  
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Init script -->
+  <script src="_topic_init.js"></script>
+
+
+
+</body>
+
+</html>
+

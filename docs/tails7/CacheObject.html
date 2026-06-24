@@ -1,0 +1,581 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 10.3.0.232">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Cache Object</title>
+  <meta name="description" content="Tails7 official documentation" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Cache Object">
+  <meta name="twitter:description" content="Tails7 official documentation">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Cache Object" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="Tails7 official documentation" />
+  <meta property="og:site_name" content="Tails7" /> 
+
+  <!-- Bootstrap CSS -->
+  <link href="vendors/bootstrap-5.3.7/bootstrap.min.css" rel="stylesheet"/>
+  <link href="vendors/bootstrap-icons-1.13.1/bootstrap-icons.min.css" rel="stylesheet"/>
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.10/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+  <style type="text/css">.navigation #inline-toc { width: auto !important}</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="visually-hidden">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>Tails7</h1>
+    
+  </header>
+
+  <nav id="panel-left" class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close" role="presentation"> 
+        <button class="hnd-toggle btn btn-default" aria-label="close">
+          <span class="bi bi-x" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="nav-item tab">
+            <a href="#contents" id="tab-contents" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#contents" aria-controls="contents" aria-selected="true">
+                <i class="bi bi-list-ul"></i>
+                Contents
+            </a>
+        </li>
+      
+        <li role="presentation" class="nav-item tab">
+            <a href="#index" id="tab-index" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#index" aria-controls="index" aria-selected="false">
+                <i class="bi bi-asterisk"></i>
+                Index
+            </a>
+        </li>
+      
+        <li role="presentation" class="nav-item tab">
+            <a href="#search" id="tab-search" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#search" aria-controls="search" aria-selected="false">
+                <i class="bi bi-search"></i>
+                Search
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+      <div role="tabpanel" class="tab-pane" id="index">
+        <div id="keywords" class="tree-container unselectable"
+            data-url="_keywords.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /index-->
+      
+      <div role="tabpanel" class="tab-pane" id="search">
+        <div class="search-content">
+          <div class="search-input">
+            <form id="search-form">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="input-search" name="input-search" placeholder="Search..." aria-label="Search..." />
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit" aria-label="Search...">
+                      <span class="bi bi-search" aria-hidden="true"></span>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>  <!-- /search-input -->
+          <div class="search-result">
+            <div id="search-info"></div>
+            <div class="tree-container unselectable" id="search-tree"></div>
+          </div>  <!-- /search-result -->
+        </div>  <!-- /search-content -->
+      </div>  <!-- /search-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="CacheObject"
+		  data-hnd-context="18"
+		  data-hnd-title="Cache Object"
+		>
+            
+                <div class="navigation">
+                    <ol class="breadcrumb">
+                        <li><a href="Objects.html">Objects</a></li><li><a href="Tails7Objects.html">Tails7 Objects</a></li>
+                    </ol>
+                    <div class="nav-arrows">
+                        <div class="btn-group btn-group" role="group"><a class="btn btn-default" href="Tails7Objects.html" title="Tails7 Objects" role="button"><span class="bi bi-chevron-up" aria-hidden="true"></span></a><a class="btn btn-default" href="LayerMode.html" title="Layer Mode" role="button"><span class="bi bi-chevron-left" aria-hidden="true"></span></a><a class="btn btn-default" href="CameraObject.html" title="Camera Object" role="button"><span class="bi bi-chevron-right" aria-hidden="true"></span></a></div>
+                    </div>
+                </div> 
+            
+
+            <a id="main-content"></a>
+
+            <h2>Cache Object</h2>
+
+            <div class="main-content">
+                
+<h1 class="rvps4"><span class="rvts0"><a class="rvts15" href="Objects.html">Objects</a></span><span class="rvts0"><span class="rvts21"> / </span></span><span class="rvts0"><a class="rvts15" href="Tails7Objects.html">Tails7 Objects</a></span><span class="rvts0"><span class="rvts21"> / </span></span><span class="rvts0"><a class="rvts15" href="CacheObject.html">Cache Object</a></span><span class="rvts0"><span class="rvts16"> </span></span><span class="rvts0"><span class="rvts17">(</span></span><span class="rvts0"><span class="rvts18">23 June, 2026)</span></span></h1>
+<p class="rvps2" style="break-before: always;"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Cache Object it's like a container with ready results for calculations of the Mapping Mode behavior of the Mapper Object.</span></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts29">Alterable Values</span></span></h3>
+<div class="rvps2">
+<table width="100%" style="border-color: #000000; border-style: solid; border-width: 1px; border-spacing: 2px;">
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 107px;">
+   <p class="rvps3"><span class="rvts11">Variable index</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 156px;">
+   <p class="rvps3"><span class="rvts11">Variable name</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 915px;">
+   <p class="rvps3"><span class="rvts11">Description</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 196px;">
+   <p class="rvps3"><span class="rvts11">Default value</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 175px;">
+   <p class="rvps3"><span class="rvts11">Required version</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">0 / A</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_PosX</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns the current position on the X axis in the shader applied to Tails7 Render Ground.</span></p>
+  </td>
+  <td rowspan="28" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,153,255,0.5); vertical-align: middle; width: 196px;">
+   <p class="rvps3"><span class="rvts11">(Automatically)</span></p>
+  </td>
+  <td rowspan="28" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; vertical-align: middle; width: 175px;">
+   <p class="rvps3"><span class="rvts22">R1.0.2_29.11.25</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">1 / B</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_PosY</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns the current position on the Y axis in the shader applied to Tails7 Render Ground.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">3 / D</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_PosZ</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns the current position on the Z axis in the shader applied to Tails7 Render Ground.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">2 / C</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_RotZ</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns the current rotation on the Z axis in the shader applied to Tails7 Render Ground.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">4 / E</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_XScale</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns the scale of the Tails7 Render Ground object on the X axis.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">5 / F</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_YScale</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns the scale of the Tails7 Render Ground object on the Y axis.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">6 / G</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_Distortion</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns the current _Distortion value in the shader applied to Tails7 Render Ground.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">7 / H</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_YTop</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns the current top boundary position of the Tails7 Render Ground object on the Y axis.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">8 / I</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_YBottom</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns the current bottom boundary position of the Tails7 Render Ground object on the Y axis.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">9 / J</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_SinRotX</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns the modified rotation value on the X axis in the shader applied to Tails7 Render Ground, specifically returns </span><span class="rvts11">sin(_RotX( "Tails7 Cache" ) - 90.0).</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">10 / K</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_CosRotX</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns the modified rotation value on the X axis in the shader applied to Tails7 Render Ground, specifically returns </span><span class="rvts11">cos(_RotX( "Tails7 Cache" ) - 90.0)</span><span class="rvts6">.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">11 / L</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_SinRotY</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns the modified rotation value on the Y axis in the shader applied to Tails7 Render Ground, specifically returns </span><span class="rvts11">sin(_RotY( "Tails7 Cache" )).</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">12 / M</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_CosRotY</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns the modified rotation value on the Y axis in the shader applied to Tails7 Render Ground, specifically returns </span><span class="rvts11">cos(_RotY( "Tails7 Cache" )).</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">13 / N</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_GroundX</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns the current position of the Tails7 Render Ground object on the X axis.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">14 / &nbsp;O</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_GroundY</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns the current position of the Tails7 Render Ground object on the Y axis.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">15 / P</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_PointX</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns the current position of the Tails7 Center Pointer object on the X axis.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">16 / Q</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_PointY</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns the current position of the Tails7 Center Pointer object on the Y axis.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">17 / R</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_Precompute1</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns the scale of the object on the X axis Tails7 Render Ground divided by the Z position, specifically </span><span class="rvts11">_XScale / _PosZ.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">18 / S</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_Precompute2</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns the scale of the object on the Y axis Tails7 Render Ground divided by the Z position, specifically </span><span class="rvts11">_YScale / _PosZ.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">19 / T</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_Precompute3</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns </span><span class="rvts11">1.0 / ( _YBottom( "Tails7 Cache" ) - _YTop( "Tails7 Cache" ) ).</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">20 / U</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_Precompute4</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns </span><span class="rvts11">_Distortion( "Tails7 Cache" ) * 2.0 * _Precompute3( "Tails7 Cache" ).</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">26 / AA</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_Precompute5</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns </span><span class="rvts11">_Precompute4( "Tails7 Cache" ) * _YScaleOver( "Tails7 Cache" ).</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">27 / AB</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_Precompute6</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns </span><span class="rvts11">_Precompute4( "Tails7 Cache" ) * _XScaleOver( "Tails7 Cache" ).</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">28 / AC</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_Precompute7</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns </span><span class="rvts11">1.0 / _PosZ( "Tails7 Cache" ) * 0.5.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">22 / W</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_XScaleOver</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns </span><span class="rvts11">1.0 / _XScale( "Tails7 Cache" ).</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">23 / X</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_YScaleOver</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Returns </span><span class="rvts11">1.0 / _YScale( "Tails7 Cache" ).</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">21 / V</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_PiOver180</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Has a value equal to </span><span class="rvts11">π / 180</span><span class="rvts6">, i.e. </span><span class="rvts11">0.0174533</span><span class="rvts6">.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 107px;">
+   <p class="rvps2"><span class="rvts22">24 / Y</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: rgba(204,255,204,0.5); width: 156px;">
+   <p class="rvps2"><span class="rvts11">_TwoPi</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Has a value equal to </span><span class="rvts11">2π</span><span class="rvts6">, i.e. </span><span class="rvts11">6.283185307179586</span><span class="rvts6">.</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"></span></p>
+<p class="rvps8" style="clear: both;"><span class="rvts19">Created with the Personal Edition of HelpNDoc: </span><a class="rvts20" href="https://www.helpndoc.com/feature-tour/markdown-import-export-using-helpndoc-help-authoring-tool/">Effortlessly Edit and Export Markdown Documents</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2026  by Foxioo. All Rights Reserved.</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-bs-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Splitter -->
+  <div id="hnd-splitter" style="left: 350px"></div>  
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-3.7.1/jquery.min.js"></script>
+  <script src="vendors/bootstrap-5.3.7/bootstrap.bundle.min.js"></script>
+  <script src="vendors/markjs-8.11.1/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.19.11/uri.min.js"></script>
+  <script src="vendors/imageMapResizer-1.0.10/imageMapResizer.min.js"></script>
+  <script src="vendors/headroom-0.11.0/headroom.min.js"></script>
+  <script src="vendors/jstree-3.3.10/jstree.min.js"></script>  
+  <script src="vendors/interactjs-1.9.22/interact.min.js"></script>  
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Init script -->
+  <script src="_topic_init.js"></script>
+
+
+
+</body>
+
+</html>
+

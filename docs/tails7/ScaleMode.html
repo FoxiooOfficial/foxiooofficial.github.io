@@ -1,0 +1,360 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 10.3.0.232">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Scale Mode</title>
+  <meta name="description" content="Tails7 official documentation" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Scale Mode">
+  <meta name="twitter:description" content="Tails7 official documentation">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Scale Mode" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="Tails7 official documentation" />
+  <meta property="og:site_name" content="Tails7" /> 
+
+  <!-- Bootstrap CSS -->
+  <link href="vendors/bootstrap-5.3.7/bootstrap.min.css" rel="stylesheet"/>
+  <link href="vendors/bootstrap-icons-1.13.1/bootstrap-icons.min.css" rel="stylesheet"/>
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.10/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+  <style type="text/css">.navigation #inline-toc { width: auto !important}</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="visually-hidden">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>Tails7</h1>
+    
+  </header>
+
+  <nav id="panel-left" class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close" role="presentation"> 
+        <button class="hnd-toggle btn btn-default" aria-label="close">
+          <span class="bi bi-x" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="nav-item tab">
+            <a href="#contents" id="tab-contents" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#contents" aria-controls="contents" aria-selected="true">
+                <i class="bi bi-list-ul"></i>
+                Contents
+            </a>
+        </li>
+      
+        <li role="presentation" class="nav-item tab">
+            <a href="#index" id="tab-index" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#index" aria-controls="index" aria-selected="false">
+                <i class="bi bi-asterisk"></i>
+                Index
+            </a>
+        </li>
+      
+        <li role="presentation" class="nav-item tab">
+            <a href="#search" id="tab-search" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#search" aria-controls="search" aria-selected="false">
+                <i class="bi bi-search"></i>
+                Search
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+      <div role="tabpanel" class="tab-pane" id="index">
+        <div id="keywords" class="tree-container unselectable"
+            data-url="_keywords.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /index-->
+      
+      <div role="tabpanel" class="tab-pane" id="search">
+        <div class="search-content">
+          <div class="search-input">
+            <form id="search-form">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="input-search" name="input-search" placeholder="Search..." aria-label="Search..." />
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit" aria-label="Search...">
+                      <span class="bi bi-search" aria-hidden="true"></span>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>  <!-- /search-input -->
+          <div class="search-result">
+            <div id="search-info"></div>
+            <div class="tree-container unselectable" id="search-tree"></div>
+          </div>  <!-- /search-result -->
+        </div>  <!-- /search-content -->
+      </div>  <!-- /search-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="ScaleMode"
+		  data-hnd-context="31"
+		  data-hnd-title="Scale Mode"
+		>
+            
+                <div class="navigation">
+                    <ol class="breadcrumb">
+                        <li><a href="Objects.html">Objects</a></li><li><a href="Tails7Objects.html">Tails7 Objects</a></li><li><a href="MapperObject.html">Mapper Object</a></li>
+                    </ol>
+                    <div class="nav-arrows">
+                        <div class="btn-group btn-group" role="group"><a class="btn btn-default" href="MapperObject.html" title="Mapper Object" role="button"><span class="bi bi-chevron-up" aria-hidden="true"></span></a><a class="btn btn-default" href="MappingScreenMode.html" title="Mapping Screen Mode" role="button"><span class="bi bi-chevron-left" aria-hidden="true"></span></a><a class="btn btn-default" href="VisibleMode.html" title="Visible Mode" role="button"><span class="bi bi-chevron-right" aria-hidden="true"></span></a></div>
+                    </div>
+                </div> 
+            
+
+            <a id="main-content"></a>
+
+            <h2>Scale Mode</h2>
+
+            <div class="main-content">
+                
+<h1 class="rvps4"><span class="rvts0"><a class="rvts15" href="Objects.html">Objects</a></span><span class="rvts0"><span class="rvts21"> / </span></span><span class="rvts0"><a class="rvts15" href="Tails7Objects.html">Tails7 Objects</a></span><span class="rvts0"><span class="rvts21"> / </span></span><span class="rvts0"><a class="rvts15" href="MapperObject.html">Mapper Object</a></span><span class="rvts0"><span class="rvts21"> / </span></span><span class="rvts0"><a class="rvts15" href="ScaleMode.html">Scale Mode</a></span><span class="rvts0"><span class="rvts16"> </span></span><span class="rvts0"><span class="rvts17">(</span></span><span class="rvts0"><span class="rvts18">23 June, 2026)</span></span></h1>
+<p class="rvps2" style="break-before: always;"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">This behavior is a behavior responsible for scaling objects.</span></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts29">Different modes</span></span></h3>
+<div class="rvps2">
+<table width="100%" style="border-color: #000000; border-style: solid; border-width: 1px; border-spacing: 2px;">
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 156px;">
+   <p class="rvps3"><span class="rvts11">Value</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 915px;">
+   <p class="rvps3"><span class="rvts11">Description</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ccffff; width: 175px;">
+   <p class="rvps3"><span class="rvts11">Required version</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: middle;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffcc99; width: 156px;">
+   <p class="rvps3"><span class="rvts11">"DEFAULT"</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Scales object to fit the Tails7 environment </span><span class="rvts22">(Default scaling)</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; vertical-align: middle; width: 175px;">
+   <p class="rvps3"><span class="rvts22">R1.0.1_10.05.25</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: middle;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffcc99; width: 156px;">
+   <p class="rvps3"><span class="rvts11">"DEFAULT_BASED_ON_X"</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Scales object to fit the Tails7 environment but bases the scale for both axes on the resolution factor of the X-axis.</span></p>
+  </td>
+  <td rowspan="2" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; vertical-align: middle; width: 175px;">
+   <p class="rvps3"><span class="rvts22">R1.0.2_29.11.25</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: middle;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffcc99; width: 156px; height: 17px;">
+   <p class="rvps3"><span class="rvts11">"DEFAULT_BASED_ON_Y"</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px; height: 17px;">
+   <p class="rvps2"><span class="rvts6">Scales object to fit the Tails7 environment but bases the scale for both axes on the resolution factor of the Y-axis.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: middle;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffcc99; width: 156px;">
+   <p class="rvps3"><span class="rvts11">"STATIC"</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Scales the object to a fixed proportion, modified inversely by the cache override, ignoring resolution factor</span></p>
+  </td>
+  <td rowspan="3" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; vertical-align: middle; width: 175px;">
+   <p class="rvps3"><span class="rvts22">R1.0.1_10.05.25</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: middle;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffcc99; width: 156px;">
+   <p class="rvps3"><span class="rvts11">"RES"</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Scales the object to raw scale values, modified only by resolution.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: middle;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffcc99; width: 156px;">
+   <p class="rvps3"><span class="rvts11">"FACTOR"</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Scales the object to raw scale values, modified only by resolution factor.</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: middle;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffcc99; width: 156px;">
+   <p class="rvps3"><span class="rvts11">"CONST"</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">Scales the object to the raw scale values </span><span class="rvts22">(no modifications)</span><span class="rvts6">.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; vertical-align: middle; width: 175px;">
+   <p class="rvps3"><span class="rvts22">R1.0.2_29.11.25</span></p>
+  </td>
+ </tr>
+ <tr style="vertical-align: middle;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffcc99; width: 156px;">
+   <p class="rvps3"><span class="rvts11">"NONE"</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; width: 915px;">
+   <p class="rvps2"><span class="rvts6">No operations.</span></p>
+  </td>
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px; background-color: #ffff99; vertical-align: middle; width: 175px;">
+   <p class="rvps3"><span class="rvts22">R1.0.1_10.05.25</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps5">
+<table width="100%" style="border-color: #000000; border-style: solid; border-width: 1px; border-spacing: 2px;">
+ <tr style="vertical-align: top;">
+  <td style="border-width : 1px; border-color: #000000; border-style: solid; padding: 10px; background-color: #ffff99;">
+   <p class="rvps6"><span class="rvts14">Note</span></p>
+   <p class="rvps6"><span class="rvts31">Setting a value other than those on the list (or "NONE") &nbsp;will cause this behavior to be ignored.</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">See also:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps2 noindent"><a class="rvts12" href="DistanceMode.html">Distance Mode</a></li>
+ <li class="rvps2 noindent"><a class="rvts12" href="MappingMode.html">Mapping Mode</a></li>
+ <li class="rvps2 noindent"><a class="rvts12" href="MappingScreenMode.html">Mapping Screen Mode</a></li>
+ <li class="rvps2 noindent"><a class="rvts12" href="LayerMode.html">Layer Mode</a></li>
+ <li class="rvps2 noindent"><a class="rvts12" href="VisibleMode.html">Visible Mode</a></li>
+ <li class="rvps2 noindent"><a class="rvts12" href="RotationMode.html">Rotation Mode</a><span class="rvts6"></span></li>
+</ul>
+<p class="rvps8" style="clear: both;"><span class="rvts19">Created with the Personal Edition of HelpNDoc: </span><a class="rvts20" href="https://www.helpauthoringsoftware.com">Effortlessly Create High-Quality Help Documentation with a Help Authoring Tool</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2026  by Foxioo. All Rights Reserved.</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-bs-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Splitter -->
+  <div id="hnd-splitter" style="left: 350px"></div>  
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-3.7.1/jquery.min.js"></script>
+  <script src="vendors/bootstrap-5.3.7/bootstrap.bundle.min.js"></script>
+  <script src="vendors/markjs-8.11.1/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.19.11/uri.min.js"></script>
+  <script src="vendors/imageMapResizer-1.0.10/imageMapResizer.min.js"></script>
+  <script src="vendors/headroom-0.11.0/headroom.min.js"></script>
+  <script src="vendors/jstree-3.3.10/jstree.min.js"></script>  
+  <script src="vendors/interactjs-1.9.22/interact.min.js"></script>  
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Init script -->
+  <script src="_topic_init.js"></script>
+
+
+
+</body>
+
+</html>
+
