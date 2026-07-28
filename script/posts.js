@@ -1,4 +1,9 @@
 const _Posts = [
+    { // 11
+        title: "FSP info",
+        date: "28.07.2026 04:02",
+        content: "Thank you Naitor, for the early beta for ps_3_0 in fusion 🙏🙏🙏🙏",
+    },
     { // 10
         title: "Tails7 Documentation",
         date: "24.06.2026 03:18",
