@@ -475,19 +475,19 @@ The documentation is updated from time to time." />
 <p class="rvps15"><span class="rvts6">The </span><span class="rvts57">a0</span><span class="rvts6"> register is an address register. A single register is available in version vs.1.1. The address register, designated as a0.x in vs.1.1, can be used as a signed integer offset for relative addressing into the constant register file.</span></p>
 <p class="rvps15"><span class="rvts6"><br/></span></p>
 <p class="rvps15"><span class="rvts6">The address register cannot be read by a vertex shader, it can only be used for relative addressing of a constant register.</span></p>
-<p class="rvps15"><span class="rvts6">Reading values outside of the legal range will return </span><span class="rvts94">(0.0, 0.0, 0.0, 0.0)</span><span class="rvts6">.</span></p>
+<p class="rvps15"><span class="rvts6">Reading values outside of the legal range will return </span><span class="rvts93">(0.0, 0.0, 0.0, 0.0)</span><span class="rvts6">.</span></p>
 <p class="rvps15"><span class="rvts6"><br/></span></p>
-<p class="rvps15"><span class="rvts6">The address register can only be a destination for the </span><span class="rvts94">mov</span><span class="rvts6"> instruction. If a floating-point number is moved into an integer register, a round-to-nearest conversion happens.</span></p>
+<p class="rvps15"><span class="rvts6">The address register can only be a destination for the </span><span class="rvts93">mov</span><span class="rvts6"> instruction. If a floating-point number is moved into an integer register, a round-to-nearest conversion happens.</span></p>
 <p class="rvps15"><span class="rvts6"><br/></span></p>
 <p class="rvps15"><span class="rvts6">All shaders must initialize the address register before using it.</span></p>
 <p class="rvps15"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts13">Constant Float Register:</span></p>
-<p class="rvps15"><span class="rvts6">Vertex shader input register for a four component floating-point constant. Set a constant register with either </span><span class="rvts94">def</span><span class="rvts6">.</span></p>
+<p class="rvps15"><span class="rvts6">Vertex shader input register for a four component floating-point constant. Set a constant register with either </span><span class="rvts93">def</span><span class="rvts6">.</span></p>
 <p class="rvps15"><span class="rvts6"><br/></span></p>
 <p class="rvps15"><span class="rvts6">The constant register file is read-only from the perspective of the vertex shader.</span></p>
 <p class="rvps15"><span class="rvts6">Any single instruction may access only one constant register. However, each source in that instruction may independently swizzle and negate that vector as it is read.</span></p>
 <p class="rvps15"><span class="rvts6"><br/></span></p>
-<p class="rvps15"><span class="rvts6">For Direct3D 8, constants set with </span><span class="rvts94">defx</span><span class="rvts6"> or the APIs both assign values to the shader constant space.</span></p>
+<p class="rvps15"><span class="rvts6">For Direct3D 8, constants set with </span><span class="rvts93">defx</span><span class="rvts6"> or the APIs both assign values to the shader constant space.</span></p>
 <p class="rvps15"><span class="rvts6">Each time the shader is executed, the constants are used by the current shader regardless of the technique used to set them.</span></p>
 <p class="rvps2"><span class="rvts13"><br/></span></p>
 <p class="rvps2"><span class="rvts13">Input Register:</span></p>
@@ -531,7 +531,7 @@ The documentation is updated from time to time." />
 <p class="rvps15"><span class="rvts57">dcl</span><span class="rvts28"> (declaration)</span><span class="rvts6"> it's assembly instruction used to define input registers and samplers before executable code begins. They declare the usage of input registers, such as mapping v0 to position or v1 to texture coordinates.&nbsp;</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"></span></p>
-<p class="rvps7" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com/step-by-step-guides/how-to-convert-a-hlp-winhelp-help-file-to-a-chm-html-help-help-file/">Effortlessly upgrade your WinHelp HLP help files to CHM with HelpNDoc</a></p>
+<p class="rvps7" style="clear: both;"><span class="rvts17">Created with the Personal Edition of HelpNDoc: </span><a class="rvts18" href="https://www.helpndoc.com/step-by-step-guides/how-to-convert-a-hlp-winhelp-help-file-to-a-chm-html-help-help-file/">Effortlessly upgrade your WinHelp HLP help files to CHM with HelpNDoc</a></p>
 
             </div>
             
